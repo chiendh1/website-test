@@ -4162,7 +4162,7 @@ window.addEventListener("load", function (e) {
     nextPage = void 0,
     barbaSelectedLink = void 0,
     barbaContainer = document.querySelector(".barba-container"),
-    colorModeSelection = "default";
+    colorModeSelection = "night-mode";
   setTimeout(function () {
     documentBody.classList.contains("night-mode") &&
       (colorModeSelection = "night-mode");

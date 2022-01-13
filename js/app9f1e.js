@@ -4158,6 +4158,9 @@ window.addEventListener("load", function (e) {
     navAbout = document.querySelector(".about-li button.link"),
     aboutBack = document.querySelector(".about .btn-back"),
     aboutContainer = document.querySelector(".about .container"),
+
+
+    
     prevPage = void 0,
     nextPage = void 0,
     barbaSelectedLink = void 0,
@@ -4394,7 +4397,7 @@ window.addEventListener("load", function (e) {
         documentBody.classList.remove("work-page-js"),
         !documentBody.classList.contains("easter-egg") &&
           documentBody.classList.contains("night-mode") &&
-          (colorModeSelection = "default");
+          (colorModeSelection = "night-mode");
     },
     onLeaveCompleted: function () {
       documentBody.classList.contains("night-mode") &&
@@ -4450,7 +4453,7 @@ window.addEventListener("load", function (e) {
         documentBody.classList.remove("journal-post-page-js"),
         !documentBody.classList.contains("easter-egg") &&
           documentBody.classList.contains("night-mode") &&
-          (colorModeSelection = "default");
+          (colorModeSelection = "night-mode");
     },
     onLeaveCompleted: function () {
       !documentBody.classList.contains("easter-egg") &&

@@ -4158,9 +4158,9 @@ window.addEventListener("load", function (e) {
     navAbout = document.querySelector(".about-li button.link"),
     aboutBack = document.querySelector(".about .btn-back"),
     aboutContainer = document.querySelector(".about .container"),
-
-
-    
+    navContact = document.querySelector(".contact-li button.link"),
+    contactBack = document.querySelector(".contact .btn-back"),
+    contactContainer = document.querySelector(".contact .container"),
     prevPage = void 0,
     nextPage = void 0,
     barbaSelectedLink = void 0,
@@ -4263,7 +4263,27 @@ window.addEventListener("load", function (e) {
         documentBody.classList.add("navTop"),
         documentBody.classList.add("aboutShow");
     }),
+    navContact.addEventListener("click", function (t) {
+      t.stopPropagation(),
+        t.preventDefault(),
+        isMobile && documentBody.classList.remove("mobileNavOpen"),
+        (contactContainer.scrollTop = 0),
+        documentBody.classList.add("navTop"),
+        documentBody.classList.add("aboutShow");
+    }),
     aboutBack.addEventListener("click", function (t) {
+      t.stopPropagation(),
+        t.preventDefault(),
+        (documentBody.classList.contains("home-page") ||
+          (documentBody.classList.contains("work-page") &&
+            ui.classList.contains("bottom")) ||
+          (!documentBody.classList.contains("journal-page") &&
+            ui.classList.contains("bottom"))) &&
+          documentBody.classList.remove("navTop"),
+        documentBody.classList.remove("aboutShow"),
+        isMobile && documentBody.classList.add("mobileNavOpen");
+    }),
+    contactBack.addEventListener("click", function (t) {
       t.stopPropagation(),
         t.preventDefault(),
         (documentBody.classList.contains("home-page") ||
@@ -4535,6 +4555,7 @@ var Home = (function () {
                   );
               }, 3e3),
               this.projectsLi.forEach(function (t) {
+                console.log("run init here")
                 t.addEventListener("click", e.projectsLiClickRef, !1),
                   t.addEventListener("mouseover", e.projectsLiMouseOverRef, !1),
                   t.addEventListener("mouseout", e.projectsLiMouseOutRef, !1);
@@ -4664,6 +4685,7 @@ var Home = (function () {
         {
           key: "projectsLiMouseOver",
           value: function (t) {
+            console.log("projectsLiMouseOver")
             var e = document.querySelectorAll(".isHovered"),
               i = document.querySelector(".projects");
             e.forEach(function (t, e) {
@@ -4676,6 +4698,7 @@ var Home = (function () {
         {
           key: "projectsLiMouseOut",
           value: function (t) {
+            console.log("projectsLiMouseOut")
             var e = document.querySelectorAll(".isHovered"),
               i = document.querySelector(".projects");
             e.forEach(function (t, e) {

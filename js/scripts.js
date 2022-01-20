@@ -1,23 +1,39 @@
-let i = 1;
+var indexHover = 1;
 function autoHover() {
-    $('ul.projects').addClass('isHovering');
-    setTimeout(function() {
-        $('.projectsLi').removeClass('hover'); 
-        $('.projectsLi a').removeClass('isHovered');
-        $(`.projectsLi-${i}`).addClass('hover');
-        $(`.projectsLi-${i} a`).addClass('isHovered');
-        if (i <= 8) { // 8 thẻ li
-            i++;
-            autoHover();
-        }
-    }, 1500);
-    setTimeout(function() {
-        if (i > 8) {
-            $('.projectsLi').removeClass('hover'); 
-            $('.projectsLi a').removeClass('isHovered');
-        }
-    }, 3000)
+  $("ul.projects").addClass("isHovering");
+
+  if (indexHover == 1) {
+    $(".projectsLi").removeClass("hover");
+    $(".projectsLi a").removeClass("isHovered");
+    $(`.projectsLi-${i}`).addClass("hover");
+    $(`.projectsLi-${i} a`).addClass("isHovered");
+    if (indexHover <= 8) {
+      // 8 thẻ li
+      indexHover++;
+      autoHover();
+    }
+  }
+  setTimeout(function () {
+    $(".projectsLi").removeClass("hover");
+    $(".projectsLi a").removeClass("isHovered");
+    $(`.projectsLi-${i}`).addClass("hover");
+    $(`.projectsLi-${i} a`).addClass("isHovered");
+    if (indexHover <= 8) {
+      // 8 thẻ li
+      indexHover++;
+      autoHover();
+    }
+  }, 1500);
+  setTimeout(function () {
+    if (indexHover > 8) {
+      $(".projectsLi").removeClass("hover");
+      $(".projectsLi a").removeClass("isHovered");
+    }
+  }, 3000);
 }
-$('.services').click(function () {
-    autoHover();
-})
+$(".services").click(function () {
+  if (indexHover > 8) {
+    indexHover = 1;
+  }
+  autoHover();
+});

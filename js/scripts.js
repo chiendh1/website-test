@@ -1,39 +1,33 @@
-var indexHover = 1;
+let i = 1;
 function autoHover() {
   $("ul.projects").addClass("isHovering");
-
-  if (indexHover == 1) {
-    $(".projectsLi").removeClass("hover");
-    $(".projectsLi a").removeClass("isHovered");
-    $(`.projectsLi-${i}`).addClass("hover");
-    $(`.projectsLi-${i} a`).addClass("isHovered");
-    if (indexHover <= 8) {
-      // 8 thẻ li
-      indexHover++;
-      autoHover();
-    }
+  let timeout = 200;
+  if (i > 1) {
+    timeout = 1000;
   }
+
   setTimeout(function () {
     $(".projectsLi").removeClass("hover");
     $(".projectsLi a").removeClass("isHovered");
     $(`.projectsLi-${i}`).addClass("hover");
     $(`.projectsLi-${i} a`).addClass("isHovered");
-    if (indexHover <= 8) {
+    if (i <= 8) {
       // 8 thẻ li
-      indexHover++;
+      i++;
       autoHover();
-    }
-  }, 1500);
-  setTimeout(function () {
-    if (indexHover > 8) {
+    } else {
       $(".projectsLi").removeClass("hover");
       $(".projectsLi a").removeClass("isHovered");
     }
-  }, 3000);
+  }, timeout);
 }
 $(".services").click(function () {
-  if (indexHover > 8) {
-    indexHover = 1;
+  if (i > 8) {
+    i = 1;
+  }
+
+  if (i !== 1) {
+    return;
   }
   autoHover();
 });

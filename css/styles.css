@@ -1,0 +1,8 @@
+.home-page:not(.intro) .projectsLi.hover .projectContainer {
+    transform: rotateY(-35deg) translateZ(0) scale(1);
+    transition-duration: 1s;
+}
+
+body.night-mode.home-page:not(.ultra-mode):not(.intro):not(.outro) .projects.isHovering li.hover a{
+    color: #f2f2f2;
+}

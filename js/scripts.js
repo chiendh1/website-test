@@ -31,3 +31,5 @@ $(".services").click(function () {
   }
   autoHover();
 });
+
+

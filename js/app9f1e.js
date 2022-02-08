@@ -4378,6 +4378,7 @@ window.addEventListener("load", function (e) {
     namespace: "home-page",
     onEnter: function () {
       documentBody.classList.add("home-page");
+      
     },
     onEnterCompleted: function () {
       "default" != colorModeSelection ||

@@ -22,14 +22,16 @@ function autoHover() {
   }, timeout);
 }
 $(function () {
-  $(".services").click(function () {
-    if (i > 8) {
-      i = 1;
-    }
+  setTimeout(() => {
+    $(".services").click(function () {
+      if (i > 8) {
+        i = 1;
+      }
 
-    if (i !== 1) {
-      return;
-    }
-    autoHover();
-  });
+      if (i !== 1) {
+        return;
+      }
+      autoHover();
+    });
+  }, 1000);
 });

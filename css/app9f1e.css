@@ -4059,6 +4059,11 @@ body.loading .journal {
   margin-bottom: 80px;
   font-size: 60px;
 }
+
+.journal-page .journal .small {
+  font-size: 25px;
+}
+
 .journal-page .journal .cta {
   display: -ms-flexbox;
   display: flex;

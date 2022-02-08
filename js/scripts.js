@@ -21,8 +21,7 @@ function autoHover() {
     }
   }, timeout);
 }
-
-$(document).ready(function () {
+$(function () {
   $(".services").click(function () {
     if (i > 8) {
       i = 1;

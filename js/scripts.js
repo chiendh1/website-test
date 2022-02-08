@@ -21,15 +21,16 @@ function autoHover() {
     }
   }, timeout);
 }
-$(".services").click(function () {
-  if (i > 8) {
-    i = 1;
-  }
 
-  if (i !== 1) {
-    return;
-  }
-  autoHover();
+$(document).ready(function () {
+  $(".services").click(function () {
+    if (i > 8) {
+      i = 1;
+    }
+
+    if (i !== 1) {
+      return;
+    }
+    autoHover();
+  });
 });
-
-

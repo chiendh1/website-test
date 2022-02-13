@@ -4156,6 +4156,8 @@ window.addEventListener("load", function (e) {
     ultraMode = document.querySelector(".color-mode .ultra-mode"),
     mobileNav = document.querySelector(".mobile-nav"),
     navAbout = document.querySelector(".about-li button.link"),
+    navContact = document.querySelector(".contact-li button.link"),
+    serviceClick = document.querySelector(".services"),
     aboutBack = document.querySelector(".about .btn-back"),
     aboutContainer = document.querySelector(".about .container"),
     // navContact = document.querySelector(".contact-li button.link"),
@@ -4262,6 +4264,17 @@ window.addEventListener("load", function (e) {
         (aboutContainer.scrollTop = 0),
         documentBody.classList.add("navTop"),
         documentBody.classList.add("aboutShow");
+    }),
+    navContact.addEventListener("click", function (t) {
+      t.stopPropagation(),
+        t.preventDefault(),
+        isMobile && documentBody.classList.remove("mobileNavOpen"),
+        (aboutContainer.scrollTop = 0),
+        documentBody.classList.add("navTop"),
+        documentBody.classList.add("aboutShow");
+    }),
+    serviceClick.addEventListener("click", function (t) {
+      clickService();
     }),
     // navContact.addEventListener("click", function (t) {
     //   t.stopPropagation(),
@@ -4378,7 +4391,6 @@ window.addEventListener("load", function (e) {
     namespace: "home-page",
     onEnter: function () {
       documentBody.classList.add("home-page");
-      
     },
     onEnterCompleted: function () {
       "default" != colorModeSelection ||
@@ -4436,7 +4448,7 @@ window.addEventListener("load", function (e) {
       documentBody.classList.add("journal-page");
       let data = [
         {
-          url: "",
+          url: "jim-beam",
           imgUrl:
             "https://images.squarespace-cdn.com/content/v1/5c587c5f65019f7b1a809d16/1549998531140-B4WVF1IJ5OX3D2YBCV2G/jim-beam-smart-decanter-full.jpg?format=2500w",
           name: "JIM BEAM",
@@ -4450,14 +4462,14 @@ window.addEventListener("load", function (e) {
         },
     
         {
-          url: "",
+          url: "work-kitchen",
           imgUrl:
             "https://images.squarespace-cdn.com/content/v1/5c587c5f65019f7b1a809d16/1581443841913-EED6JMVBFISC7O8GI0JV/a3NfgsQ-_400x400.jpg?format=1000w",
           name: "CUISINART",
         },
     
         {
-          url: "",
+          url: "work-gimlet",
           imgUrl:
             "https://images.squarespace-cdn.com/content/v1/5c587c5f65019f7b1a809d16/1549996190470-9FPQ3XVRZDPLK6BKC7HJ/gimlet_website_casestudy_image_googlehome.jpg?format=2500w",
           name: "GIMLET",
@@ -4470,14 +4482,14 @@ window.addEventListener("load", function (e) {
           name: "REEBOK",
         },
         {
-          url: "",
+          url: "work-chobani",
           imgUrl:
             "https://images.squarespace-cdn.com/content/v1/5c587c5f65019f7b1a809d16/1550106279926-M6KROGJ33AMT4TCAAAPN/Chobani-20180209075016123.JPG?format=1500w",
           name: "CHOBANI",
         },
     
         {
-          url: "",
+          url: "warner-music-group",
           imgUrl:
             "https://images.squarespace-cdn.com/content/v1/5c587c5f65019f7b1a809d16/1550105006167-K6L1H6CVZX7SD99CD2EX/GUEST_a15f92e7-63c1-493f-8c4a-598970ba48fe.jpeg?format=1000w",
           name: "WARNER MUSIC</br>GROUP",
@@ -4491,35 +4503,35 @@ window.addEventListener("load", function (e) {
         },
     
         {
-          url: "",
+          url: "purell",
           imgUrl:
             "https://images.squarespace-cdn.com/content/v1/5c587c5f65019f7b1a809d16/1550087382538-FYN1BUT2HTFRK0YWAT5W/purell_kid_low.jpg?format=1500w",
           name: "PURELL",
         },
     
         {
-          url: "",
+          url: "hss",
           imgUrl:
             "https://images.squarespace-cdn.com/content/v1/5c587c5f65019f7b1a809d16/1549999422184-ZBZWGAEOQY4TV7TDH4Q5/HSS_sick_girl_image1.png?format=2500w",
           name: "HSS",
         },
     
         {
-          url: "",
+          url: "bic",
           imgUrl:
             "https://images.squarespace-cdn.com/content/v1/5c587c5f65019f7b1a809d16/1550092056833-2H2PONW5YJGXPB31XCH3/bic_office_assistant_low.jpg?format=2500w",
           name: "BIC",
         },
     
         {
-          url: "",
+          url: "doctors-without-borders",
           imgUrl:
             "https://images.squarespace-cdn.com/content/v1/5c587c5f65019f7b1a809d16/1550266424390-ZL44VI529KORCD0K7WZ5/doctors_wo_borders_googlehome_livingroom_low.jpg?format=1500w",
           name: "DOCTORS WITHOUT BORDERS",
         },
     
         {
-          url: "",
+          url: "national-grid",
           imgUrl:
             "https://images.squarespace-cdn.com/content/v1/5c587c5f65019f7b1a809d16/1581436849595-M3K0LLESEC541MVXL20E/ng--logo.png?format=1000w",
           name: "NATIONALGRID",
@@ -4529,7 +4541,7 @@ window.addEventListener("load", function (e) {
         $(".journal .content .work").append(`
               <article class="post reveal">
                                 <div class="info">
-                                  <a class="cta" href="collaboration/">
+                                  <a class="cta" href="${element.url}">
                                     <h2 class="title">${element.name}</h2>
                                     <span class="read-more">read more</span></a
                                   >
@@ -4596,7 +4608,7 @@ window.addEventListener("load", function (e) {
     onLeaveCompleted: function () {
       !documentBody.classList.contains("easter-egg") &&
         documentBody.classList.contains("night-mode") &&
-        documentBody.classList.remove("night-mode"),
+        // documentBody.classList.remove("night-mode"),
         documentBody.classList.remove("journal-post-page");
     },
   });

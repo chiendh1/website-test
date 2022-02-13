@@ -136,6 +136,15 @@ summary {
 template {
   display: none;
 }
+.text-center {
+  text-align: center !important;
+}
+.text-uppercase {
+  text-transform: uppercase !important;
+}
+.font-bold {
+  font-weight: bold !important;
+}
 .flickity-enabled {
   position: relative;
 }
@@ -3539,13 +3548,13 @@ body.aboutShow .mobile-nav-inner:before {
 body.aboutShow .mobile-nav-inner:after {
   transform: translate3d(-7px, -2px, 0) rotate(45deg) scaleX(0.6);
 }
-.about {
+.about, .contract {
   z-index: 1;
   opacity: 0;
   transition: opacity 0.5s 0s;
 }
 .about,
-.about:before {
+.about:before, .contract, .contract:before {
   position: fixed;
   top: 0;
   left: 0;

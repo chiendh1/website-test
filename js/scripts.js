@@ -27,7 +27,7 @@ function clickService () {
     window.location.href = '/';
     let expiration = new Date();
     expiration.setTime(expiration.getTime() + (30*24*60*60*1000));
-    setCookie('cookie_services', true, expiration, "/");
+    setCookie('cookie_services', 1, expiration, "/");
   } else {
     if (i > 8) {
       i = 1;

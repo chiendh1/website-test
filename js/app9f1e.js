@@ -4402,6 +4402,13 @@ window.addEventListener("load", function (e) {
           documentBody.classList.contains("navTop") &&
             documentBody.classList.remove("navTop");
         }, 250);
+        setTimeout(function () {
+          const cookie = getCookie('cookie_services');
+          if (cookie) {
+            clickService();
+            eraseCookie('cookie_services', '/');
+          }
+        }, 3000)
     },
     onLeave: function () {
       stopPage(), documentBody.classList.remove("home-page-js");

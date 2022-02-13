@@ -4538,11 +4538,39 @@ window.addEventListener("load", function (e) {
         },
     
         {
+          url: "proximo-spirits",
+          imgUrl:
+            "https://proximo.cc/wp-content/uploads/2015/08/logo1.png",
+          name: "PROXIMO SPIRITS",
+        },
+
+        {
+          
           url: "national-grid",
           imgUrl:
             "https://images.squarespace-cdn.com/content/v1/5c587c5f65019f7b1a809d16/1581436849595-M3K0LLESEC541MVXL20E/ng--logo.png?format=1000w",
           name: "NATIONALGRID",
         },
+
+        
+        {
+          
+          url: "vita-coco",
+          imgUrl:
+            "https://assets-global.website-files.com/5b4a8d1cabad384302b96f64/5b60c7862231dc553570e5a7_5b399a96b128b34aa3f56fce_VC_white_logo.png",
+          name: "VITA COCO",
+        },
+        {
+          
+          url: "girl-scouts",
+          imgUrl:
+            "https://pixy.org/download/1360455/",
+          name: "GIRL SCOUTS",
+        },
+
+
+
+
       ];
       data.forEach((element, index) => {
         $(".journal .content .work").append(`

@@ -4226,3 +4226,33 @@ body.loading .journal {
   margin-bottom: 0;
 }
 /*# sourceMappingURL=app.css.map */
+
+.h2-title {
+  margin-bottom: 30px;
+}
+.if-video {
+  width: 100%;
+  margin-bottom: 40px;
+}
+section.module-copy-image {
+  max-width: 1000px;
+}
+p.p-des {
+  line-height: 1.6;
+  font-size: 16px;
+}
+.p-title {
+  font-size: 20px;
+}
+.p-description {
+  font-weight: 300;
+  font-style: normal;
+  font-size: 30px;
+}
+ul.wrap-result li {
+  padding: 10px;
+  font-size: 16px;
+}
+.title-img {
+  margin-bottom: 30px;
+}

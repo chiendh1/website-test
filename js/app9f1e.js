@@ -4540,7 +4540,7 @@ window.addEventListener("load", function (e) {
         {
           url: "proximo-spirits",
           imgUrl:
-            "https://proximo.cc/wp-content/uploads/2015/08/logo1.png",
+            "https://120w7g2wkk7id5lo5370vqdf-wpengine.netdna-ssl.com/wp-content/uploads/2017/08/proximo-og.jpg",
           name: "PROXIMO SPIRITS",
         },
 

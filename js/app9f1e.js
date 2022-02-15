@@ -4643,8 +4643,9 @@ window.addEventListener("load", function (e) {
     onLeaveCompleted: function () {
       !documentBody.classList.contains("easter-egg") &&
         documentBody.classList.contains("night-mode") &&
-        // documentBody.classList.remove("night-mode"),
+        documentBody.classList.remove(""),
         documentBody.classList.remove("journal-post-page");
+        console.log(1111);
     },
   });
   JournalPostpage.init(), Barba.Pjax.start();

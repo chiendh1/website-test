@@ -3167,7 +3167,7 @@ body:not(.home-page):not(.journal-page):not(.aboutShow)
     }
   }
   body:not(.home-page) .ui.outline .info {
-    opacity: 1;
+    opacity: 0;
     pointer-events: none;
   }
   body:not(.home-page).journal-post-page .ui.bottom .info .contact,

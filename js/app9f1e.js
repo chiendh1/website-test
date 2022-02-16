@@ -4161,7 +4161,7 @@ window.addEventListener("load", function (e) {
     aboutBack = document.querySelector(".about .btn-back"),
     aboutContainer = document.querySelector(".about .container"),
     // navContact = document.querySelector(".contact-li button.link"),
-    // contactBack = document.querySelector(".contact .btn-back"),
+    contactBack = document.querySelector(".contact-html .btn-back"),
     // contactContainer = document.querySelector(".contact .container"),
     prevPage = void 0,
     nextPage = void 0,
@@ -4296,18 +4296,18 @@ window.addEventListener("load", function (e) {
         documentBody.classList.remove("aboutShow"),
         isMobile && documentBody.classList.add("mobileNavOpen");
     }),
-    // contactBack.addEventListener("click", function (t) {
-    //   t.stopPropagation(),
-    //     t.preventDefault(),
-    //     (documentBody.classList.contains("home-page") ||
-    //       (documentBody.classList.contains("work-page") &&
-    //         ui.classList.contains("bottom")) ||
-    //       (!documentBody.classList.contains("journal-page") &&
-    //         ui.classList.contains("bottom"))) &&
-    //       documentBody.classList.remove("navTop"),
-    //     documentBody.classList.remove("aboutShow"),
-    //     isMobile && documentBody.classList.add("mobileNavOpen");
-    // }),
+    contactBack.addEventListener("click", function (t) {
+      t.stopPropagation(),
+        t.preventDefault(),
+        (documentBody.classList.contains("home-page") ||
+          (documentBody.classList.contains("work-page") &&
+            ui.classList.contains("bottom")) ||
+          (!documentBody.classList.contains("journal-page") &&
+            ui.classList.contains("bottom"))) &&
+          documentBody.classList.remove("navTop"),
+        documentBody.classList.remove("aboutShow"),
+        isMobile && documentBody.classList.add("mobileNavOpen");
+    }),
     isMobile ||
       (document.onkeydown = function (t) {
         (t = t || window.event),
@@ -4428,6 +4428,7 @@ window.addEventListener("load", function (e) {
       documentBody.classList.add("work-page");
     },
     onEnterCompleted: function () {
+      console.log(1111);
       documentBody.classList.add("work-page-js"), initPage();
     },
     onLeave: function () {

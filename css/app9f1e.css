@@ -2869,8 +2869,8 @@ body.uiHover .ui .color-mode {
     opacity: 1;
   }
   body.navTop .ui .links ul {
-    /* transform: translate3d(0, calc(-90vh + 104px), 0);
-    transition-delay: 0s; */
+    transform: translate3d(0, calc(-90vh + 104px), 0);
+    transition-delay: 0s;
   }
   body.navTop .ui .links li {
     position: relative;

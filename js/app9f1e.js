@@ -4560,12 +4560,14 @@ window.addEventListener("load", function (e) {
           imgUrl:
             "https://assets-global.website-files.com/5b4a8d1cabad384302b96f64/5b60c7862231dc553570e5a7_5b399a96b128b34aa3f56fce_VC_white_logo.png",
           name: "VITA COCO",
+          disabledReadmore: true,
         },
         {
           url: "girl-scouts",
           imgUrl:
             "https://pixy.org/download/1360455/",
           name: "GIRL SCOUTS",
+          disabledReadmore: true,
         },
       ];
       data.forEach((element, index) => {

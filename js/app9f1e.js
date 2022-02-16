@@ -4205,7 +4205,7 @@ window.addEventListener("load", function (e) {
         documentBody.classList.contains("uiHover") &&
           documentBody.classList.remove("uiHover");
       })),
-    nightMode.addEventListener("click", function (t) {
+    nightMode && nightMode.addEventListener("click", function (t) {
       var e = t.target.getAttribute("class");
       documentBody.classList.contains(e) ||
         ("default" == colorModeSelection
@@ -4215,13 +4215,13 @@ window.addEventListener("load", function (e) {
         documentBody.classList.add(e)),
         (colorModeSelection = e);
     }),
-    nightMode.addEventListener("mouseenter", function (t) {
+    nightMode && nightMode.addEventListener("mouseenter", function (t) {
       colorMode.classList.add("night");
     }),
-    nightMode.addEventListener("mouseleave", function (t) {
+    nightMode && nightMode.addEventListener("mouseleave", function (t) {
       colorMode.classList.remove("night");
     }),
-    lightMode.addEventListener("click", function (t) {
+    lightMode && lightMode.addEventListener("click", function (t) {
       var e = t.target.getAttribute("class");
       documentBody.classList.contains(e) ||
         ("default" == colorModeSelection
@@ -4231,13 +4231,13 @@ window.addEventListener("load", function (e) {
         documentBody.classList.add(e)),
         (colorModeSelection = e);
     }),
-    lightMode.addEventListener("mouseenter", function (t) {
+    lightMode && lightMode.addEventListener("mouseenter", function (t) {
       colorMode.classList.add("light");
     }),
-    lightMode.addEventListener("mouseleave", function (t) {
+    lightMode && lightMode.addEventListener("mouseleave", function (t) {
       colorMode.classList.remove("light");
     }),
-    ultraMode.addEventListener("click", function (t) {
+    ultraMode && ultraMode.addEventListener("click", function (t) {
       var e = t.target.getAttribute("class");
       documentBody.classList.contains(e) ||
         (documentBody.classList.remove(colorModeSelection),
@@ -4245,19 +4245,19 @@ window.addEventListener("load", function (e) {
         documentBody.classList.add(e)),
         (colorModeSelection = e);
     }),
-    ultraMode.addEventListener("mouseenter", function (t) {
+    ultraMode && ultraMode.addEventListener("mouseenter", function (t) {
       colorMode.classList.add("ultra");
     }),
-    ultraMode.addEventListener("mouseleave", function (t) {
+    ultraMode && ultraMode.addEventListener("mouseleave", function (t) {
       colorMode.classList.remove("ultra");
     }),
-    mobileNav.addEventListener("click", function (t) {
+    mobileNav && mobileNav.addEventListener("click", function (t) {
       t.stopPropagation(),
         t.preventDefault(),
         documentBody.classList.toggle("mobileNavOpen"),
         documentBody.classList.remove("uiHover");
     }),
-    navAbout.addEventListener("click", function (t) {
+    navAbout && navAbout.addEventListener("click", function (t) {
       t.stopPropagation(),
         t.preventDefault(),
         isMobile && documentBody.classList.remove("mobileNavOpen"),
@@ -4265,7 +4265,7 @@ window.addEventListener("load", function (e) {
         documentBody.classList.add("navTop"),
         documentBody.classList.add("aboutShow");
     }),
-    navContact.addEventListener("click", function (t) {
+    navContact && navContact.addEventListener("click", function (t) {
       t.stopPropagation(),
         t.preventDefault(),
         isMobile && documentBody.classList.remove("mobileNavOpen"),
@@ -4273,7 +4273,7 @@ window.addEventListener("load", function (e) {
         documentBody.classList.add("navTop"),
         documentBody.classList.add("aboutShow");
     }),
-    serviceClick.addEventListener("click", function (t) {
+    serviceClick && serviceClick.addEventListener("click", function (t) {
       clickService();
     }),
     // navContact.addEventListener("click", function (t) {
@@ -4284,7 +4284,7 @@ window.addEventListener("load", function (e) {
     //     documentBody.classList.add("navTop"),
     //     documentBody.classList.add("aboutShow");
     // }),
-    aboutBack.addEventListener("click", function (t) {
+    aboutBack && aboutBack.addEventListener("click", function (t) {
       t.stopPropagation(),
         t.preventDefault(),
         (documentBody.classList.contains("home-page") ||
@@ -4296,7 +4296,7 @@ window.addEventListener("load", function (e) {
         documentBody.classList.remove("aboutShow"),
         isMobile && documentBody.classList.add("mobileNavOpen");
     }),
-    contactBack.addEventListener("click", function (t) {
+    contactBack && contactBack.addEventListener("click", function (t) {
       t.stopPropagation(),
         t.preventDefault(),
         (documentBody.classList.contains("home-page") ||

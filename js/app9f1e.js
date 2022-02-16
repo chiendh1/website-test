@@ -4467,6 +4467,7 @@ window.addEventListener("load", function (e) {
           imgUrl:
             "https://images.squarespace-cdn.com/content/v1/5c587c5f65019f7b1a809d16/1581437943357-5KTDPQFWNHJ71YJ8FLKH/unnamed+%2819%29.jpg?format=1000w",
           name: "U.S. AIR FORCE",
+          disabledReadmore: true,
         },
     
         {
@@ -4488,6 +4489,7 @@ window.addEventListener("load", function (e) {
           imgUrl:
             "https://images.squarespace-cdn.com/content/v1/5c587c5f65019f7b1a809d16/1581437237480-FKRJJWYWRVEGKGTIT0OW/Reebok-Logo.jpg?format=1000w",
           name: "REEBOK",
+          disabledReadmore: true,
         },
         {
           url: "work-chobani",
@@ -4508,6 +4510,7 @@ window.addEventListener("load", function (e) {
           imgUrl:
             "https://images.squarespace-cdn.com/content/v1/5c587c5f65019f7b1a809d16/1581437000050-E446WQWAKY4T27KZMHKY/b54903a89269790ec77f7eda9cd4bb3e.jpg?format=1500w",
           name: "ILLY",
+          disabledReadmore: true,
         },
     
         {
@@ -4539,47 +4542,39 @@ window.addEventListener("load", function (e) {
         },
     
         {
-          url: "proximo-spirits",
+          url: "",
           imgUrl:
             "https://120w7g2wkk7id5lo5370vqdf-wpengine.netdna-ssl.com/wp-content/uploads/2017/08/proximo-og.jpg",
           name: "PROXIMO SPIRITS",
+          disabledReadmore: true,
         },
 
         {
-          
           url: "national-grid",
           imgUrl:
             "https://images.squarespace-cdn.com/content/v1/5c587c5f65019f7b1a809d16/1581436849595-M3K0LLESEC541MVXL20E/ng--logo.png?format=1000w",
           name: "NATIONALGRID",
         },
-
-        
         {
-          
           url: "vita-coco",
           imgUrl:
             "https://assets-global.website-files.com/5b4a8d1cabad384302b96f64/5b60c7862231dc553570e5a7_5b399a96b128b34aa3f56fce_VC_white_logo.png",
           name: "VITA COCO",
         },
         {
-          
           url: "girl-scouts",
           imgUrl:
             "https://pixy.org/download/1360455/",
           name: "GIRL SCOUTS",
         },
-
-
-
-
       ];
       data.forEach((element, index) => {
         $(".journal .content .work").append(`
               <article class="post reveal">
                                 <div class="info">
-                                  <a class="cta" href="${element.url}">
+                                  <a class="cta" href="${element.disabledReadmore ? `javascript:void(0)` : element.url}">
                                     <h2 class="title">${element.name}</h2>
-                                    <span class="read-more">read more</span></a
+                                    <span class="read-more ${element.disabledReadmore ? `none` : ``}">read more</span></a
                                   >
                                 </div>
                                 <div class="images">
@@ -4644,9 +4639,7 @@ window.addEventListener("load", function (e) {
     onLeaveCompleted: function () {
       !documentBody.classList.contains("easter-egg") &&
         documentBody.classList.contains("night-mode") &&
-        documentBody.classList.remove(""),
         documentBody.classList.remove("journal-post-page");
-        console.log(1111);
     },
   });
   JournalPostpage.init(), Barba.Pjax.start();

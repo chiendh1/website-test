@@ -11,6 +11,9 @@ hr {
   height: 0;
   overflow: visible;
 }
+.none {
+  display: none !important;
+}
 pre {
   font-family: monospace, monospace;
   font-size: 1em;
@@ -2866,8 +2869,8 @@ body.uiHover .ui .color-mode {
     opacity: 1;
   }
   body.navTop .ui .links ul {
-    transform: translate3d(0, calc(-90vh + 104px), 0);
-    transition-delay: 0s;
+    /* transform: translate3d(0, calc(-90vh + 104px), 0);
+    transition-delay: 0s; */
   }
   body.navTop .ui .links li {
     position: relative;
@@ -3164,7 +3167,7 @@ body:not(.home-page):not(.journal-page):not(.aboutShow)
     }
   }
   body:not(.home-page) .ui.outline .info {
-    opacity: 0;
+    opacity: 1;
     pointer-events: none;
   }
   body:not(.home-page).journal-post-page .ui.bottom .info .contact,
@@ -4058,7 +4061,8 @@ body.loading .journal {
 .journal-page .journal .date,
 .journal-page .journal .title {
   width: 100%;
-  font-family: Druk Wide Web;
+  /* font-family: Druk Wide Web; */
+  font-family: akzidenz-grotesk, sans-serif;
   font-weight: 500;
   font-style: normal;
   font-stretch: normal;
@@ -4255,4 +4259,13 @@ ul.wrap-result li {
 }
 .title-img {
   margin-bottom: 30px;
+}
+
+.home-page:not(.intro) .projectsLi.hover .projectContainer {
+  transform: rotateY(-35deg) translateZ(0) scale(1);
+  transition-duration: 1s;
+}
+
+body.night-mode.home-page:not(.ultra-mode):not(.intro):not(.outro) .projects.isHovering li.hover a{
+  color: #f2f2f2;
 }

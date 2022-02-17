@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-  <!-- Mirrored from vanholtz.co/work/push/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 30 Dec 2021 09:04:21 GMT -->
+  <!-- Mirrored from vanholtz.co/work/parliament/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 30 Dec 2021 09:04:36 GMT -->
   <head>
-    <title>MagicCo – AR/VR</title>
+    <title>MagicCo – Innovation Strategy</title>
     <meta
       name="description"
       content="The world's most experienced voice services agency focusing on strategy, design, and deployment of voice applications and systems."
@@ -14,7 +14,7 @@
     />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="index.html" />
-    <meta property="og:title" content="MagicCo – AR/VR" />
+    <meta property="og:title" content="MagicCo – Innovation Strategy" />
     <meta
       property="og:description"
       content="The world's most experienced voice services agency focusing on strategy, design, and deployment of voice applications and systems."
@@ -23,7 +23,7 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="MagicCo" />
     <meta name="twitter:creator" content="@OfficialMagicCo" />
-    <meta name="twitter:title" content="MagicCo – AR/VR" />
+    <meta name="twitter:title" content="MagicCo – Innovation Strategy" />
     <meta
       name="twitter:description"
       content="The world's most experienced voice services agency focusing on strategy, design, and deployment of voice applications and systems."
@@ -163,22 +163,17 @@
         font-stretch: normal;
       }
       h1,
-      h5,
       h6,
       strong {
         font-family: akzidenz-grotesk, sans-serif;
         font-weight: 500;
       }
       h1:first-of-type,
-      h5:first-of-type,
       h6:first-of-type {
         margin-top: 0;
       }
       h1 {
         font-size: 34px;
-      }
-      h5 {
-        font-size: 18px;
       }
       h6 {
         font-size: 16px;
@@ -330,71 +325,6 @@
       .parallax-vertical-mm-bt {
         transform: translateY(var(--transform-y));
       }
-      .module-copy {
-        padding: 15vh 10vw 0;
-        margin-left: auto;
-        margin-right: auto;
-        max-width: calc(1440px + 20vw);
-      }
-      .module-copy,
-      .module-copy .summary {
-        display: -ms-flexbox;
-        display: flex;
-        -ms-flex-pack: justify;
-        justify-content: space-between;
-      }
-      .module-copy .summary {
-        width: calc(100% - 170px);
-      }
-      .module-copy .col-1,
-      .module-copy .col-2 {
-        -ms-flex-preferred-size: 50%;
-        flex-basis: 50%;
-        padding-right: 30px;
-        font-size: 18px;
-        line-height: 1.4em;
-      }
-      .module-copy .col-1 p,
-      .module-copy .col-2 p {
-        margin-bottom: 0;
-      }
-      @media screen and (max-width: 1024px) {
-        .module-copy {
-          padding-top: 10vh;
-        }
-        .module-copy .col-1,
-        .module-copy .col-2 {
-          -ms-flex-preferred-size: 100%;
-          flex-basis: 100%;
-        }
-        .module-copy .col-2 {
-          margin-top: 1em;
-        }
-      }
-      @media screen and (max-width: 1023px) {
-        .module-copy .summary {
-          -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
-        }
-      }
-      @media screen and (max-width: 767px) {
-        .module-copy {
-          padding-left: 30px;
-          padding-right: 30px;
-        }
-        .module-copy .summary {
-          margin-top: 0;
-          width: 100%;
-        }
-        .module-copy .col-1,
-        .module-copy .col-2 {
-          font-size: 18px;
-          line-height: 1.4em;
-        }
-        .module-copy .col-2 {
-          margin-top: 5vw;
-        }
-      }
       .module-image {
         display: -ms-flexbox;
         display: flex;
@@ -408,6 +338,16 @@
       .module-image img {
         width: calc(100% - 200px);
         height: 100%;
+      }
+      .module-image .info {
+        -ms-flex-negative: 0;
+        flex-shrink: 0;
+        width: 170px;
+        margin-left: 30px;
+        line-height: 1.4em;
+      }
+      .module-image .title {
+        margin-bottom: 15px;
       }
       @media screen and (max-width: 1024px) {
         .module-image {
@@ -424,18 +364,113 @@
         .module-image img {
           width: 100%;
         }
+        .module-image .info {
+          margin-top: 5vw;
+          margin-left: 0;
+          width: 100%;
+          font-size: 16px;
+          line-height: 1.4em;
+        }
+        .module-image .title {
+          margin-bottom: 5vw;
+        }
       }
-      div .theme-reduce-top-padding,
-      section .theme-reduce-top-padding {
-        padding-top: 5vh;
+      .module-gallery {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        padding: 15vh 10vw 0;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: calc(1440px + 20vw);
       }
-      .reveal.module-copy .col-1,
-      .reveal.module-copy .col-2 {
-        opacity: 0;
-        transform: translateY(100px);
+      .module-gallery .gallery {
+        position: relative;
+        width: 100%;
+      }
+      .module-gallery .gallery video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        vertical-align: middle;
+      }
+      .module-gallery .info {
+        -ms-flex-negative: 0;
+        flex-shrink: 0;
+        width: 170px;
+        margin-left: 30px;
+        font-size: 12px;
+      }
+      .module-gallery .pagination {
+        margin-bottom: 20px;
+      }
+      .module-gallery .pagination button {
+        padding: 0;
+        margin: 0;
+        border: none;
+        border-radius: none;
+        background: none;
+        outline: none;
+      }
+      .module-gallery .pagination .btn-gallery-left {
+        transform: translateY(1px);
+      }
+      .module-gallery .pagination .current {
+        padding-left: 10px;
+      }
+      .module-gallery .pagination .total {
+        padding-right: 10px;
+      }
+      @media screen and (max-width: 1024px) {
+        .module-gallery {
+          padding-top: 20vw;
+        }
+      }
+      @media screen and (max-width: 767px) {
+        .module-gallery {
+          -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+          padding-top: 15vw;
+          padding-left: 30px;
+          padding-right: 30px;
+        }
+        .module-gallery .info {
+          margin-top: 5vw;
+          margin-left: 0;
+          width: 100%;
+        }
+        .module-gallery .pagination {
+          width: 50%;
+          float: right;
+          margin-bottom: 5vw;
+          text-align: right;
+        }
       }
       .reveal.module-image .media {
         opacity: 0;
+      }
+      .reveal.module-image .info {
+        perspective: 250px;
+        perspective-origin: 0 0;
+      }
+      .reveal.module-image .title {
+        opacity: 0;
+        transform: rotateY(35deg) translateZ(0);
+        transform-origin: left center;
+      }
+      .reveal.module-gallery .media {
+        opacity: 0;
+      }
+      .reveal.module-gallery .info {
+        perspective: 250px;
+        perspective-origin: 0 0;
+      }
+      .reveal.module-gallery .pagination {
+        opacity: 0;
+        transform: rotateY(35deg) translateZ(0);
+        transform-origin: left center;
       }
       .ui {
         display: -ms-flexbox;
@@ -1091,18 +1126,6 @@
         width: 170px;
         margin-left: 30px;
       }
-      .work-page .case-study .intro .credits h5 {
-        margin-bottom: 10px;
-      }
-      .work-page .case-study .intro .credits h6 {
-        font-weight: 300;
-      }
-      .work-page .case-study .intro .credits a {
-        display: block;
-        width: 100%;
-        color: #000;
-        text-decoration: none;
-      }
       .work-page .case-study .intro .credits span {
         display: block;
       }
@@ -1234,7 +1257,10 @@
               <div class="content">
                 <section
                   class="hero"
-                  style="background-image: url('../../img/work/push/hero.png')"
+                  style="
+                    background-image: url('../../img/work/parliament/hero.jpg');
+                    background-position: left bottom;
+                  "
                 >
                   <div
                     class="title-container parallax-vertical-mm-bt"
@@ -1242,50 +1268,48 @@
                     data-to="25%"
                     data-timing="quadOut"
                   >
-                    <h1 class="title">AR/VR</h1>
+                    <h1 class="title">Innovation<br/>Strategy</h1>
                   </div>
                 </section>
                 <section class="intro reveal">
                   <div class="credits">
-                    <h5>
-                      <a
-                        href="https://www.pushhere.com/"
-                        target="_blank"
-                        rel="noopener"
-                        >www.pushhere.com</a
-                      >
-                    </h5>
-                    <h6>Push</h6>
-                    <span class="title">Agency:</span> <span>MagicCo </span
-                    ><span class="title">Full Stack Developer:</span>
+                    <span class="title">Agency:</span> <span>Parliament </span
+                    ><span class="title">Front-end Developer:</span>
+                    <span>MagicCo </span
+                    ><span class="title">Back-end Developer:</span>
                     <span>MagicCo</span>
                   </div>
                   <div class="summary reveal">
                     <div class="col-1">
                       <p>
                         <strong
-                          >Push is an award winning design agency based in
-                          Orlando,&nbsp;Florida.</strong
+                          >Parliament is a design agency located
+                          in&nbsp;PDX.</strong
                         >
                       </p>
                       <p>
-                        <strong
-                          >They specialize in the restaurant, retail, and
-                          education&nbsp;industries.</strong
-                        >
+                        They target specific industries they've defined as:
+                        Things with Wheels, Hook & Bullet, The Great Outdoors,
+                        and Surf. They can really do it&nbsp;all.
+                      </p>
+                      <p>
+                        Parliament has a beautiful collection of photography
+                        assets and the website does a really nice job showcasing
+                        that content, especially in their Journal&nbsp;posts.
                       </p>
                     </div>
                     <div class="col-2">
                       <p>
-                        With high expectations Push came to us to develop and
-                        bring life to their new&nbsp;website.
+                        Pre-designed and developed content modules give the
+                        website a ton of flexibility. They all have available
+                        layout, theme, and style&nbsp;options too.
                       </p>
                       <p>
-                        Maintainability was also of great importance. They
-                        wanted to be able to display new work, update their
-                        talented group of pushers, post career opportunities,
-                        share insights, and have an open line for
-                        new&nbsp;business.
+                        There are behind the scenes features like custom landing
+                        pages that are used to target potential clients. Also,
+                        an entire job applicant management system where you can
+                        rate each candidate, write notes, and have easy access
+                        to their&nbsp;infomation.
                       </p>
                     </div>
                   </div>
@@ -1293,51 +1317,139 @@
                 <section class="module-image reveal">
                   <img
                     class="media"
-                    src="../../img/work/push/home-full.jpg"
-                    alt="Home page"
-                  />
-                </section>
-                <section class="module-copy reveal theme-reduce-top-padding">
-                  <div class="summary">
-                    <div class="col-1">
-                      <p>
-                        The website is centered around the concept of colors and
-                        tiles. The home page allows for random or selected
-                        content to be&nbsp;showcased.
-                      </p>
-                    </div>
-                    <div class="col-2">
-                      <p>
-                        Tiles have an idle animation to display additional
-                        information. They also rise and pivot in 3d as you hover
-                        over&nbsp;each.
-                      </p>
-                    </div>
-                  </div>
-                </section>
-                <section class="module-image reveal">
-                  <img
-                    class="media"
-                    src="../../img/work/push/nav.jpg"
-                    alt="Navigation"
+                    src="../../img/work/parliament/home-full.jpg"
+                    alt="Home"
                   />
                   <div class="info">
-                    <h6 class="title">
-                      Push the logo to access the navigation&nbsp;menu.
-                    </h6>
+                    <h6 class="title">Home</h6>
                     <p>
-                      On mobile the homepage is the navigation
-                      menu&mdash;getting you to what you're looking
-                      for&nbsp;faster.
+                      The Parliament website is filled with beautiful hi-res
+                      photography, content blocks, and
+                      excellent&nbsp;typography.
                     </p>
                   </div>
                 </section>
-                <section class="module-image reveal">
-                  <img
-                    class="media"
-                    src="../../img/work/push/work-full.jpg"
-                    alt="Work"
-                  />
+                <section class="module-gallery reveal">
+                  <div class="media gallery">
+                    <video muted autoplay playsinline loop>
+                      <source
+                        src="../../video/work/parliament/parliament-nav-01.mp4"
+                        type="video/mp4"
+                      /></video
+                    ><video muted autoplay playsinline loop>
+                      <source
+                        src="../../video/work/parliament/parliament-nav-02.mp4"
+                        type="video/mp4"
+                      />
+                    </video>
+                  </div>
+                  <div class="info">
+                    <div class="pagination">
+                      <button class="btn-gallery-left" aria-label="Previous">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="19"
+                          height="8"
+                          viewBox="0 0 19 8"
+                        >
+                          <path
+                            d="M1.94974747,3 L19,3 L19,4 L1.70710678,4 L4.24264069,6.53553391 L3.53553391,7.24264069 L-2.22044605e-16,3.62132034 L3.53553391,0 L4.24264069,0.707106781 L1.94974747,3 Z"
+                          />
+                        </svg>
+                      </button>
+                      <span class="current"></span> /
+                      <span class="total"></span>
+                      <button class="btn-gallery-right" aria-label="Next">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="19"
+                          height="8"
+                          viewBox="0 0 19 8"
+                        >
+                          <path
+                            d="M1.94974747,3 L19,3 L19,4 L1.70710678,4 L4.24264069,6.53553391 L3.53553391,7.24264069 L-2.22044605e-16,3.62132034 L3.53553391,0 L4.24264069,0.707106781 L1.94974747,3 Z"
+                            transform="matrix(-1 0 0 1 19 0)"
+                          />
+                        </svg>
+                      </button>
+                    </div>
+                    <h6 class="title">Navigation Menu</h6>
+                    <div class="description">
+                      <p>
+                        Making full use of the available screen space we
+                        displayed links on the right, but also a randomly
+                        selected CTA on the&nbsp;left.
+                      </p>
+                      <p>
+                        New CTAs can be made and weighted so that certain ones
+                        show up more often than&nbsp;others.
+                      </p>
+                    </div>
+                  </div>
+                </section>
+                <section class="module-gallery reveal">
+                  <div class="media gallery">
+                    <img
+                      src="../../img/work/parliament/carousel_01-slide_01.jpg"
+                      alt="Work Content Module"
+                    />
+                    <img
+                      src="../../img/work/parliament/carousel_01-slide_02.jpg"
+                      alt="Image & Copy Content Module"
+                    />
+                    <img
+                      src="../../img/work/parliament/carousel_01-slide_03.jpg"
+                      alt="Image Content Module"
+                    />
+                    <img
+                      src="../../img/work/parliament/carousel_01-slide_04.jpg"
+                      alt="CTA Content Module"
+                    />
+                    <img
+                      src="../../img/work/parliament/carousel_01-slide_05.jpg"
+                      alt="Multi-Image Content Module"
+                    />
+                  </div>
+                  <div class="info">
+                    <div class="pagination">
+                      <button class="btn-gallery-left" aria-label="Previous">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="19"
+                          height="8"
+                          viewBox="0 0 19 8"
+                        >
+                          <path
+                            d="M1.94974747,3 L19,3 L19,4 L1.70710678,4 L4.24264069,6.53553391 L3.53553391,7.24264069 L-2.22044605e-16,3.62132034 L3.53553391,0 L4.24264069,0.707106781 L1.94974747,3 Z"
+                          />
+                        </svg>
+                      </button>
+                      <span class="current"></span> /
+                      <span class="total"></span>
+                      <button class="btn-gallery-right" aria-label="Next">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="19"
+                          height="8"
+                          viewBox="0 0 19 8"
+                        >
+                          <path
+                            d="M1.94974747,3 L19,3 L19,4 L1.70710678,4 L4.24264069,6.53553391 L3.53553391,7.24264069 L-2.22044605e-16,3.62132034 L3.53553391,0 L4.24264069,0.707106781 L1.94974747,3 Z"
+                            transform="matrix(-1 0 0 1 19 0)"
+                          />
+                        </svg>
+                      </button>
+                    </div>
+                    <h6 class="title">Content Modules</h6>
+                    <div class="description">
+                      <p>
+                        There are at least a dozen content modules ready to use
+                        on any page, in any order, with several styling and
+                        layout options to make pages unique from
+                        one&nbsp;another.
+                      </p>
+                    </div>
+                  </div>
                 </section>
                 <section
                   class="module-quote reveal parallax-vertical-mm-bt"
@@ -1348,208 +1460,66 @@
                   <blockquote>
                     <span class="quote-left">&ldquo;</span>
                     <p>
-                      Simply put Eric can take a good design and turn it into
-                      something&nbsp;great.
+                      Eric is that rare developer who respects the integrity of
+                      a given design, yet knows the best way to enhance user
+                      experience and systematize a site’s&nbsp;structure.
                     </p>
                     <p>
-                      He is one of those unique people that can think both
-                      creatively and analytically to make projects that are
-                      internet famous and built like&nbsp;tanks.
-                    </p>
-                    <p>
-                      More importantly he is a great guy with a good heart that
-                      wont let you&nbsp;down.
+                      He actively contributes to brainstorms and elevates every
+                      project he’s involved&nbsp;with.
                     </p>
                   </blockquote>
                   <span class="attribution"
-                    >&mdash; Mark Unger, Partner & Chief Creative
-                    Officer,&nbsp;Push</span
+                    >&mdash; Chris Erickson, Creative Director & Founding
+                    Partner,&nbsp;Parliament</span
                   >
                 </section>
-                <section class="module-gallery reveal">
-                  <div class="media gallery">
-                    <img
-                      src="../../img/work/push/carousel_01-slide_01.jpg"
-                      alt="Hero"
-                    />
-                    <img
-                      src="../../img/work/push/carousel_01-slide_02.jpg"
-                      alt="Experience"
-                    />
-                    <img
-                      src="../../img/work/push/carousel_01-slide_03.jpg"
-                      alt="Process"
-                    />
-                    <img
-                      src="../../img/work/push/carousel_01-slide_04.jpg"
-                      alt="Convergence Model"
-                    />
-                    <img
-                      src="../../img/work/push/carousel_01-slide_05.jpg"
-                      alt="Experience"
-                    />
-                    <img
-                      src="../../img/work/push/carousel_01-slide_06.jpg"
-                      alt="Image & Copy"
-                    />
-                  </div>
+                <section class="module-image reveal">
+                  <img
+                    class="media"
+                    src="../../img/work/parliament/apparel-full.jpg"
+                    alt="Product"
+                  />
                   <div class="info">
-                    <div class="pagination">
-                      <button class="btn-gallery-left" aria-label="Previous">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="19"
-                          height="8"
-                          viewBox="0 0 19 8"
-                        >
-                          <path
-                            d="M1.94974747,3 L19,3 L19,4 L1.70710678,4 L4.24264069,6.53553391 L3.53553391,7.24264069 L-2.22044605e-16,3.62132034 L3.53553391,0 L4.24264069,0.707106781 L1.94974747,3 Z"
-                          />
-                        </svg>
-                      </button>
-                      <span class="current"></span> /
-                      <span class="total"></span>
-                      <button class="btn-gallery-right" aria-label="Next">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="19"
-                          height="8"
-                          viewBox="0 0 19 8"
-                        >
-                          <path
-                            d="M1.94974747,3 L19,3 L19,4 L1.70710678,4 L4.24264069,6.53553391 L3.53553391,7.24264069 L-2.22044605e-16,3.62132034 L3.53553391,0 L4.24264069,0.707106781 L1.94974747,3 Z"
-                            transform="matrix(-1 0 0 1 19 0)"
-                          />
-                        </svg>
-                      </button>
-                    </div>
-                    <div class="description">
-                      <p>
-                        &mdash; Hero<br />&mdash; Experience<br />&mdash;
-                        Process<br />&mdash; Convergence Model<br />&mdash;
-                        Experience<br />&mdash; Image & Copy Module
-                      </p>
-                    </div>
-                  </div>
-                </section>
-                <section class="module-copy reveal theme-reduce-top-padding">
-                  <div class="summary">
-                    <div class="col-1">
-                      <p>
-                        Many content modules were developed to allow for
-                        customizeable layouts and different ways of presenting
-                        imagery and&nbsp;copy.
-                      </p>
-                    </div>
+                    <h6 class="title">Online Store</h6>
+                    <p>
+                      We used Craft Commerce to power the shop which gave us the
+                      flexibility to completely customize the&nbsp;experience.
+                    </p>
                   </div>
                 </section>
                 <section class="module-image reveal">
                   <img
                     class="media"
-                    src="../../img/work/push/pushers-full.jpg"
-                    alt="Pushers"
+                    src="../../img/work/parliament/product-full.jpg"
+                    alt="Product"
                   />
-                </section>
-                <section class="module-gallery reveal">
-                  <div class="media gallery">
-                    <img
-                      src="../../img/work/push/carousel_02-slide_01.jpg"
-                      alt="Pusher"
-                    />
-                    <img
-                      src="../../img/work/push/carousel_02-slide_02.jpg"
-                      alt="Insight"
-                    />
-                    <img
-                      src="../../img/work/push/carousel_02-slide_03.jpg"
-                      alt="Contact"
-                    />
-                  </div>
                   <div class="info">
-                    <div class="pagination">
-                      <button class="btn-gallery-left" aria-label="Previous">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="19"
-                          height="8"
-                          viewBox="0 0 19 8"
-                        >
-                          <path
-                            d="M1.94974747,3 L19,3 L19,4 L1.70710678,4 L4.24264069,6.53553391 L3.53553391,7.24264069 L-2.22044605e-16,3.62132034 L3.53553391,0 L4.24264069,0.707106781 L1.94974747,3 Z"
-                          />
-                        </svg>
-                      </button>
-                      <span class="current"></span> /
-                      <span class="total"></span>
-                      <button class="btn-gallery-right" aria-label="Next">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="19"
-                          height="8"
-                          viewBox="0 0 19 8"
-                        >
-                          <path
-                            d="M1.94974747,3 L19,3 L19,4 L1.70710678,4 L4.24264069,6.53553391 L3.53553391,7.24264069 L-2.22044605e-16,3.62132034 L3.53553391,0 L4.24264069,0.707106781 L1.94974747,3 Z"
-                            transform="matrix(-1 0 0 1 19 0)"
-                          />
-                        </svg>
-                      </button>
-                    </div>
-                    <h6 class="title">
-                      Pusher details, a bold collection of insights, and modular
-                      contact&nbsp;pages.
-                    </h6>
-                    <div class="description">
-                      <p>
-                        &mdash; Pusher<br />&mdash; Insight<br />&mdash; Contact
-                      </p>
-                    </div>
+                    <h6 class="title">Product Detail</h6>
+                    <p>
+                      Featuring a big bold buy button with built in
+                      functionality to display a close up product shot on hover
+                      with size and color&nbsp;availability.
+                    </p>
+                    <p>
+                      The team wrote up some ridiculous product descriptions and
+                      is reason enough to hit that buy&nbsp;button.
+                    </p>
                   </div>
                 </section>
-                <section class="module-gallery reveal">
-                  <div class="media gallery">
-                    <img
-                      src="../../img/work/push/carousel_03-slide_01.jpg"
-                      alt="Mobile"
+                <section class="module-video reveal">
+                  <video muted autoplay playsinline loop>
+                    <source
+                      src="../../video/work/parliament/parliament-shop.mp4"
+                      type="video/mp4"
                     />
-                    <img
-                      src="../../img/work/push/carousel_03-slide_02.jpg"
-                      alt="Mobile"
-                    />
-                  </div>
+                  </video>
                   <div class="info">
-                    <div class="pagination">
-                      <button class="btn-gallery-left" aria-label="Previous">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="19"
-                          height="8"
-                          viewBox="0 0 19 8"
-                        >
-                          <path
-                            d="M1.94974747,3 L19,3 L19,4 L1.70710678,4 L4.24264069,6.53553391 L3.53553391,7.24264069 L-2.22044605e-16,3.62132034 L3.53553391,0 L4.24264069,0.707106781 L1.94974747,3 Z"
-                          />
-                        </svg>
-                      </button>
-                      <span class="current"></span> /
-                      <span class="total"></span>
-                      <button class="btn-gallery-right" aria-label="Next">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="19"
-                          height="8"
-                          viewBox="0 0 19 8"
-                        >
-                          <path
-                            d="M1.94974747,3 L19,3 L19,4 L1.70710678,4 L4.24264069,6.53553391 L3.53553391,7.24264069 L-2.22044605e-16,3.62132034 L3.53553391,0 L4.24264069,0.707106781 L1.94974747,3 Z"
-                            transform="matrix(-1 0 0 1 19 0)"
-                          />
-                        </svg>
-                      </button>
-                    </div>
-                    <h6 class="title">
-                      All the bells and whistles can be found on the&nbsp;go.
-                    </h6>
+                    <h6 class="title">Custom shopping UI</h6>
+                    <p>
+                      Beautiful product shots, add to cart animation, and dark
+                      themed&nbsp;cart.
+                    </p>
                   </div>
                 </section>
                 <section class="module-copy reveal theme-reduce-top-padding">
@@ -1557,32 +1527,27 @@
                     <div class="col-1">
                       <p>
                         <strong
-                          >Push, a powerhouse that's been pushing brands to
-                          their full potential for over 21&nbsp;years.</strong
+                          >Parliament has a strong grip on their brand identity
+                          and know exactly who they&nbsp;are.</strong
                         >
                       </p>
                       <p>
-                        They've gone so far as to understand the business that
-                        one of the partners opened and runs a successful
-                        multi-location&nbsp;restaurant.
+                        The website is packed full of features – the fully
+                        customizable pages and content, fullscreen navigation
+                        and weighted CTAs, targeted landing pages, a custom
+                        store, and the applicant management&nbsp;system.
                       </p>
                     </div>
                     <div class="col-2">
                       <p>
-                        If you're in Orlando be sure to grab a bite at one of
-                        the two
-                        <a
-                          href="https://www.hubblybubblyfalafel.com/"
-                          target="_blank"
-                          rel="noopener"
-                          >Hubbly Bubbly</a
-                        >
-                        locations.
+                        They've been known to host happy hours to anyone who
+                        wants to hang. Definitely stop by and say hi to these
+                        rad dudes if you're in the&nbsp;area.
                       </p>
                       <p>
                         Like this project and want to chat about what we could
                         do for you?
-                        <a href="mailto:hello@vanholtz.co">Holler!</a>
+                        <a href="mailto:hello@vanholtz.co">Say&nbsp;hello!</a>
                       </p>
                     </div>
                   </div>
@@ -1593,9 +1558,9 @@
                   data-to="0%"
                   data-timing="quadOut"
                 >
-                  <a href="../onxmaps/"
+                  <a href="../product-rd/"
                     ><h2 class="next-project">next project</h2>
-                    <span class="project-name">Hardware</span></a
+                    <span class="project-name">Product<br/>R+D</span></a
                   >
                 </section>
               </div>
@@ -1656,5 +1621,5 @@
       gtag("config", "UA-120921934-1");
     </script>
   </body>
-  <!-- Mirrored from vanholtz.co/work/push/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 30 Dec 2021 09:04:26 GMT -->
+  <!-- Mirrored from vanholtz.co/work/parliament/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 30 Dec 2021 09:04:40 GMT -->
 </html>

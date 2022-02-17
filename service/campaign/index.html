@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-  <!-- Mirrored from vanholtz.co/work/thebrigade/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 30 Dec 2021 09:04:17 GMT -->
+  <!-- Mirrored from vanholtz.co/work/iconmotosports/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 30 Dec 2021 09:04:31 GMT -->
   <head>
-    <title>MagicCo – The Metaverse</title>
+    <title>MagicCo – Omni channel - Campaigns</title>
     <meta
       name="description"
       content="The world's most experienced voice services agency focusing on strategy, design, and deployment of voice applications and systems."
@@ -14,7 +14,7 @@
     />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="index.html" />
-    <meta property="og:title" content="MagicCo – The Metaverse" />
+    <meta property="og:title" content="MagicCo – Omni channel - Campaigns" />
     <meta
       property="og:description"
       content="The world's most experienced voice services agency focusing on strategy, design, and deployment of voice applications and systems."
@@ -23,7 +23,7 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="MagicCo" />
     <meta name="twitter:creator" content="@OfficialMagicCo" />
-    <meta name="twitter:title" content="MagicCo – The Metaverse" />
+    <meta name="twitter:title" content="MagicCo – Omni channel - Campaigns" />
     <meta
       name="twitter:description"
       content="The world's most experienced voice services agency focusing on strategy, design, and deployment of voice applications and systems."
@@ -330,112 +330,90 @@
       .parallax-vertical-mm-bt {
         transform: translateY(var(--transform-y));
       }
-      .module-copy {
+      .module-gallery {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
         padding: 15vh 10vw 0;
         margin-left: auto;
         margin-right: auto;
         max-width: calc(1440px + 20vw);
       }
-      .module-copy,
-      .module-copy .summary {
-        display: -ms-flexbox;
-        display: flex;
-        -ms-flex-pack: justify;
-        justify-content: space-between;
+      .module-gallery .gallery {
+        position: relative;
+        width: 100%;
       }
-      .module-copy .summary {
-        width: calc(100% - 170px);
+      .module-gallery .gallery img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        vertical-align: middle;
       }
-      .module-copy .col-1,
-      .module-copy .col-2 {
-        -ms-flex-preferred-size: 50%;
-        flex-basis: 50%;
-        padding-right: 30px;
-        font-size: 18px;
-        line-height: 1.4em;
+      .module-gallery .info {
+        -ms-flex-negative: 0;
+        flex-shrink: 0;
+        width: 170px;
+        margin-left: 30px;
+        font-size: 12px;
       }
-      .module-copy .col-1 p,
-      .module-copy .col-2 p {
-        margin-bottom: 0;
+      .module-gallery .pagination {
+        margin-bottom: 20px;
+      }
+      .module-gallery .pagination button {
+        padding: 0;
+        margin: 0;
+        border: none;
+        border-radius: none;
+        background: none;
+        outline: none;
+      }
+      .module-gallery .pagination .btn-gallery-left {
+        transform: translateY(1px);
+      }
+      .module-gallery .pagination .current {
+        padding-left: 10px;
+      }
+      .module-gallery .pagination .total {
+        padding-right: 10px;
       }
       @media screen and (max-width: 1024px) {
-        .module-copy {
-          padding-top: 10vh;
-        }
-        .module-copy .col-1,
-        .module-copy .col-2 {
-          -ms-flex-preferred-size: 100%;
-          flex-basis: 100%;
-        }
-        .module-copy .col-2 {
-          margin-top: 1em;
-        }
-      }
-      @media screen and (max-width: 1023px) {
-        .module-copy .summary {
-          -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
+        .module-gallery {
+          padding-top: 20vw;
         }
       }
       @media screen and (max-width: 767px) {
-        .module-copy {
-          padding-left: 30px;
-          padding-right: 30px;
-        }
-        .module-copy .summary {
-          margin-top: 0;
-          width: 100%;
-        }
-        .module-copy .col-1,
-        .module-copy .col-2 {
-          font-size: 18px;
-          line-height: 1.4em;
-        }
-        .module-copy .col-2 {
-          margin-top: 5vw;
-        }
-      }
-      .module-image {
-        display: -ms-flexbox;
-        display: flex;
-        -ms-flex-pack: justify;
-        justify-content: space-between;
-        padding: 15vh 10vw 0;
-        margin-left: auto;
-        margin-right: auto;
-        max-width: calc(1440px + 20vw);
-      }
-      .module-image img {
-        width: calc(100% - 200px);
-        height: 100%;
-      }
-      @media screen and (max-width: 1024px) {
-        .module-image {
+        .module-gallery {
+          -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
           padding-top: 15vw;
-        }
-      }
-      @media screen and (max-width: 767px) {
-        .module-image {
-          -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
           padding-left: 30px;
           padding-right: 30px;
         }
-        .module-image img {
+        .module-gallery .info {
+          margin-top: 5vw;
+          margin-left: 0;
           width: 100%;
         }
+        .module-gallery .pagination {
+          width: 50%;
+          float: right;
+          margin-bottom: 5vw;
+          text-align: right;
+        }
       }
-      div .theme-reduce-top-padding,
-      section .theme-reduce-top-padding {
-        padding-top: 5vh;
-      }
-      .reveal.module-copy .col-1,
-      .reveal.module-copy .col-2 {
+      .reveal.module-gallery .media {
         opacity: 0;
-        transform: translateY(100px);
       }
-      .reveal.module-image .media {
+      .reveal.module-gallery .info {
+        perspective: 250px;
+        perspective-origin: 0 0;
+      }
+      .reveal.module-gallery .pagination {
         opacity: 0;
+        transform: rotateY(35deg) translateZ(0);
+        transform-origin: left center;
       }
       .ui {
         display: -ms-flexbox;
@@ -1206,101 +1184,7 @@
   </head>
   <body class="work-page navTop night-mode loading first-load">
     <header class="ui">
-      <a class="logo" href="../../"
-        ><span class="slideUp"><span>Magic</span> </span
-        ><span class="slideUp"><span>Co.</span> </span></a
-      ><button class="mobile-nav" type="button" role="button" aria-label="Menu">
-        <span class="mobile-nav-box"
-          ><span class="mobile-nav-inner"></span
-        ></span>
-      </button>
-      <div class="info">
-        <div class="left">
-          <div class="contact">
-            <ul>
-              <li>Studio of MagicCo</li>
-              <li>Web Developer</li>
-            </ul>
-            <ul>
-              <li>Portland Oregon</li>
-              <li class="email">
-                <a href="mailto:hello@vanholtz.co"
-                  ><strong>hello@vanholtz.co</strong></a
-                >
-              </li>
-            </ul>
-          </div>
-          <nav class="links">
-            <ul>
-              <li class="about-li">
-                <button class="link" aria-label="About">
-                  <span>01</span> <strong>about</strong>
-                </button>
-              </li>
-              <li class="journal-li">
-                <a href="../../journal/"
-                  ><span>02</span> <strong>journal</strong></a
-                >
-              </li>
-            </ul>
-          </nav>
-        </div>
-        <div class="right">
-          <nav class="social">
-            <ul>
-              <li>
-                <a
-                  class="no-barba"
-                  href="https://www.twitter.com/vanholtzco/"
-                  target="_blank"
-                  rel="noopener"
-                  ><span>03</span> <strong>twitter</strong></a
-                >
-              </li>
-              <li>
-                <a
-                  class="no-barba"
-                  href="https://www.instagram.com/vanholtzco/"
-                  target="_blank"
-                  rel="noopener"
-                  ><span>04</span> <strong>instagram</strong></a
-                >
-              </li>
-              <li>
-                <a
-                  class="no-barba"
-                  href="https://www.linkedin.com/company/vanholtzco/"
-                  target="_blank"
-                  rel="noopener"
-                  ><span>05</span> <strong>linkedin</strong></a
-                >
-              </li>
-            </ul>
-          </nav>
-          <div class="credits">
-            <div class="label">design</div>
-            <div class="credit-link">
-              <a
-                class="no-barba"
-                href="https://www.behance.net/feint_studio"
-                target="_blank"
-                rel="noopener"
-                ><strong>feint</strong></a
-              >
-            </div>
-          </div>
-          <div class="color-mode">
-            <div class="dot"></div>
-            <button class="night-mode" aria-label="Night Color Mode"></button>
-            <button class="light-mode" aria-label="Light Color Mode"></button>
-            <button class="ultra-mode" aria-label="Ultra Color Mode"></button>
-            <div class="circle"></div>
-          </div>
-        </div>
-        <div class="copyright">
-          Copyright © 2018 MagicCo. All rights reserved.
-        </div>
-      </div>
+      <!-- Include file here -->
     </header>
     <div
       class="curtain"
@@ -1324,81 +1208,146 @@
             <div class="container">
               <div class="content">
                 <section
-                  class="hero dark"
+                  class="hero"
                   style="
-                    background-image: url('../../img/work/thebrigade/hero.png');
-                    background-position: center center;
+                    background-image: url('../../img/work/iconmotosports/hero.jpg');
                   "
                 >
                   <div
                     class="title-container parallax-vertical-mm-bt"
-                    data-from="-35%"
+                    data-from="-27%"
                     data-to="25%"
                     data-timing="quadOut"
                   >
-                    <h1 class="title">The<br />Metaverse</h1>
+                    <h1 class="title">Omni channel<br />Campaigns</h1>
                   </div>
                 </section>
                 <section class="intro reveal">
                   <div class="credits">
                     <h5>
                       <a
-                        href="https://www.thisisthebrigade.com/"
+                        href="http://www.rideicon.com/"
                         target="_blank"
                         rel="noopener"
-                        >www.thisisthebrigade.com</a
+                        >www.rideicon.com </a
+                      ><a
+                        href="http://www.icon1000.com/"
+                        target="_blank"
+                        rel="noopener"
+                        >www.icon1000.com </a
+                      ><a
+                        href="http://www.iconraiden.com/"
+                        target="_blank"
+                        rel="noopener"
+                        >www.iconraiden.com</a
                       >
                     </h5>
-                    <h6>The Metaverse</h6>
-                    <span class="title">Agency:</span> <span>MagicCo </span
-                    ><span class="title">Full Stack Developer:</span>
+                    <h6>Icon Motosports</h6>
+                    <span class="title">Agencies:</span>
+                    <span>Parliment<br />Built </span
+                    ><span class="title">Lead Front-end Developer:</span>
+                    <span>MagicCo </span
+                    ><span class="title">Lead Back-end Developer:</span>
                     <span>MagicCo</span>
                   </div>
                   <div class="summary reveal">
                     <div class="col-1">
                       <p>
                         <strong
-                          >The Brigade is a digital agency in&nbsp;PDX.</strong
+                          >Icon is a Portland Oregon based company and industry
+                          leader in protective motorcycle&nbsp;gear.</strong
                         >
                       </p>
                       <p>
-                        The website was designed with sharp lines, angles and
-                        extended backgrounds. Its goal was for a fast, precise,
-                        and moody&nbsp;feel.
+                        We built a website that could showcase their inspired
+                        product design, bikes, videos, and more with all of the
+                        speed and attitude of their brand and&nbsp;riders.
                       </p>
                     </div>
                     <div class="col-2">
                       <p>
-                        The Brigade's main priority for the new website was
-                        having it powered by a CMS so that anyone on the team
-                        can make&nbsp;updates.
+                        With seasonal product releases, epic video productions,
+                        and limiter stories there are no dead ends to the amount
+                        of content on the&nbsp;site.
+                      </p>
+                      <p>
+                        The Icon website is the hub of product information for
+                        their customers, brick & mortar and
+                        online&nbsp;retailers.
                       </p>
                     </div>
                   </div>
                 </section>
-                <section class="module-image reveal">
-                  <img
-                    class="media"
-                    src="../../img/work/thebrigade/home-full.jpg"
-                    alt="Home Full"
-                  />
+                <section class="module-gallery reveal">
+                  <div class="media gallery">
+                    <img
+                      src="../../img/work/iconmotosports/carousel_01-slide_01.jpg"
+                      alt="Icon"
+                    />
+                    <img
+                      src="../../img/work/iconmotosports/carousel_01-slide_02.jpg"
+                      alt="Icon 1000"
+                    />
+                    <img
+                      src="../../img/work/iconmotosports/carousel_01-slide_03.jpg"
+                      alt="Raiden"
+                    />
+                  </div>
+                  <div class="info">
+                    <div class="pagination">
+                      <button class="btn-gallery-left" aria-label="Previous">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="19"
+                          height="8"
+                          viewBox="0 0 19 8"
+                        >
+                          <path
+                            d="M1.94974747,3 L19,3 L19,4 L1.70710678,4 L4.24264069,6.53553391 L3.53553391,7.24264069 L-2.22044605e-16,3.62132034 L3.53553391,0 L4.24264069,0.707106781 L1.94974747,3 Z"
+                          />
+                        </svg>
+                      </button>
+                      <span class="current"></span> /
+                      <span class="total"></span>
+                      <button class="btn-gallery-right" aria-label="Next">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="19"
+                          height="8"
+                          viewBox="0 0 19 8"
+                        >
+                          <path
+                            d="M1.94974747,3 L19,3 L19,4 L1.70710678,4 L4.24264069,6.53553391 L3.53553391,7.24264069 L-2.22044605e-16,3.62132034 L3.53553391,0 L4.24264069,0.707106781 L1.94974747,3 Z"
+                            transform="matrix(-1 0 0 1 19 0)"
+                          />
+                        </svg>
+                      </button>
+                    </div>
+                    <h6 class="title">Three websites in one.</h6>
+                    <div class="description">
+                      <p>
+                        &mdash; Icon Motosports<br />&mdash; Icon 1000<br />&mdash;
+                        Raiden
+                      </p>
+                    </div>
+                  </div>
                 </section>
                 <section class="module-copy reveal theme-reduce-top-padding">
                   <div class="summary">
                     <div class="col-1">
                       <p>
-                        A big development challenge was allowing for backgrounds
-                        to overflow the page content, angled clip paths,
-                        animated lines, images, and text all intersecting at
-                        just the right&nbsp;spots.
+                        Icon Motosports is comprised of two additional brands
+                        Icon 1000 and Raiden. Each is geared towards a specific
+                        theme – street, modern, and adventure. All three brands
+                        needed to be able to live on their own while still
+                        being&nbsp;Icon.
                       </p>
                     </div>
                     <div class="col-2">
                       <p>
-                        All of this while still being responsive, and looking
-                        great on any device. The design encourages the viewer to
-                        scroll down the page, and provides a nice flow
-                        between&nbsp;content.
+                        We developed three websites under one code base that are
+                        all functionally the same, but each being styled
+                        independently from one&nbsp;another.
                       </p>
                     </div>
                   </div>
@@ -1406,15 +1355,19 @@
                 <section class="module-image reveal">
                   <img
                     class="media"
-                    src="../../img/work/thebrigade/work-full.jpg"
-                    alt="Home Full"
+                    src="../../img/work/iconmotosports/home_full.jpg"
+                    alt="Home page"
                   />
                   <div class="info">
-                    <h6 class="title">Work showcase</h6>
+                    <h6 class="title">Home</h6>
                     <p>
-                      The work page layout allows for a hierarchy of projects
-                      that can draw attention to the latest and greatest by
-                      The&nbsp;Brigade.
+                      Icon has the ability to adjust the layout and order of
+                      most any page on the&nbsp;website.
+                    </p>
+                    <p>
+                      As seen on the homepage there's a newsletter sign up,
+                      announcement, featured collections, product categories,
+                      career listing, and recent limiter&nbsp;posts.
                     </p>
                   </div>
                 </section>
@@ -1427,45 +1380,78 @@
                   <blockquote>
                     <span class="quote-left">&ldquo;</span>
                     <p>
-                      We love working with Eric because he: nails the quality,
-                      delivers thoughtfully executed code, and is a pleasure to
-                      work&nbsp;with.
+                      Our previous system took a team of designers, image
+                      processors, and IT professionals to update&nbsp;content.
                     </p>
                     <p>
-                      In short, we trust him with our most
-                      important&nbsp;clients.
+                      Now, we have a dedicated staff of one to manage all
+                      content&nbsp;updates.
                     </p>
                   </blockquote>
                   <span class="attribution"
-                    >&mdash; Ben Fogarty, President &amp; CEO,
-                    The&nbsp;Brigade</span
+                    >&mdash; Ryan Miller, Digital Marketing Manager,
+                    Icon&nbsp;Motosports</span
                   >
+                </section>
+                <section class="module-image reveal">
+                  <img
+                    class="media"
+                    src="../../img/work/iconmotosports/product_full.jpg"
+                    alt="Product page"
+                  />
+                  <div class="info">
+                    <h6 class="title">Product page</h6>
+                    <p>
+                      The product page is clean, beautiful, and content rich. It
+                      starts with a full sized product shot or&nbsp;video.
+                    </p>
+                    <p>
+                      Directly underneath the hero is the product purchase
+                      information like price, colors, sizes, and&nbsp;features.
+                    </p>
+                    <p>
+                      Next, a high resolution carousel containing different
+                      angles of the product that you can view&nbsp;fullscreen.
+                    </p>
+                    <p>
+                      Then product features, comparisons, and a drawer of
+                      detailed product information. Care instructions,
+                      replacement parts, product manual, and part numbers – this
+                      section contains everything you might need for
+                      your&nbsp;product.
+                    </p>
+                    <p>
+                      Finally, detailed product shots, features, product
+                      accessories, videos, and product links to complete
+                      the&nbsp;look.
+                    </p>
+                  </div>
                 </section>
                 <section class="module-gallery reveal">
                   <div class="media gallery">
                     <img
-                      src="../../img/work/thebrigade/carousel_01-slide_01.jpg"
-                      alt="Hero"
+                      src="../../img/work/iconmotosports/carousel_02-slide_01.jpg"
+                      alt="Featured Collection"
                     />
                     <img
-                      src="../../img/work/thebrigade/carousel_01-slide_02.jpg"
-                      alt="Carousel"
+                      src="../../img/work/iconmotosports/carousel_02-slide_02.jpg"
+                      alt="Product Listing"
                     />
                     <img
-                      src="../../img/work/thebrigade/carousel_01-slide_03.jpg"
-                      alt="Image"
+                      src="../../img/work/iconmotosports/carousel_02-slide_03.jpg"
+                      alt="Featured Product"
                     />
                     <img
-                      src="../../img/work/thebrigade/carousel_01-slide_04.jpg"
-                      alt="Image & Copy"
+                      src="../../img/work/iconmotosports/carousel_02-slide_04.jpg"
+                      alt="Store Locator"
                     />
                     <img
-                      src="../../img/work/thebrigade/carousel_01-slide_05.jpg"
-                      alt="Parallax Images"
+                      src="../../img/work/iconmotosports/carousel_02-slide_05.jpg"
+                      alt="Store Locator"
                     />
                     <img
-                      src="../../img/work/thebrigade/carousel_01-slide_06.jpg"
-                      alt="Footer"
+                      src="../../img/work/iconmotosports/carousel_02-slide_06.jpg"
+                      alt="Store Locator"
                     />
                   </div>
                   <div class="info">
@@ -1498,13 +1484,29 @@
                         </svg>
                       </button>
                     </div>
-                    <h6 class="title">Case Studies</h6>
+                    <h6 class="title">High Quality Visuals</h6>
                     <div class="description">
                       <p>
-                        Several content blocks were developed so that The
-                        Brigade can have the freedom to create custom page
-                        layouts and have multiple options when presenting
-                        their&nbsp;work.
+                        Icon's website looks stunning due to its use of
+                        high-resolution imagery and&nbsp;videos.
+                      </p>
+                    </div>
+                  </div>
+                </section>
+                <section class="module-copy reveal theme-reduce-top-padding">
+                  <div class="summary">
+                    <div class="col-1">
+                      <p>
+                        Their product shots and videos are on another level.
+                        They produce all of their own photo and video shoots
+                        with their in-house production&nbsp;team.
+                      </p>
+                    </div>
+                    <div class="col-2">
+                      <p>
+                        Content for the website was pleasantly abundant. From
+                        undead biker gangs to escaping fire breathing
+                        dragons–Icon has gear for every kind of&nbsp;rider.
                       </p>
                     </div>
                   </div>
@@ -1512,12 +1514,20 @@
                 <section class="module-gallery reveal">
                   <div class="media gallery">
                     <img
-                      src="../../img/work/thebrigade/carousel_02-slide_01.jpg"
-                      alt="About"
+                      src="../../img/work/iconmotosports/carousel_03-slide_01.jpg"
+                      alt="Featured Collection"
                     />
                     <img
-                      src="../../img/work/thebrigade/carousel_02-slide_02.jpg"
-                      alt="Carousel"
+                      src="../../img/work/iconmotosports/carousel_03-slide_02.jpg"
+                      alt="Product Listing"
+                    />
+                    <img
+                      src="../../img/work/iconmotosports/carousel_03-slide_03.jpg"
+                      alt="Featured Product"
+                    />
+                    <img
+                      src="../../img/work/iconmotosports/carousel_03-slide_04.jpg"
+                      alt="Store Locator"
                     />
                   </div>
                   <div class="info">
@@ -1550,31 +1560,20 @@
                         </svg>
                       </button>
                     </div>
-                    <h6 class="title">Secret Weapon</h6>
                     <div class="description">
-                      <p>Stevie Dog–stay chill my&nbsp;friend.</p>
+                      <p>
+                        &mdash; Featured Collection<br />&mdash; Product
+                        Listing<br />&mdash; Featured Product<br />&mdash; Store
+                        Locator
+                      </p>
                     </div>
                   </div>
                 </section>
                 <section class="module-image reveal">
                   <img
                     class="media"
-                    src="../../img/work/thebrigade/mobile-home-nav.jpg"
-                    alt="Mobile home and navigation"
-                  />
-                  <div class="info">
-                    <h6 class="title">A sleek mobile experience.</h6>
-                    <p>
-                      Overflowing backgrounds, angled cuts, and animations are
-                      all carried over to the mobile&nbsp;UI.
-                    </p>
-                  </div>
-                </section>
-                <section class="module-image reveal">
-                  <img
-                    class="media"
-                    src="../../img/work/thebrigade/mobile-careers-values-case_study.jpg"
-                    alt="Mobile careers, values, case study"
+                    src="../../img/work/iconmotosports/mobile.jpg"
+                    alt="Mobile"
                   />
                 </section>
                 <section class="module-copy reveal theme-reduce-top-padding">
@@ -1582,26 +1581,27 @@
                     <div class="col-1">
                       <p>
                         <strong
-                          >The best part of The Brigade are the people who stand
-                          behind the&nbsp;shield.</strong
+                          >Icon is the dream client you always hope
+                          to&nbsp;land.</strong
                         >
                       </p>
                       <p>
-                        They are a small and friendly bunch of
-                        talented&nbsp;individuals.
+                        With their badass team, gear, and visual assets we were
+                        honored to work with them to build this three headed
+                        beast of a&nbsp;website.
                       </p>
                     </div>
                     <div class="col-2">
                       <p>
-                        The Brigade is known to host musical events, and I hear
-                        there's talk of a stand-up night full of dad&nbsp;jokes.
-                        Look them up if you're in town.
+                        Icon has a tight grip on the creative direction of their
+                        brands. So we were thrilled to hand over the keys and
+                        see the website come to&nbsp;life.
                       </p>
                       <p>
                         Like this project and want to chat about what we could
                         do for you?
                         <a href="mailto:hello@vanholtz.co"
-                          >Let's&nbsp;connect!</a
+                          >Drop us a&nbsp;line.</a
                         >
                       </p>
                     </div>
@@ -1613,9 +1613,11 @@
                   data-to="0%"
                   data-timing="quadOut"
                 >
-                  <a href="../push/"
+                  <a href="../innovation-strategy/"
                     ><h2 class="next-project">next project</h2>
-                    <span class="project-name">AR/VR</span></a
+                    <span class="project-name"
+                      >Innovation<br />Strategy</span
+                    ></a
                   >
                 </section>
               </div>
@@ -1676,5 +1678,5 @@
       gtag("config", "UA-120921934-1");
     </script>
   </body>
-  <!-- Mirrored from vanholtz.co/work/thebrigade/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 30 Dec 2021 09:04:21 GMT -->
+  <!-- Mirrored from vanholtz.co/work/iconmotosports/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 30 Dec 2021 09:04:36 GMT -->
 </html>

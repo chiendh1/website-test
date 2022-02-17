@@ -4471,7 +4471,7 @@ window.addEventListener("load", function (e) {
         },
     
         {
-          url: "work-kitchen",
+          url: "cuisinart",
           imgUrl:
             "https://images.squarespace-cdn.com/content/v1/5c587c5f65019f7b1a809d16/1581443841913-EED6JMVBFISC7O8GI0JV/a3NfgsQ-_400x400.jpg?format=1000w",
           name: "CUISINART",

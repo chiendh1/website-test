@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-  <!-- Mirrored from vanholtz.co/work/zervice/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 30 Dec 2021 09:04:43 GMT -->
+  <!-- Mirrored from vanholtz.co/work/studiomega/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 30 Dec 2021 09:04:11 GMT -->
   <head>
-    <title>MagicCo – Advertise</title>
+    <title>Magic Co - Voice Studio</title>
     <meta
       name="description"
-      content="The world's most experienced voice services agency focusing on strategy, design, and deployment of voice applications and systems."
+      content="Studio of Magic. Specializing in refined digital web experiences with a focus on animated, responsive, and interactive content."
     />
     <meta charset="utf-8" />
     <meta
@@ -14,7 +14,7 @@
     />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="index.html" />
-    <meta property="og:title" content="MagicCo – Advertise" />
+    <meta property="og:title" content="Magic Co – Voice Studio" />
     <meta
       property="og:description"
       content="The world's most experienced voice services agency focusing on strategy, design, and deployment of voice applications and systems."
@@ -23,10 +23,10 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="MagicCo" />
     <meta name="twitter:creator" content="@OfficialMagicCo" />
-    <meta name="twitter:title" content="MagicCo – Advertise" />
+    <meta name="twitter:title" content="Magic Co – Voice Studio" />
     <meta
       name="twitter:description"
-      content="The world's most experienced voice services agency focusing on strategy, design, and deployment of voice applications and systems."
+      content="Studio of Magic. Specializing in refined digital web experiences with a focus on animated, responsive, and interactive content."
     />
     <meta name="twitter:image" content="http://static1.squarespace.com/static/5c587c5f65019f7b1a809d16/t/5ded66da4d5f2571c8daaa39/1575839452880/Magicco-AI-For-Marketeers-logo.png?format=1500w" />
     <link
@@ -330,7 +330,7 @@
       .parallax-vertical-mm-bt {
         transform: translateY(var(--transform-y));
       }
-      .module-image {
+      .module-gallery {
         display: -ms-flexbox;
         display: flex;
         -ms-flex-pack: justify;
@@ -340,84 +340,86 @@
         margin-right: auto;
         max-width: calc(1440px + 20vw);
       }
-      .module-image img {
-        width: calc(100% - 200px);
-        height: 100%;
+      .module-gallery .gallery {
+        position: relative;
+        width: 100%;
       }
-      @media screen and (max-width: 1024px) {
-        .module-image {
-          padding-top: 15vw;
-        }
+      .module-gallery .gallery img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        vertical-align: middle;
       }
-      @media screen and (max-width: 767px) {
-        .module-image {
-          -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
-          padding-left: 30px;
-          padding-right: 30px;
-        }
-        .module-image img {
-          width: 100%;
-        }
-      }
-      .module-video {
-        display: -ms-flexbox;
-        display: flex;
-        -ms-flex-pack: justify;
-        justify-content: space-between;
-        padding: 15vh 10vw 0;
-        max-width: calc(1440px + 20vw);
-        margin-left: auto;
-        margin-right: auto;
-      }
-      .module-video video {
-        width: calc(100% - 200px);
-        height: 100%;
-      }
-      .module-video .info {
+      .module-gallery .info {
         -ms-flex-negative: 0;
         flex-shrink: 0;
         width: 170px;
         margin-left: 30px;
-        line-height: 1.4em;
+        font-size: 12px;
       }
-      .module-video .title {
-        margin-bottom: 10px;
+      .module-gallery .pagination {
+        margin-bottom: 20px;
+      }
+      .module-gallery .pagination button {
+        padding: 0;
+        margin: 0;
+        border: none;
+        border-radius: none;
+        background: none;
+        outline: none;
+      }
+      .module-gallery .pagination .btn-gallery-left {
+        transform: translateY(1px);
+      }
+      .module-gallery .pagination .current {
+        padding-left: 10px;
+      }
+      .module-gallery .pagination .total {
+        padding-right: 10px;
+      }
+      .module-gallery .title {
+        margin-bottom: 15px;
       }
       @media screen and (max-width: 1024px) {
-        .module-video {
+        .module-gallery {
           padding-top: 20vw;
         }
       }
       @media screen and (max-width: 767px) {
-        .module-video {
+        .module-gallery {
           -ms-flex-wrap: wrap;
           flex-wrap: wrap;
+          padding-top: 15vw;
           padding-left: 30px;
           padding-right: 30px;
         }
-        .module-video video {
-          width: 100%;
-          opacity: 0.99;
-        }
-        .module-video .info {
+        .module-gallery .info {
           margin-top: 5vw;
           margin-left: 0;
           width: 100%;
         }
-        .module-video .info p {
-          font-size: 16px;
-          line-height: 1.4em;
+        .module-gallery .pagination {
+          width: 50%;
+          float: right;
+          margin-bottom: 5vw;
+          text-align: right;
+        }
+        .module-gallery .title {
+          width: 50%;
+          float: left;
+          margin-bottom: 5vw;
         }
       }
-      .reveal.module-image .media {
+      .reveal.module-gallery .media {
         opacity: 0;
       }
-      .reveal.module-video .info {
+      .reveal.module-gallery .info {
         perspective: 250px;
         perspective-origin: 0 0;
       }
-      .reveal.module-video .title {
+      .reveal.module-gallery .pagination,
+      .reveal.module-gallery .title {
         opacity: 0;
         transform: rotateY(35deg) translateZ(0);
         transform-origin: left center;
@@ -1178,9 +1180,6 @@
           margin-top: 15vw;
         }
       }
-      .work-page .push .hero {
-        background-position: 50%;
-      }
       .about {
         opacity: 0;
       }
@@ -1192,7 +1191,7 @@
       crossorigin="anonymous"
     />
   </head>
-  <body class="work-page night-mode navTop loading first-load">
+  <body class="work-page navTop night-mode loading first-load">
     <header class="ui">
       <!-- Include file here -->
     </header>
@@ -1211,7 +1210,7 @@
     <div id="barba-wrapper">
       <div class="barba-container" data-namespace="work-page">
         <div class="barba-transition-container">
-          <section class="case-study push basicScroll">
+          <section class="case-study basicScroll">
             <a class="btn-page-back" href="../../"
               ><span class="btn-box"><span class="icon-back"></span></span
             ></a>
@@ -1220,8 +1219,8 @@
                 <section
                   class="hero"
                   style="
-                    background-image: url('../../img/work/zervice/hero.jpg');
-                    background-position: 84% center;
+                    background-image: url('../../img/work/studiomega/hero.jpg');
+                    background-position: 100% 15%;
                   "
                 >
                   <div
@@ -1230,141 +1229,299 @@
                     data-to="25%"
                     data-timing="quadOut"
                   >
-                    <h1 class="title">Advertise</h1>
+                    <h1 class="title">Voice<br />Studio</h1>
                   </div>
                 </section>
                 <section class="intro reveal">
                   <div class="credits">
                     <h5>
                       <a
-                        href="http://www.zervice.com/"
+                        href="http://www.studiomega.com/"
                         target="_blank"
                         rel="noopener"
-                        >www.zervice.com</a
+                        >www.studiomega.com</a
                       >
                     </h5>
-                    <h6>Zervice</h6>
-                    <span class="title">Agency:</span> <span>Push </span
-                    ><span class="title">Developer:</span> <span>MagicCo</span>
+                    <h6>Studio Mega</h6>
+                    <span class="title">Agency:</span> <span>MagicCo </span
+                    ><span class="title">Lead Front-end Developer:</span>
+                    <span>MagicCo </span
+                    ><span class="title">Lead Back-end Developer:</span>
+                    <span>MagicCo</span>
                   </div>
                   <div class="summary reveal">
                     <div class="col-1">
                       <p>
                         <strong
-                          >The Zervice Group runs a variety of different
-                          franchises that provide services for a happier and
-                          healthier&nbsp;life.</strong
+                          >Studio Mega is a brand design agency based in
+                          Portland, Oregon.</strong
                         >
                       </p>
                       <p>
-                        Back in 2013, we delivered this award winning website
-                        with a unique navigation and design. Instead of
-                        scrolling through the page, you get to experience and
-                        learn about Zervice by driving around the&nbsp;town.
+                        With simplicity, flexibility, and maintainability in
+                        mind we built a website uniquely&nbsp;mega.
                       </p>
                     </div>
                     <div class="col-2">
                       <p>
-                        The website was developed using a series of photos, an
-                        SVG path that the vehicle drives along, interactive
-                        elements like the clouds, quizzes, and&nbsp;overlays.
-                      </p>
-                      <p>
-                        One of the coolest features was that image assets could
-                        be layered, which allowed for the vehicle to then drive
-                        under or over, providing a real sense of depth and
-                        emersion to the&nbsp;environment.
+                        Powered by a Craft CMS back-end the website is easy to
+                        manage and update. There are several customizable
+                        content blocks that can be added and rearranged to make
+                        case studies be presented in a meaningful&nbsp;way.
                       </p>
                     </div>
                   </div>
                 </section>
-                <section class="module-video reveal">
-                  <video muted autoplay playsinline loop>
-                    <source
-                      src="../../video/work/zervice/zervice.mp4"
-                      type="video/mp4"
+                <section class="module-gallery reveal">
+                  <div class="media gallery">
+                    <img
+                      src="../../img/work/studiomega/carousel_01-slide_01.jpg"
+                      alt="Home"
                     />
-                  </video>
+                    <img
+                      src="../../img/work/studiomega/carousel_01-slide_02.jpg"
+                      alt="Work"
+                    />
+                    <img
+                      src="../../img/work/studiomega/carousel_01-slide_03.jpg"
+                      alt="Studio"
+                    />
+                    <img
+                      src="../../img/work/studiomega/carousel_01-slide_04.jpg"
+                      alt="Journal"
+                    />
+                  </div>
                   <div class="info">
-                    <h6 class="title">Start</h6>
+                    <div class="pagination">
+                      <button class="btn-gallery-left" aria-label="Previous">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="19"
+                          height="8"
+                          viewBox="0 0 19 8"
+                        >
+                          <path
+                            d="M1.94974747,3 L19,3 L19,4 L1.70710678,4 L4.24264069,6.53553391 L3.53553391,7.24264069 L-2.22044605e-16,3.62132034 L3.53553391,0 L4.24264069,0.707106781 L1.94974747,3 Z"
+                          />
+                        </svg>
+                      </button>
+                      <span class="current"></span> /
+                      <span class="total"></span>
+                      <button class="btn-gallery-right" aria-label="Next">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="19"
+                          height="8"
+                          viewBox="0 0 19 8"
+                        >
+                          <path
+                            d="M1.94974747,3 L19,3 L19,4 L1.70710678,4 L4.24264069,6.53553391 L3.53553391,7.24264069 L-2.22044605e-16,3.62132034 L3.53553391,0 L4.24264069,0.707106781 L1.94974747,3 Z"
+                            transform="matrix(-1 0 0 1 19 0)"
+                          />
+                        </svg>
+                      </button>
+                    </div>
+                    <h6 class="title">
+                      Start with an idea<br />and make it&nbsp;<i>better</i>
+                    </h6>
+                    <div class="description">
+                      <p>
+                        &mdash; Home<br />&mdash; Work<br />&mdash; Studio<br />&mdash;
+                        Journal
+                      </p>
+                    </div>
+                  </div>
+                </section>
+                <section class="module-copy reveal theme-reduce-top-padding">
+                  <div class="summary">
+                    <div class="col-1">
+                      <p>
+                        The home page features a randomly selected video, masked
+                        in a circle, with animated text describing Studio Mega's
+                        high-level&nbsp;process.
+                      </p>
+                    </div>
+                    <div class="col-2">
+                      <p>
+                        We developed multiple content column layouts, carousels,
+                        and media assets that provide an ease to the flow
+                        of&nbsp;pages.
+                      </p>
+                    </div>
+                  </div>
+                </section>
+                <section
+                  class="module-quote reveal parallax-vertical-mm-bt"
+                  data-from="0%"
+                  data-to="10%"
+                  data-timing="quadOut"
+                >
+                  <blockquote>
+                    <span class="quote-left">&ldquo;</span>
                     <p>
-                      You begin the journey with a van that drives into view, a
-                      welcome message, and a thought bubble with a button
-                      to&nbsp;go.
+                      Finding someone that can not only bring expertise and
+                      technical ability but also creativity to enhance the
+                      experience is hard to find. But Eric does just&nbsp;that.
+                    </p>
+                    <p>
+                      When we work with him, we’re not just handing off a
+                      direction and waiting for him to implement it. We
+                      collaborate throughout the process and the end result is
+                      always better than what we initially thought
+                      was&nbsp;possible.
+                    </p>
+                    <p>
+                      On top of that, he’s an awesome dude, good communicator
+                      and fun to be&nbsp;around.
+                    </p>
+                  </blockquote>
+                  <span class="attribution"
+                    >&mdash; Josh Beyer, Partner & Business Director,
+                    Studio&nbsp;Mega</span
+                  >
+                </section>
+                <section class="module-gallery reveal">
+                  <div class="media gallery">
+                    <img
+                      src="../../img/work/studiomega/carousel_02-slide_01.jpg"
+                      alt="Home"
+                    />
+                    <img
+                      src="../../img/work/studiomega/carousel_02-slide_02.jpg"
+                      alt="Work"
+                    />
+                    <img
+                      src="../../img/work/studiomega/carousel_02-slide_03.jpg"
+                      alt="Studio"
+                    />
+                    <img
+                      src="../../img/work/studiomega/carousel_02-slide_04.jpg"
+                      alt="Journal"
+                    />
+                    <img
+                      src="../../img/work/studiomega/carousel_02-slide_05.jpg"
+                      alt="Journal"
+                    />
+                    <img
+                      src="../../img/work/studiomega/carousel_02-slide_06.jpg"
+                      alt="Journal"
+                    />
+                  </div>
+                  <div class="info">
+                    <div class="pagination">
+                      <button class="btn-gallery-left" aria-label="Previous">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="19"
+                          height="8"
+                          viewBox="0 0 19 8"
+                        >
+                          <path
+                            d="M1.94974747,3 L19,3 L19,4 L1.70710678,4 L4.24264069,6.53553391 L3.53553391,7.24264069 L-2.22044605e-16,3.62132034 L3.53553391,0 L4.24264069,0.707106781 L1.94974747,3 Z"
+                          />
+                        </svg>
+                      </button>
+                      <span class="current"></span> /
+                      <span class="total"></span>
+                      <button class="btn-gallery-right" aria-label="Next">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="19"
+                          height="8"
+                          viewBox="0 0 19 8"
+                        >
+                          <path
+                            d="M1.94974747,3 L19,3 L19,4 L1.70710678,4 L4.24264069,6.53553391 L3.53553391,7.24264069 L-2.22044605e-16,3.62132034 L3.53553391,0 L4.24264069,0.707106781 L1.94974747,3 Z"
+                            transform="matrix(-1 0 0 1 19 0)"
+                          />
+                        </svg>
+                      </button>
+                    </div>
+                    <h6 class="title">Case Studies</h6>
+                    <div class="description">
+                      <p>
+                        A primary focus of the website is to showcase the brand
+                        design work that Studio Mega has delivered to
+                        their&nbsp;clients.
+                      </p>
+                    </div>
+                  </div>
+                </section>
+                <section class="module-copy reveal theme-reduce-top-padding">
+                  <div class="summary">
+                    <div class="col-1">
+                      <p>
+                        From print to digital, and events to in-store brand work
+                        we wanted the work to stand on its own. The copy and
+                        assets can be laid out in multiple configurations that
+                        suit the content. Videos can also be used in place of
+                        photos wherever&nbsp;needed.
+                      </p>
+                    </div>
+                    <div class="col-2">
+                      <p>
+                        Project description, categories, inline client brand
+                        color, and easy access to the next case study all make
+                        for an informative and content rich&nbsp;experience.
+                      </p>
+                    </div>
+                  </div>
+                </section>
+                <section class="module-image reveal">
+                  <img
+                    class="media"
+                    src="../../img/work/studiomega/people.jpg"
+                    alt="The people of Studio Mega"
+                  />
+                  <div class="info">
+                    <h6 class="title">
+                      Studio Mega's own branding set them apart from
+                      other&nbsp;agencies.
+                    </h6>
+                    <p>
+                      Vibrant colors, unique blending modes, and hover overlays
+                      can be seen here and in hoverable content throughout
+                      the&nbsp;website.
                     </p>
                   </div>
                 </section>
                 <section class="module-image reveal">
                   <img
                     class="media"
-                    src="../../img/work/zervice/about.jpg"
-                    alt="About"
+                    src="../../img/work/studiomega/mobile-home-nav.jpg"
+                    alt="Mobile home and navigation"
                   />
                   <div class="info">
-                    <h6 class="title">Homebase</h6>
+                    <h6 class="title">
+                      A fully featured mobile&nbsp;experience.
+                    </h6>
                     <p>
-                      One of the more complex scenes includes a marquee text
-                      scroller, and a building that the vehicle
-                      drives&nbsp;through.
+                      Inline autoplaying videos and animations can be seen on
+                      the home, work, and case study&nbsp;pages.
+                    </p>
+                    <p>
+                      The animated mobile navigation and content keep the mobile
+                      experience feeling fast and&nbsp;fluid.
                     </p>
                   </div>
                 </section>
                 <section class="module-image reveal">
                   <img
                     class="media"
-                    src="../../img/work/zervice/quiz.jpg"
-                    alt="Quiz"
+                    src="../../img/work/studiomega/mobile-studio-journal-case_study.jpg"
+                    alt="Mobile studio, journal, and Case study"
                   />
                   <div class="info">
-                    <h6 class="title">Quiz</h6>
+                    <h6 class="title">Touch interactions</h6>
                     <p>
-                      With a couple stops throughout the trip you're prompted
-                      with a quiz to learn more about Zervice's&nbsp;offerings.
+                      Touch is used as an alternative information view of some
+                      otherwise hoverable&nbsp;content.
                     </p>
-                  </div>
-                </section>
-                <section class="module-image reveal">
-                  <img
-                    class="media"
-                    src="../../img/work/zervice/maidpro.jpg"
-                    alt="MaidPro"
-                  />
-                  <div class="info">
-                    <h6 class="title">Neighborhood</h6>
                     <p>
-                      As you make your way along the winding roads you visit
-                      these homes and can learn all about one of the many
-                      Zervices like&nbsp;MaidPro.
-                    </p>
-                  </div>
-                </section>
-                <section class="module-image reveal">
-                  <img
-                    class="media"
-                    src="../../img/work/zervice/train.jpg"
-                    alt="Train"
-                  />
-                  <div class="info">
-                    <h6 class="title">All aboard!</h6>
-                    <p>
-                      At the final stop you drive into the city and under a
-                      bridge, just as a train speeds by from&nbsp;above.
-                    </p>
-                  </div>
-                </section>
-                <section class="module-image reveal">
-                  <img
-                    class="media"
-                    src="../../img/work/zervice/mobile-start-about-train.jpg"
-                    alt="Mobile Start About Train"
-                  />
-                  <div class="info">
-                    <h6 class="title">On the go.</h6>
-                    <p>
-                      In the early responsive web days this site actually worked
-                      from a mobile device. Don't let the iPhone X here fool
-                      you–when this site came out everyone had the
-                      iPhone&nbsp;5.
+                      Simply touching this content as you scroll down the page
+                      will toggle this view. Carousels also support touch drag
+                      with left and right hot spot areas for the user to
+                      progress to new&nbsp;slides.
                     </p>
                   </div>
                 </section>
@@ -1373,21 +1530,27 @@
                     <div class="col-1">
                       <p>
                         <strong
-                          >Zervice is a progressive group with multiple
-                          franchise brands all leading the&nbsp;way.</strong
+                          >Studio Mega has some of the top creative talent in
+                          the Portland&nbsp;area.</strong
                         >
                       </p>
                       <p>
-                        They wanted a unique website and gave us free reign over
-                        the creative direction and execution of the project.
-                        They were ecstatic with what we&nbsp;delivered.
+                        We're thrilled at each opportunity we have to partner
+                        with such an easy going, welcoming group of
+                        mega&nbsp;creatives.
                       </p>
                     </div>
                     <div class="col-2">
                       <p>
-                        This is the oldest website we are showcasing, but one
-                        that we are so grateful having been part of. It was also
-                        one of the most awarded websites we've&nbsp;launched.
+                        If you're ever in PDX, be sure to grab a drink with
+                        these fine people. Learn about how they've helped build
+                        and brand their little create oasis,
+                        <a
+                          href="http://studiomega.com/journal/welcome-to-the-new-new"
+                          target="_blank"
+                          rel="noopener"
+                          >New New Crusher&nbsp;Court</a
+                        >.
                       </p>
                       <p>
                         Like this project and want to chat about what we could
@@ -1405,9 +1568,9 @@
                   data-to="0%"
                   data-timing="quadOut"
                 >
-                  <a href="../studiomega/"
+                  <a href="../the-metaverse/"
                     ><h2 class="next-project">next project</h2>
-                    <span class="project-name">Voice<br />Studio</span></a
+                    <span class="project-name">The<br />Metaverse</span></a
                   >
                 </section>
               </div>
@@ -1468,5 +1631,5 @@
       gtag("config", "UA-120921934-1");
     </script>
   </body>
-  <!-- Mirrored from vanholtz.co/work/zervice/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 30 Dec 2021 09:04:47 GMT -->
+  <!-- Mirrored from vanholtz.co/work/studiomega/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 30 Dec 2021 09:04:17 GMT -->
 </html>

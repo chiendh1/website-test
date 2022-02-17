@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-  <!-- Mirrored from vanholtz.co/work/haydenshapes/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 30 Dec 2021 09:04:40 GMT -->
+  <!-- Mirrored from vanholtz.co/work/push/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 30 Dec 2021 09:04:21 GMT -->
   <head>
-    <title>MagicCo – Product R+D</title>
+    <title>MagicCo – AR/VR</title>
     <meta
       name="description"
       content="The world's most experienced voice services agency focusing on strategy, design, and deployment of voice applications and systems."
@@ -14,7 +14,7 @@
     />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="index.html" />
-    <meta property="og:title" content="MagicCo – Product R+D" />
+    <meta property="og:title" content="MagicCo – AR/VR" />
     <meta
       property="og:description"
       content="The world's most experienced voice services agency focusing on strategy, design, and deployment of voice applications and systems."
@@ -23,7 +23,7 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="MagicCo" />
     <meta name="twitter:creator" content="@OfficialMagicCo" />
-    <meta name="twitter:title" content="MagicCo – Product R+D" />
+    <meta name="twitter:title" content="MagicCo – AR/VR" />
     <meta
       name="twitter:description"
       content="The world's most experienced voice services agency focusing on strategy, design, and deployment of voice applications and systems."
@@ -96,6 +96,9 @@
       }
       strong {
         font-weight: bolder;
+      }
+      img {
+        border-style: none;
       }
       button {
         font-family: inherit;
@@ -327,46 +330,112 @@
       .parallax-vertical-mm-bt {
         transform: translateY(var(--transform-y));
       }
-      .module-code {
+      .module-copy {
+        padding: 15vh 10vw 0;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: calc(1440px + 20vw);
+      }
+      .module-copy,
+      .module-copy .summary {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+      }
+      .module-copy .summary {
+        width: calc(100% - 170px);
+      }
+      .module-copy .col-1,
+      .module-copy .col-2 {
+        -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+        padding-right: 30px;
+        font-size: 18px;
+        line-height: 1.4em;
+      }
+      .module-copy .col-1 p,
+      .module-copy .col-2 p {
+        margin-bottom: 0;
+      }
+      @media screen and (max-width: 1024px) {
+        .module-copy {
+          padding-top: 10vh;
+        }
+        .module-copy .col-1,
+        .module-copy .col-2 {
+          -ms-flex-preferred-size: 100%;
+          flex-basis: 100%;
+        }
+        .module-copy .col-2 {
+          margin-top: 1em;
+        }
+      }
+      @media screen and (max-width: 1023px) {
+        .module-copy .summary {
+          -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+        }
+      }
+      @media screen and (max-width: 767px) {
+        .module-copy {
+          padding-left: 30px;
+          padding-right: 30px;
+        }
+        .module-copy .summary {
+          margin-top: 0;
+          width: 100%;
+        }
+        .module-copy .col-1,
+        .module-copy .col-2 {
+          font-size: 18px;
+          line-height: 1.4em;
+        }
+        .module-copy .col-2 {
+          margin-top: 5vw;
+        }
+      }
+      .module-image {
         display: -ms-flexbox;
         display: flex;
         -ms-flex-pack: justify;
         justify-content: space-between;
         padding: 15vh 10vw 0;
-        max-width: calc(1440px + 20vw);
         margin-left: auto;
         margin-right: auto;
+        max-width: calc(1440px + 20vw);
       }
-      .module-code .video-wrapper {
-        position: relative;
-        padding-bottom: calc(63.25% - 200px);
-        padding-top: 25px;
+      .module-image img {
         width: calc(100% - 200px);
-        height: 0;
-      }
-      .module-code .video-wrapper iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
         height: 100%;
       }
       @media screen and (max-width: 1024px) {
-        .module-code {
-          padding-top: 10vh;
+        .module-image {
+          padding-top: 15vw;
         }
       }
       @media screen and (max-width: 767px) {
-        .module-code {
+        .module-image {
           -ms-flex-wrap: wrap;
           flex-wrap: wrap;
           padding-left: 30px;
           padding-right: 30px;
         }
-        .module-code .video-wrapper {
-          padding-bottom: 56.25%;
+        .module-image img {
           width: 100%;
         }
+      }
+      div .theme-reduce-top-padding,
+      section .theme-reduce-top-padding {
+        padding-top: 5vh;
+      }
+      .reveal.module-copy .col-1,
+      .reveal.module-copy .col-2 {
+        opacity: 0;
+        transform: translateY(100px);
+      }
+      .reveal.module-image .media {
+        opacity: 0;
       }
       .ui {
         display: -ms-flexbox;
@@ -1165,9 +1234,7 @@
               <div class="content">
                 <section
                   class="hero"
-                  style="
-                    background-image: url('../../img/work/haydenshapes/hero.jpg');
-                  "
+                  style="background-image: url('../../img/work/push/hero.png')"
                 >
                   <div
                     class="title-container parallax-vertical-mm-bt"
@@ -1175,207 +1242,314 @@
                     data-to="25%"
                     data-timing="quadOut"
                   >
-                    <h1 class="title">Product<br/>R+D</h1>
+                    <h1 class="title">AR/VR</h1>
                   </div>
                 </section>
                 <section class="intro reveal">
                   <div class="credits">
                     <h5>
                       <a
-                        href="https://www.haydenshapes.com/hsstudio?activeLocationUid=us&amp;activeBoardUid=hypto-krypto"
+                        href="https://www.pushhere.com/"
                         target="_blank"
                         rel="noopener"
-                        >www.haydenshapes.com</a
+                        >www.pushhere.com</a
                       >
                     </h5>
-                    <h6>Haydenshapes – HSStudio</h6>
-                    <span class="title">Agency:</span> <span>Parliament </span
-                    ><span class="title">Front-end Developer:</span>
+                    <h6>Push</h6>
+                    <span class="title">Agency:</span> <span>MagicCo </span
+                    ><span class="title">Full Stack Developer:</span>
                     <span>MagicCo</span>
                   </div>
                   <div class="summary reveal">
                     <div class="col-1">
                       <p>
                         <strong
-                          >Haydenshapes is pioneering new technologies in the
-                          surf&nbsp;industry.</strong
+                          >Push is an award winning design agency based in
+                          Orlando,&nbsp;Florida.</strong
                         >
                       </p>
                       <p>
-                        Hayden changed the game when he introduced futureflex, a
-                        manufacturing technology which uses carbon fiber to
-                        strengthen the edges of the&nbsp;board.
-                      </p>
-                      <p>
-                        He wanted a web app just as unique that allowed his
-                        customers to craft their boards to be the perfect shape,
-                        size, density, and&nbsp;design.
+                        <strong
+                          >They specialize in the restaurant, retail, and
+                          education&nbsp;industries.</strong
+                        >
                       </p>
                     </div>
                     <div class="col-2">
                       <p>
-                        The UI overlays a 3d environment where you can rotate
-                        and zoom in on the board you're&nbsp;creating.
+                        With high expectations Push came to us to develop and
+                        bring life to their new&nbsp;website.
                       </p>
                       <p>
-                        See changes to the board in real-time, even see how the
-                        light shines off the surface of the board based on the
-                        type of polish&nbsp;selected.
-                      </p>
-                      <p>
-                        The web app takes all of the information you've entered
-                        and creates a dynamic product ready for purchase. You
-                        can do all of this from a computer, tablet, or
-                        mobile&nbsp;device.
+                        Maintainability was also of great importance. They
+                        wanted to be able to display new work, update their
+                        talented group of pushers, post career opportunities,
+                        share insights, and have an open line for
+                        new&nbsp;business.
                       </p>
                     </div>
                   </div>
                 </section>
-                <section class="module-code">
-                  <div class="video-wrapper">
-                    <iframe
-                      width="560"
-                      height="315"
-                      src="https://www.youtube.com/embed/nyogfu2GWMY?rel=0&amp;start=6"
-                      frameborder="0"
-                      allow="autoplay; encrypted-media"
-                      allowfullscreen
-                    ></iframe>
-                  </div>
-                </section>
                 <section class="module-image reveal">
                   <img
                     class="media"
-                    src="../../img/work/haydenshapes/home.jpg"
-                    alt="Home"
+                    src="../../img/work/push/home-full.jpg"
+                    alt="Home page"
                   />
-                  <div class="info">
-                    <h6 class="title">Home</h6>
-                    <p>
-                      There are many types of boards you can start with. This is
-                      the Hypto&nbsp;Krypto.
-                    </p>
-                    <p>
-                      The minimal UI puts the focus on the 3d board that
-                      you're&nbsp;designing.
-                    </p>
+                </section>
+                <section class="module-copy reveal theme-reduce-top-padding">
+                  <div class="summary">
+                    <div class="col-1">
+                      <p>
+                        The website is centered around the concept of colors and
+                        tiles. The home page allows for random or selected
+                        content to be&nbsp;showcased.
+                      </p>
+                    </div>
+                    <div class="col-2">
+                      <p>
+                        Tiles have an idle animation to display additional
+                        information. They also rise and pivot in 3d as you hover
+                        over&nbsp;each.
+                      </p>
+                    </div>
                   </div>
                 </section>
                 <section class="module-image reveal">
                   <img
                     class="media"
-                    src="../../img/work/haydenshapes/technology.jpg"
-                    alt="Technology"
-                  />
-                  <div class="info">
-                    <h6 class="title">Technology</h6>
-                    <p>
-                      You start by customizing the materials and technology
-                      used. Selecting a technology opens up more options such as
-                      foam density and&nbsp;lamination.
-                    </p>
-                  </div>
-                </section>
-                <section class="module-image reveal">
-                  <img
-                    class="media"
-                    src="../../img/work/haydenshapes/about.jpg"
-                    alt="About"
-                  />
-                  <div class="info">
-                    <h6 class="title">Dimensions</h6>
-                    <p>
-                      Customize the board with your name to make it truly yours.
-                      Additionally, you can pick the board's length and width.
-                      It is even able to offer up dimensions based on your
-                      height and&nbsp;weight.
-                    </p>
-                  </div>
-                </section>
-                <section class="module-image reveal">
-                  <img
-                    class="media"
-                    src="../../img/work/haydenshapes/fins.jpg"
-                    alt="Fins"
-                  />
-                  <div class="info">
-                    <h6 class="title">Fins</h6>
-                    <p>
-                      There are several fin options for your board like the
-                      setup count and&nbsp;colors.
-                    </p>
-                  </div>
-                </section>
-                <section class="module-image reveal">
-                  <img
-                    class="media"
-                    src="../../img/work/haydenshapes/artwork.jpg"
-                    alt="Artwork"
-                  />
-                  <div class="info">
-                    <h6 class="title">Artwork</h6>
-                    <p>
-                      Our favorite step, picking the design of the board.
-                      Haydenshapes has design collections that'll make your
-                      board stand out from the&nbsp;crowd.
-                    </p>
-                  </div>
-                </section>
-                <section class="module-image reveal">
-                  <img
-                    class="media"
-                    src="../../img/work/haydenshapes/logos.jpg"
-                    alt="Logos"
-                  />
-                  <div class="info">
-                    <h6 class="title">Logo</h6>
-                    <p>
-                      Take pride in your custom board, and Haydenshapes, by
-                      applying a logo to it. There are different logos to chose
-                      from, if you'd like, along with its color and
-                      &nbsp;position.
-                    </p>
-                  </div>
-                </section>
-                <section class="module-image reveal">
-                  <img
-                    class="media"
-                    src="../../img/work/haydenshapes/finish.jpg"
-                    alt="Finish"
-                  />
-                  <div class="info">
-                    <h6 class="title">Finish</h6>
-                    <p>
-                      Finally, select the board's finish. Rotate the board and
-                      see how the light reflects off of its&nbsp;surface.
-                    </p>
-                  </div>
-                </section>
-                <section class="module-image reveal">
-                  <img
-                    class="media"
-                    src="../../img/work/haydenshapes/review.jpg"
-                    alt="Review"
-                  />
-                  <div class="info">
-                    <h6 class="title">Review</h6>
-                    <p>Take a final look before checking&nbsp;out.</p>
-                  </div>
-                </section>
-                <section class="module-image reveal">
-                  <img
-                    class="media"
-                    src="../../img/work/haydenshapes/mobile-nav-home-review-options.jpg"
-                    alt="Mobile Nav Home Review Options"
+                    src="../../img/work/push/nav.jpg"
+                    alt="Navigation"
                   />
                   <div class="info">
                     <h6 class="title">
-                      Customize your board from the comfort of the&nbsp;beach.
+                      Push the logo to access the navigation&nbsp;menu.
                     </h6>
                     <p>
-                      The web app works just as well from your phone. The UI is
-                      sleek, quick, and 3d is fully supported as&nbsp;well.
+                      On mobile the homepage is the navigation
+                      menu&mdash;getting you to what you're looking
+                      for&nbsp;faster.
                     </p>
+                  </div>
+                </section>
+                <section class="module-image reveal">
+                  <img
+                    class="media"
+                    src="../../img/work/push/work-full.jpg"
+                    alt="Work"
+                  />
+                </section>
+                <section
+                  class="module-quote reveal parallax-vertical-mm-bt"
+                  data-from="0%"
+                  data-to="10%"
+                  data-timing="quadOut"
+                >
+                  <blockquote>
+                    <span class="quote-left">&ldquo;</span>
+                    <p>
+                      Simply put Eric can take a good design and turn it into
+                      something&nbsp;great.
+                    </p>
+                    <p>
+                      He is one of those unique people that can think both
+                      creatively and analytically to make projects that are
+                      internet famous and built like&nbsp;tanks.
+                    </p>
+                    <p>
+                      More importantly he is a great guy with a good heart that
+                      wont let you&nbsp;down.
+                    </p>
+                  </blockquote>
+                  <span class="attribution"
+                    >&mdash; Mark Unger, Partner & Chief Creative
+                    Officer,&nbsp;Push</span
+                  >
+                </section>
+                <section class="module-gallery reveal">
+                  <div class="media gallery">
+                    <img
+                      src="../../img/work/push/carousel_01-slide_01.jpg"
+                      alt="Hero"
+                    />
+                    <img
+                      src="../../img/work/push/carousel_01-slide_02.jpg"
+                      alt="Experience"
+                    />
+                    <img
+                      src="../../img/work/push/carousel_01-slide_03.jpg"
+                      alt="Process"
+                    />
+                    <img
+                      src="../../img/work/push/carousel_01-slide_04.jpg"
+                      alt="Convergence Model"
+                    />
+                    <img
+                      src="../../img/work/push/carousel_01-slide_05.jpg"
+                      alt="Experience"
+                    />
+                    <img
+                      src="../../img/work/push/carousel_01-slide_06.jpg"
+                      alt="Image & Copy"
+                    />
+                  </div>
+                  <div class="info">
+                    <div class="pagination">
+                      <button class="btn-gallery-left" aria-label="Previous">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="19"
+                          height="8"
+                          viewBox="0 0 19 8"
+                        >
+                          <path
+                            d="M1.94974747,3 L19,3 L19,4 L1.70710678,4 L4.24264069,6.53553391 L3.53553391,7.24264069 L-2.22044605e-16,3.62132034 L3.53553391,0 L4.24264069,0.707106781 L1.94974747,3 Z"
+                          />
+                        </svg>
+                      </button>
+                      <span class="current"></span> /
+                      <span class="total"></span>
+                      <button class="btn-gallery-right" aria-label="Next">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="19"
+                          height="8"
+                          viewBox="0 0 19 8"
+                        >
+                          <path
+                            d="M1.94974747,3 L19,3 L19,4 L1.70710678,4 L4.24264069,6.53553391 L3.53553391,7.24264069 L-2.22044605e-16,3.62132034 L3.53553391,0 L4.24264069,0.707106781 L1.94974747,3 Z"
+                            transform="matrix(-1 0 0 1 19 0)"
+                          />
+                        </svg>
+                      </button>
+                    </div>
+                    <div class="description">
+                      <p>
+                        &mdash; Hero<br />&mdash; Experience<br />&mdash;
+                        Process<br />&mdash; Convergence Model<br />&mdash;
+                        Experience<br />&mdash; Image & Copy Module
+                      </p>
+                    </div>
+                  </div>
+                </section>
+                <section class="module-copy reveal theme-reduce-top-padding">
+                  <div class="summary">
+                    <div class="col-1">
+                      <p>
+                        Many content modules were developed to allow for
+                        customizeable layouts and different ways of presenting
+                        imagery and&nbsp;copy.
+                      </p>
+                    </div>
+                  </div>
+                </section>
+                <section class="module-image reveal">
+                  <img
+                    class="media"
+                    src="../../img/work/push/pushers-full.jpg"
+                    alt="Pushers"
+                  />
+                </section>
+                <section class="module-gallery reveal">
+                  <div class="media gallery">
+                    <img
+                      src="../../img/work/push/carousel_02-slide_01.jpg"
+                      alt="Pusher"
+                    />
+                    <img
+                      src="../../img/work/push/carousel_02-slide_02.jpg"
+                      alt="Insight"
+                    />
+                    <img
+                      src="../../img/work/push/carousel_02-slide_03.jpg"
+                      alt="Contact"
+                    />
+                  </div>
+                  <div class="info">
+                    <div class="pagination">
+                      <button class="btn-gallery-left" aria-label="Previous">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="19"
+                          height="8"
+                          viewBox="0 0 19 8"
+                        >
+                          <path
+                            d="M1.94974747,3 L19,3 L19,4 L1.70710678,4 L4.24264069,6.53553391 L3.53553391,7.24264069 L-2.22044605e-16,3.62132034 L3.53553391,0 L4.24264069,0.707106781 L1.94974747,3 Z"
+                          />
+                        </svg>
+                      </button>
+                      <span class="current"></span> /
+                      <span class="total"></span>
+                      <button class="btn-gallery-right" aria-label="Next">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="19"
+                          height="8"
+                          viewBox="0 0 19 8"
+                        >
+                          <path
+                            d="M1.94974747,3 L19,3 L19,4 L1.70710678,4 L4.24264069,6.53553391 L3.53553391,7.24264069 L-2.22044605e-16,3.62132034 L3.53553391,0 L4.24264069,0.707106781 L1.94974747,3 Z"
+                            transform="matrix(-1 0 0 1 19 0)"
+                          />
+                        </svg>
+                      </button>
+                    </div>
+                    <h6 class="title">
+                      Pusher details, a bold collection of insights, and modular
+                      contact&nbsp;pages.
+                    </h6>
+                    <div class="description">
+                      <p>
+                        &mdash; Pusher<br />&mdash; Insight<br />&mdash; Contact
+                      </p>
+                    </div>
+                  </div>
+                </section>
+                <section class="module-gallery reveal">
+                  <div class="media gallery">
+                    <img
+                      src="../../img/work/push/carousel_03-slide_01.jpg"
+                      alt="Mobile"
+                    />
+                    <img
+                      src="../../img/work/push/carousel_03-slide_02.jpg"
+                      alt="Mobile"
+                    />
+                  </div>
+                  <div class="info">
+                    <div class="pagination">
+                      <button class="btn-gallery-left" aria-label="Previous">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="19"
+                          height="8"
+                          viewBox="0 0 19 8"
+                        >
+                          <path
+                            d="M1.94974747,3 L19,3 L19,4 L1.70710678,4 L4.24264069,6.53553391 L3.53553391,7.24264069 L-2.22044605e-16,3.62132034 L3.53553391,0 L4.24264069,0.707106781 L1.94974747,3 Z"
+                          />
+                        </svg>
+                      </button>
+                      <span class="current"></span> /
+                      <span class="total"></span>
+                      <button class="btn-gallery-right" aria-label="Next">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="19"
+                          height="8"
+                          viewBox="0 0 19 8"
+                        >
+                          <path
+                            d="M1.94974747,3 L19,3 L19,4 L1.70710678,4 L4.24264069,6.53553391 L3.53553391,7.24264069 L-2.22044605e-16,3.62132034 L3.53553391,0 L4.24264069,0.707106781 L1.94974747,3 Z"
+                            transform="matrix(-1 0 0 1 19 0)"
+                          />
+                        </svg>
+                      </button>
+                    </div>
+                    <h6 class="title">
+                      All the bells and whistles can be found on the&nbsp;go.
+                    </h6>
                   </div>
                 </section>
                 <section class="module-copy reveal theme-reduce-top-padding">
@@ -1383,28 +1557,32 @@
                     <div class="col-1">
                       <p>
                         <strong
-                          >Haydenshapes has won consecutive surfboard of the
-                          year&nbsp;awards.</strong
+                          >Push, a powerhouse that's been pushing brands to
+                          their full potential for over 21&nbsp;years.</strong
                         >
                       </p>
                       <p>
-                        We wanted to develop a web app just as impressive.
-                        Through its modern design, smooth UI, and 3d rendered
-                        board we believe we&nbsp;delivered.
+                        They've gone so far as to understand the business that
+                        one of the partners opened and runs a successful
+                        multi-location&nbsp;restaurant.
                       </p>
                     </div>
                     <div class="col-2">
                       <p>
-                        Even if you're not in the market for a new surfboard you
-                        should still give HSStudio a spin to see what you can
-                        come up with. Stay&nbsp;pitted.
+                        If you're in Orlando be sure to grab a bite at one of
+                        the two
+                        <a
+                          href="https://www.hubblybubblyfalafel.com/"
+                          target="_blank"
+                          rel="noopener"
+                          >Hubbly Bubbly</a
+                        >
+                        locations.
                       </p>
                       <p>
                         Like this project and want to chat about what we could
                         do for you?
-                        <a href="mailto:hello@vanholtz.co"
-                          >Let's&nbsp;us&nbsp;know!</a
-                        >
+                        <a href="mailto:hello@vanholtz.co">Holler!</a>
                       </p>
                     </div>
                   </div>
@@ -1415,9 +1593,9 @@
                   data-to="0%"
                   data-timing="quadOut"
                 >
-                  <a href="../zervice/"
+                  <a href="../hardware/"
                     ><h2 class="next-project">next project</h2>
-                    <span class="project-name">Advertise</span></a
+                    <span class="project-name">Hardware</span></a
                   >
                 </section>
               </div>
@@ -1478,5 +1656,5 @@
       gtag("config", "UA-120921934-1");
     </script>
   </body>
-  <!-- Mirrored from vanholtz.co/work/haydenshapes/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 30 Dec 2021 09:04:43 GMT -->
+  <!-- Mirrored from vanholtz.co/work/push/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 30 Dec 2021 09:04:26 GMT -->
 </html>

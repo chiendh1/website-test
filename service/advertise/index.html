@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-  <!-- Mirrored from vanholtz.co/work/iconmotosports/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 30 Dec 2021 09:04:31 GMT -->
+  <!-- Mirrored from vanholtz.co/work/zervice/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 30 Dec 2021 09:04:43 GMT -->
   <head>
-    <title>MagicCo – Omni channel - Campaigns</title>
+    <title>MagicCo – Advertise</title>
     <meta
       name="description"
       content="The world's most experienced voice services agency focusing on strategy, design, and deployment of voice applications and systems."
@@ -14,7 +14,7 @@
     />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="index.html" />
-    <meta property="og:title" content="MagicCo – Omni channel - Campaigns" />
+    <meta property="og:title" content="MagicCo – Advertise" />
     <meta
       property="og:description"
       content="The world's most experienced voice services agency focusing on strategy, design, and deployment of voice applications and systems."
@@ -23,7 +23,7 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="MagicCo" />
     <meta name="twitter:creator" content="@OfficialMagicCo" />
-    <meta name="twitter:title" content="MagicCo – Omni channel - Campaigns" />
+    <meta name="twitter:title" content="MagicCo – Advertise" />
     <meta
       name="twitter:description"
       content="The world's most experienced voice services agency focusing on strategy, design, and deployment of voice applications and systems."
@@ -330,7 +330,7 @@
       .parallax-vertical-mm-bt {
         transform: translateY(var(--transform-y));
       }
-      .module-gallery {
+      .module-image {
         display: -ms-flexbox;
         display: flex;
         -ms-flex-pack: justify;
@@ -340,77 +340,84 @@
         margin-right: auto;
         max-width: calc(1440px + 20vw);
       }
-      .module-gallery .gallery {
-        position: relative;
-        width: 100%;
+      .module-image img {
+        width: calc(100% - 200px);
+        height: 100%;
       }
-      .module-gallery .gallery img {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        vertical-align: middle;
+      @media screen and (max-width: 1024px) {
+        .module-image {
+          padding-top: 15vw;
+        }
       }
-      .module-gallery .info {
+      @media screen and (max-width: 767px) {
+        .module-image {
+          -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+          padding-left: 30px;
+          padding-right: 30px;
+        }
+        .module-image img {
+          width: 100%;
+        }
+      }
+      .module-video {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        padding: 15vh 10vw 0;
+        max-width: calc(1440px + 20vw);
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .module-video video {
+        width: calc(100% - 200px);
+        height: 100%;
+      }
+      .module-video .info {
         -ms-flex-negative: 0;
         flex-shrink: 0;
         width: 170px;
         margin-left: 30px;
-        font-size: 12px;
+        line-height: 1.4em;
       }
-      .module-gallery .pagination {
-        margin-bottom: 20px;
-      }
-      .module-gallery .pagination button {
-        padding: 0;
-        margin: 0;
-        border: none;
-        border-radius: none;
-        background: none;
-        outline: none;
-      }
-      .module-gallery .pagination .btn-gallery-left {
-        transform: translateY(1px);
-      }
-      .module-gallery .pagination .current {
-        padding-left: 10px;
-      }
-      .module-gallery .pagination .total {
-        padding-right: 10px;
+      .module-video .title {
+        margin-bottom: 10px;
       }
       @media screen and (max-width: 1024px) {
-        .module-gallery {
+        .module-video {
           padding-top: 20vw;
         }
       }
       @media screen and (max-width: 767px) {
-        .module-gallery {
+        .module-video {
           -ms-flex-wrap: wrap;
           flex-wrap: wrap;
-          padding-top: 15vw;
           padding-left: 30px;
           padding-right: 30px;
         }
-        .module-gallery .info {
+        .module-video video {
+          width: 100%;
+          opacity: 0.99;
+        }
+        .module-video .info {
           margin-top: 5vw;
           margin-left: 0;
           width: 100%;
         }
-        .module-gallery .pagination {
-          width: 50%;
-          float: right;
-          margin-bottom: 5vw;
-          text-align: right;
+        .module-video .info p {
+          font-size: 16px;
+          line-height: 1.4em;
         }
       }
-      .reveal.module-gallery .media {
+      .reveal.module-image .media {
         opacity: 0;
       }
-      .reveal.module-gallery .info {
+      .reveal.module-video .info {
         perspective: 250px;
         perspective-origin: 0 0;
       }
-      .reveal.module-gallery .pagination {
+      .reveal.module-video .title {
         opacity: 0;
         transform: rotateY(35deg) translateZ(0);
         transform-origin: left center;
@@ -1171,6 +1178,9 @@
           margin-top: 15vw;
         }
       }
+      .work-page .push .hero {
+        background-position: 50%;
+      }
       .about {
         opacity: 0;
       }
@@ -1182,7 +1192,7 @@
       crossorigin="anonymous"
     />
   </head>
-  <body class="work-page navTop night-mode loading first-load">
+  <body class="work-page night-mode navTop loading first-load">
     <header class="ui">
       <!-- Include file here -->
     </header>
@@ -1201,7 +1211,7 @@
     <div id="barba-wrapper">
       <div class="barba-container" data-namespace="work-page">
         <div class="barba-transition-container">
-          <section class="case-study basicScroll">
+          <section class="case-study push basicScroll">
             <a class="btn-page-back" href="../../"
               ><span class="btn-box"><span class="icon-back"></span></span
             ></a>
@@ -1210,398 +1220,180 @@
                 <section
                   class="hero"
                   style="
-                    background-image: url('../../img/work/iconmotosports/hero.jpg');
+                    background-image: url('../../img/work/zervice/hero.jpg');
+                    background-position: 84% center;
                   "
                 >
                   <div
                     class="title-container parallax-vertical-mm-bt"
-                    data-from="-27%"
+                    data-from="-35%"
                     data-to="25%"
                     data-timing="quadOut"
                   >
-                    <h1 class="title">Omni channel<br />Campaigns</h1>
+                    <h1 class="title">Advertise</h1>
                   </div>
                 </section>
                 <section class="intro reveal">
                   <div class="credits">
                     <h5>
                       <a
-                        href="http://www.rideicon.com/"
+                        href="http://www.zervice.com/"
                         target="_blank"
                         rel="noopener"
-                        >www.rideicon.com </a
-                      ><a
-                        href="http://www.icon1000.com/"
-                        target="_blank"
-                        rel="noopener"
-                        >www.icon1000.com </a
-                      ><a
-                        href="http://www.iconraiden.com/"
-                        target="_blank"
-                        rel="noopener"
-                        >www.iconraiden.com</a
+                        >www.zervice.com</a
                       >
                     </h5>
-                    <h6>Icon Motosports</h6>
-                    <span class="title">Agencies:</span>
-                    <span>Parliment<br />Built </span
-                    ><span class="title">Lead Front-end Developer:</span>
-                    <span>MagicCo </span
-                    ><span class="title">Lead Back-end Developer:</span>
-                    <span>MagicCo</span>
+                    <h6>Zervice</h6>
+                    <span class="title">Agency:</span> <span>Push </span
+                    ><span class="title">Developer:</span> <span>MagicCo</span>
                   </div>
                   <div class="summary reveal">
                     <div class="col-1">
                       <p>
                         <strong
-                          >Icon is a Portland Oregon based company and industry
-                          leader in protective motorcycle&nbsp;gear.</strong
+                          >The Zervice Group runs a variety of different
+                          franchises that provide services for a happier and
+                          healthier&nbsp;life.</strong
                         >
                       </p>
                       <p>
-                        We built a website that could showcase their inspired
-                        product design, bikes, videos, and more with all of the
-                        speed and attitude of their brand and&nbsp;riders.
+                        Back in 2013, we delivered this award winning website
+                        with a unique navigation and design. Instead of
+                        scrolling through the page, you get to experience and
+                        learn about Zervice by driving around the&nbsp;town.
                       </p>
                     </div>
                     <div class="col-2">
                       <p>
-                        With seasonal product releases, epic video productions,
-                        and limiter stories there are no dead ends to the amount
-                        of content on the&nbsp;site.
+                        The website was developed using a series of photos, an
+                        SVG path that the vehicle drives along, interactive
+                        elements like the clouds, quizzes, and&nbsp;overlays.
                       </p>
                       <p>
-                        The Icon website is the hub of product information for
-                        their customers, brick & mortar and
-                        online&nbsp;retailers.
+                        One of the coolest features was that image assets could
+                        be layered, which allowed for the vehicle to then drive
+                        under or over, providing a real sense of depth and
+                        emersion to the&nbsp;environment.
                       </p>
                     </div>
                   </div>
                 </section>
-                <section class="module-gallery reveal">
-                  <div class="media gallery">
-                    <img
-                      src="../../img/work/iconmotosports/carousel_01-slide_01.jpg"
-                      alt="Icon"
+                <section class="module-video reveal">
+                  <video muted autoplay playsinline loop>
+                    <source
+                      src="../../video/work/zervice/zervice.mp4"
+                      type="video/mp4"
                     />
-                    <img
-                      src="../../img/work/iconmotosports/carousel_01-slide_02.jpg"
-                      alt="Icon 1000"
-                    />
-                    <img
-                      src="../../img/work/iconmotosports/carousel_01-slide_03.jpg"
-                      alt="Raiden"
-                    />
-                  </div>
+                  </video>
                   <div class="info">
-                    <div class="pagination">
-                      <button class="btn-gallery-left" aria-label="Previous">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="19"
-                          height="8"
-                          viewBox="0 0 19 8"
-                        >
-                          <path
-                            d="M1.94974747,3 L19,3 L19,4 L1.70710678,4 L4.24264069,6.53553391 L3.53553391,7.24264069 L-2.22044605e-16,3.62132034 L3.53553391,0 L4.24264069,0.707106781 L1.94974747,3 Z"
-                          />
-                        </svg>
-                      </button>
-                      <span class="current"></span> /
-                      <span class="total"></span>
-                      <button class="btn-gallery-right" aria-label="Next">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="19"
-                          height="8"
-                          viewBox="0 0 19 8"
-                        >
-                          <path
-                            d="M1.94974747,3 L19,3 L19,4 L1.70710678,4 L4.24264069,6.53553391 L3.53553391,7.24264069 L-2.22044605e-16,3.62132034 L3.53553391,0 L4.24264069,0.707106781 L1.94974747,3 Z"
-                            transform="matrix(-1 0 0 1 19 0)"
-                          />
-                        </svg>
-                      </button>
-                    </div>
-                    <h6 class="title">Three websites in one.</h6>
-                    <div class="description">
-                      <p>
-                        &mdash; Icon Motosports<br />&mdash; Icon 1000<br />&mdash;
-                        Raiden
-                      </p>
-                    </div>
-                  </div>
-                </section>
-                <section class="module-copy reveal theme-reduce-top-padding">
-                  <div class="summary">
-                    <div class="col-1">
-                      <p>
-                        Icon Motosports is comprised of two additional brands
-                        Icon 1000 and Raiden. Each is geared towards a specific
-                        theme – street, modern, and adventure. All three brands
-                        needed to be able to live on their own while still
-                        being&nbsp;Icon.
-                      </p>
-                    </div>
-                    <div class="col-2">
-                      <p>
-                        We developed three websites under one code base that are
-                        all functionally the same, but each being styled
-                        independently from one&nbsp;another.
-                      </p>
-                    </div>
+                    <h6 class="title">Start</h6>
+                    <p>
+                      You begin the journey with a van that drives into view, a
+                      welcome message, and a thought bubble with a button
+                      to&nbsp;go.
+                    </p>
                   </div>
                 </section>
                 <section class="module-image reveal">
                   <img
                     class="media"
-                    src="../../img/work/iconmotosports/home_full.jpg"
-                    alt="Home page"
+                    src="../../img/work/zervice/about.jpg"
+                    alt="About"
                   />
                   <div class="info">
-                    <h6 class="title">Home</h6>
+                    <h6 class="title">Homebase</h6>
                     <p>
-                      Icon has the ability to adjust the layout and order of
-                      most any page on the&nbsp;website.
+                      One of the more complex scenes includes a marquee text
+                      scroller, and a building that the vehicle
+                      drives&nbsp;through.
                     </p>
-                    <p>
-                      As seen on the homepage there's a newsletter sign up,
-                      announcement, featured collections, product categories,
-                      career listing, and recent limiter&nbsp;posts.
-                    </p>
-                  </div>
-                </section>
-                <section
-                  class="module-quote reveal parallax-vertical-mm-bt"
-                  data-from="0%"
-                  data-to="10%"
-                  data-timing="quadOut"
-                >
-                  <blockquote>
-                    <span class="quote-left">&ldquo;</span>
-                    <p>
-                      Our previous system took a team of designers, image
-                      processors, and IT professionals to update&nbsp;content.
-                    </p>
-                    <p>
-                      Now, we have a dedicated staff of one to manage all
-                      content&nbsp;updates.
-                    </p>
-                  </blockquote>
-                  <span class="attribution"
-                    >&mdash; Ryan Miller, Digital Marketing Manager,
-                    Icon&nbsp;Motosports</span
-                  >
-                </section>
-                <section class="module-image reveal">
-                  <img
-                    class="media"
-                    src="../../img/work/iconmotosports/product_full.jpg"
-                    alt="Product page"
-                  />
-                  <div class="info">
-                    <h6 class="title">Product page</h6>
-                    <p>
-                      The product page is clean, beautiful, and content rich. It
-                      starts with a full sized product shot or&nbsp;video.
-                    </p>
-                    <p>
-                      Directly underneath the hero is the product purchase
-                      information like price, colors, sizes, and&nbsp;features.
-                    </p>
-                    <p>
-                      Next, a high resolution carousel containing different
-                      angles of the product that you can view&nbsp;fullscreen.
-                    </p>
-                    <p>
-                      Then product features, comparisons, and a drawer of
-                      detailed product information. Care instructions,
-                      replacement parts, product manual, and part numbers – this
-                      section contains everything you might need for
-                      your&nbsp;product.
-                    </p>
-                    <p>
-                      Finally, detailed product shots, features, product
-                      accessories, videos, and product links to complete
-                      the&nbsp;look.
-                    </p>
-                  </div>
-                </section>
-                <section class="module-gallery reveal">
-                  <div class="media gallery">
-                    <img
-                      src="../../img/work/iconmotosports/carousel_02-slide_01.jpg"
-                      alt="Featured Collection"
-                    />
-                    <img
-                      src="../../img/work/iconmotosports/carousel_02-slide_02.jpg"
-                      alt="Product Listing"
-                    />
-                    <img
-                      src="../../img/work/iconmotosports/carousel_02-slide_03.jpg"
-                      alt="Featured Product"
-                    />
-                    <img
-                      src="../../img/work/iconmotosports/carousel_02-slide_04.jpg"
-                      alt="Store Locator"
-                    />
-                    <img
-                      src="../../img/work/iconmotosports/carousel_02-slide_05.jpg"
-                      alt="Store Locator"
-                    />
-                    <img
-                      src="../../img/work/iconmotosports/carousel_02-slide_06.jpg"
-                      alt="Store Locator"
-                    />
-                  </div>
-                  <div class="info">
-                    <div class="pagination">
-                      <button class="btn-gallery-left" aria-label="Previous">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="19"
-                          height="8"
-                          viewBox="0 0 19 8"
-                        >
-                          <path
-                            d="M1.94974747,3 L19,3 L19,4 L1.70710678,4 L4.24264069,6.53553391 L3.53553391,7.24264069 L-2.22044605e-16,3.62132034 L3.53553391,0 L4.24264069,0.707106781 L1.94974747,3 Z"
-                          />
-                        </svg>
-                      </button>
-                      <span class="current"></span> /
-                      <span class="total"></span>
-                      <button class="btn-gallery-right" aria-label="Next">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="19"
-                          height="8"
-                          viewBox="0 0 19 8"
-                        >
-                          <path
-                            d="M1.94974747,3 L19,3 L19,4 L1.70710678,4 L4.24264069,6.53553391 L3.53553391,7.24264069 L-2.22044605e-16,3.62132034 L3.53553391,0 L4.24264069,0.707106781 L1.94974747,3 Z"
-                            transform="matrix(-1 0 0 1 19 0)"
-                          />
-                        </svg>
-                      </button>
-                    </div>
-                    <h6 class="title">High Quality Visuals</h6>
-                    <div class="description">
-                      <p>
-                        Icon's website looks stunning due to its use of
-                        high-resolution imagery and&nbsp;videos.
-                      </p>
-                    </div>
-                  </div>
-                </section>
-                <section class="module-copy reveal theme-reduce-top-padding">
-                  <div class="summary">
-                    <div class="col-1">
-                      <p>
-                        Their product shots and videos are on another level.
-                        They produce all of their own photo and video shoots
-                        with their in-house production&nbsp;team.
-                      </p>
-                    </div>
-                    <div class="col-2">
-                      <p>
-                        Content for the website was pleasantly abundant. From
-                        undead biker gangs to escaping fire breathing
-                        dragons–Icon has gear for every kind of&nbsp;rider.
-                      </p>
-                    </div>
-                  </div>
-                </section>
-                <section class="module-gallery reveal">
-                  <div class="media gallery">
-                    <img
-                      src="../../img/work/iconmotosports/carousel_03-slide_01.jpg"
-                      alt="Featured Collection"
-                    />
-                    <img
-                      src="../../img/work/iconmotosports/carousel_03-slide_02.jpg"
-                      alt="Product Listing"
-                    />
-                    <img
-                      src="../../img/work/iconmotosports/carousel_03-slide_03.jpg"
-                      alt="Featured Product"
-                    />
-                    <img
-                      src="../../img/work/iconmotosports/carousel_03-slide_04.jpg"
-                      alt="Store Locator"
-                    />
-                  </div>
-                  <div class="info">
-                    <div class="pagination">
-                      <button class="btn-gallery-left" aria-label="Previous">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="19"
-                          height="8"
-                          viewBox="0 0 19 8"
-                        >
-                          <path
-                            d="M1.94974747,3 L19,3 L19,4 L1.70710678,4 L4.24264069,6.53553391 L3.53553391,7.24264069 L-2.22044605e-16,3.62132034 L3.53553391,0 L4.24264069,0.707106781 L1.94974747,3 Z"
-                          />
-                        </svg>
-                      </button>
-                      <span class="current"></span> /
-                      <span class="total"></span>
-                      <button class="btn-gallery-right" aria-label="Next">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="19"
-                          height="8"
-                          viewBox="0 0 19 8"
-                        >
-                          <path
-                            d="M1.94974747,3 L19,3 L19,4 L1.70710678,4 L4.24264069,6.53553391 L3.53553391,7.24264069 L-2.22044605e-16,3.62132034 L3.53553391,0 L4.24264069,0.707106781 L1.94974747,3 Z"
-                            transform="matrix(-1 0 0 1 19 0)"
-                          />
-                        </svg>
-                      </button>
-                    </div>
-                    <div class="description">
-                      <p>
-                        &mdash; Featured Collection<br />&mdash; Product
-                        Listing<br />&mdash; Featured Product<br />&mdash; Store
-                        Locator
-                      </p>
-                    </div>
                   </div>
                 </section>
                 <section class="module-image reveal">
                   <img
                     class="media"
-                    src="../../img/work/iconmotosports/mobile.jpg"
-                    alt="Mobile"
+                    src="../../img/work/zervice/quiz.jpg"
+                    alt="Quiz"
                   />
+                  <div class="info">
+                    <h6 class="title">Quiz</h6>
+                    <p>
+                      With a couple stops throughout the trip you're prompted
+                      with a quiz to learn more about Zervice's&nbsp;offerings.
+                    </p>
+                  </div>
+                </section>
+                <section class="module-image reveal">
+                  <img
+                    class="media"
+                    src="../../img/work/zervice/maidpro.jpg"
+                    alt="MaidPro"
+                  />
+                  <div class="info">
+                    <h6 class="title">Neighborhood</h6>
+                    <p>
+                      As you make your way along the winding roads you visit
+                      these homes and can learn all about one of the many
+                      Zervices like&nbsp;MaidPro.
+                    </p>
+                  </div>
+                </section>
+                <section class="module-image reveal">
+                  <img
+                    class="media"
+                    src="../../img/work/zervice/train.jpg"
+                    alt="Train"
+                  />
+                  <div class="info">
+                    <h6 class="title">All aboard!</h6>
+                    <p>
+                      At the final stop you drive into the city and under a
+                      bridge, just as a train speeds by from&nbsp;above.
+                    </p>
+                  </div>
+                </section>
+                <section class="module-image reveal">
+                  <img
+                    class="media"
+                    src="../../img/work/zervice/mobile-start-about-train.jpg"
+                    alt="Mobile Start About Train"
+                  />
+                  <div class="info">
+                    <h6 class="title">On the go.</h6>
+                    <p>
+                      In the early responsive web days this site actually worked
+                      from a mobile device. Don't let the iPhone X here fool
+                      you–when this site came out everyone had the
+                      iPhone&nbsp;5.
+                    </p>
+                  </div>
                 </section>
                 <section class="module-copy reveal theme-reduce-top-padding">
                   <div class="summary">
                     <div class="col-1">
                       <p>
                         <strong
-                          >Icon is the dream client you always hope
-                          to&nbsp;land.</strong
+                          >Zervice is a progressive group with multiple
+                          franchise brands all leading the&nbsp;way.</strong
                         >
                       </p>
                       <p>
-                        With their badass team, gear, and visual assets we were
-                        honored to work with them to build this three headed
-                        beast of a&nbsp;website.
+                        They wanted a unique website and gave us free reign over
+                        the creative direction and execution of the project.
+                        They were ecstatic with what we&nbsp;delivered.
                       </p>
                     </div>
                     <div class="col-2">
                       <p>
-                        Icon has a tight grip on the creative direction of their
-                        brands. So we were thrilled to hand over the keys and
-                        see the website come to&nbsp;life.
+                        This is the oldest website we are showcasing, but one
+                        that we are so grateful having been part of. It was also
+                        one of the most awarded websites we've&nbsp;launched.
                       </p>
                       <p>
                         Like this project and want to chat about what we could
                         do for you?
                         <a href="mailto:hello@vanholtz.co"
-                          >Drop us a&nbsp;line.</a
+                          >Hit&nbsp;us&nbsp;up!</a
                         >
                       </p>
                     </div>
@@ -1613,11 +1405,9 @@
                   data-to="0%"
                   data-timing="quadOut"
                 >
-                  <a href="../parliament/"
+                  <a href="../voicestudio/"
                     ><h2 class="next-project">next project</h2>
-                    <span class="project-name"
-                      >Innovation<br />Strategy</span
-                    ></a
+                    <span class="project-name">Voice<br />Studio</span></a
                   >
                 </section>
               </div>
@@ -1678,5 +1468,5 @@
       gtag("config", "UA-120921934-1");
     </script>
   </body>
-  <!-- Mirrored from vanholtz.co/work/iconmotosports/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 30 Dec 2021 09:04:36 GMT -->
+  <!-- Mirrored from vanholtz.co/work/zervice/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 30 Dec 2021 09:04:47 GMT -->
 </html>

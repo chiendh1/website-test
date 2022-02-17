@@ -4633,6 +4633,7 @@ window.addEventListener("load", function (e) {
     },
     onLeave: function () {
       stopPage(),
+      documentBody.classList.remove("journal-post-page");
         documentBody.classList.remove("journal-post-page-js"),
         !documentBody.classList.contains("easter-egg") &&
           documentBody.classList.contains("night-mode") &&

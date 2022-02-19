@@ -4428,7 +4428,6 @@ window.addEventListener("load", function (e) {
       documentBody.classList.add("work-page");
     },
     onEnterCompleted: function () {
-      console.log(1111);
       documentBody.classList.add("work-page-js"), initPage();
     },
     onLeave: function () {

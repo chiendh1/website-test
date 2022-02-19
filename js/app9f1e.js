@@ -4271,7 +4271,7 @@ window.addEventListener("load", function (e) {
         isMobile && documentBody.classList.remove("mobileNavOpen"),
         (aboutContainer.scrollTop = 0),
         documentBody.classList.add("navTop"),
-        documentBody.classList.add("aboutShow");
+        documentBody.classList.add("contactShow");
     }),
     serviceClick && serviceClick.addEventListener("click", function (t) {
       clickService();

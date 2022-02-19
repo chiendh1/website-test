@@ -4486,7 +4486,7 @@ window.addEventListener("load", function (e) {
         {
           url: "",
           imgUrl:
-            "https://images.squarespace-cdn.com/content/v1/5c587c5f65019f7b1a809d16/1581437237480-FKRJJWYWRVEGKGTIT0OW/Reebok-Logo.jpg?format=1000w",
+            "https://www.nicepng.com/png/full/76-763451_reebok-logo-black-and-white-imagenes-del-logo.png",
           name: "REEBOK",
           disabledReadmore: true,
         },
@@ -4568,6 +4568,20 @@ window.addEventListener("load", function (e) {
           name: "GIRL SCOUTS",
           disabledReadmore: true,
         },
+        {
+          url: "bnp-paribas",
+          imgUrl:
+            "https://manaos.com/wp-content/uploads/2021/09/logo-BNP-Paribas-white.png",
+          name: "BNP PARIBAS",
+          disabledReadmore: true,
+        },
+        {
+          url: "liquid-iv",
+          imgUrl:
+            "https://athelogroup.com/wp-content/uploads/2021/06/liquidIValt.png",
+          name: "LIQUID IV",
+          disabledReadmore: true,
+        },
       ];
       data.forEach((element, index) => {
         $(".journal .content .work").append(`
@@ -4586,6 +4600,8 @@ window.addEventListener("load", function (e) {
                                     data-timing="quadOut"
                                   >
                                     <img
+                                      style="max-width: 550px;
+                                      height: auto;"
                                       src="${element.imgUrl}"
                                       alt="${element.name}"
                                     />

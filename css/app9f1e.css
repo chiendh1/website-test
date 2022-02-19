@@ -4362,3 +4362,9 @@ ul.wrap-result li {
 body.night-mode.home-page:not(.ultra-mode):not(.intro):not(.outro) .projects.isHovering li.hover a{
   color: #f2f2f2;
 }
+.work-page .case-study .intro .col-1 p.service-title strong {
+  font-size: 36px;
+}
+p.quote {
+  font-size: 20px;
+}

@@ -3380,7 +3380,7 @@ body:not(.home-page):not(.journal-page):not(.aboutShow)
     width: 100%;
   }
   .home-page .projects a {
-    font-size: 13vw;
+    font-size: 9.5vw;
     letter-spacing: normal;
   }
 }

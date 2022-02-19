@@ -4271,7 +4271,7 @@ window.addEventListener("load", function (e) {
         isMobile && documentBody.classList.remove("mobileNavOpen"),
         (aboutContainer.scrollTop = 0),
         documentBody.classList.add("navTop"),
-        documentBody.classList.add("aboutShow");
+        documentBody.classList.add("contactShow");
     }),
     serviceClick && serviceClick.addEventListener("click", function (t) {
       clickService();
@@ -4305,7 +4305,7 @@ window.addEventListener("load", function (e) {
           (!documentBody.classList.contains("journal-page") &&
             ui.classList.contains("bottom"))) &&
           documentBody.classList.remove("navTop"),
-        documentBody.classList.remove("aboutShow"),
+        documentBody.classList.remove("contactShow"),
         isMobile && documentBody.classList.add("mobileNavOpen");
     }),
     isMobile ||

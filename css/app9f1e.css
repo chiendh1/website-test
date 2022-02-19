@@ -270,11 +270,11 @@ template {
   background: #fff;
 }
 .about ::-moz-selection,
-.ui ::-moz-selection {
+.ui ::-moz-selection, .contact-html ::-moz-selection {
   background: #fff;
 }
 .about ::selection,
-.ui ::selection {
+.ui ::selection, .contact-html ::selection {
   background: #fff;
 }
 body.home-page ::-moz-selection {
@@ -516,6 +516,11 @@ button.link {
   opacity: 1;
   animation: b 2s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0.25s infinite forwards;
 }
+.contact-html .btn-back:hover .btn-box {
+  transform: translateY(0) scale(1);
+  opacity: 1;
+  animation: b 2s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0.25s infinite forwards;
+}
 @keyframes b {
   0% {
     transform: translateY(0) scale(1);
@@ -637,6 +642,12 @@ body.ultra-mode .ui .copyright {
   body.ultra-mode.uiHover:not(.aboutShow) body.ultra-mode .copyright {
     opacity: 0.5;
   }
+  body.night-mode.uiHover:not(.contactShow) body.night-mode .copyright,
+  body.night-mode.uiHover:not(.contactShow) body.ultra-mode .copyright,
+  body.ultra-mode.uiHover:not(.contactShow) body.night-mode .copyright,
+  body.ultra-mode.uiHover:not(.contactShow) body.ultra-mode .copyright {
+    opacity: 0.5;
+  }
 }
 body.night-mode .mobile-nav,
 body.ultra-mode .mobile-nav {
@@ -692,8 +703,18 @@ body.ultra-mode.aboutShow .content,
 body.ultra-mode.aboutShow .stagePerspective {
   opacity: 0.1;
 }
+body.night-mode.contactShow .content,
+body.night-mode.contactShow .stagePerspective,
+body.ultra-mode.contactShow .content,
+body.ultra-mode.contactShow .stagePerspective {
+  opacity: 0.1;
+}
 body.night-mode .about:before,
 body.ultra-mode .about:before {
+  background-color: rgba(0, 0, 0, 0.85);
+}
+body.night-mode .contact-html:before,
+body.ultra-mode .contact-html:before {
   background-color: rgba(0, 0, 0, 0.85);
 }
 body.night-mode .about .left,
@@ -705,6 +726,10 @@ body.ultra-mode .about .right {
 @media screen and (min-width: 768px) {
   body.night-mode .about:before,
   body.ultra-mode .about:before {
+    display: none;
+  }
+  body.night-mode .contact-html:before,
+  body.ultra-mode .contact-html:before {
     display: none;
   }
 }
@@ -956,7 +981,10 @@ body.ultra-mode .content {
 body.ultra-mode:not(.home-page).aboutShow .content {
   opacity: 0.1;
 }
-body.ultra-mode .about:before {
+body.ultra-mode:not(.home-page).contactShow .content {
+  opacity: 0.1;
+}
+body.ultra-mode .contact-html:before {
   background-color: rgba(72, 1, 255, 0.85);
 }
 body.ultra-mode .logo {
@@ -2602,6 +2630,10 @@ body.home-page .ui .copyright {
     opacity: 0.5;
     transition-delay: 0.5s;
   }
+  body.uiHover:not(.contactShow) .ui .copyright {
+    opacity: 0.5;
+    transition-delay: 0.5s;
+  }
 }
 .ui .info {
   -ms-flex-pack: justify;
@@ -2983,6 +3015,13 @@ body.uiHover .ui .color-mode {
     display: block;
     transform: translateX(0);
   }
+  .contactShow .mobile-nav {
+    transform: translateX(calc(5vw + 60px));
+  }
+  .contactShow .btn-back {
+    display: block;
+    transform: translateX(0);
+  }
   .mobile-nav {
     display: block;
     position: relative;
@@ -3153,6 +3192,17 @@ body:not(.home-page):not(.journal-page):not(.aboutShow).loading
   transform: translateX(calc(5vw + 60px));
 }
 body:not(.home-page):not(.journal-page):not(.aboutShow)
+  .basicScroll
+  .btn-page-back {
+  z-index: 9999;
+  transform: translateX(0);
+}
+body:not(.home-page):not(.journal-page):not(.contactShow).loading
+  .basicScroll
+  .btn-page-back {
+  transform: translateX(calc(5vw + 60px));
+}
+body:not(.home-page):not(.journal-page):not(.contactShow)
   .basicScroll
   .btn-page-back {
   z-index: 9999;
@@ -3517,8 +3567,14 @@ body:not(.home-page):not(.journal-page):not(.aboutShow)
 body:not(.aboutShow) .about {
   pointer-events: none;
 }
+body:not(.contactShow) .contact-html {
+  pointer-events: none;
+}
 @media screen and (min-width: 768px) {
   body:not(.aboutShow) .about .container {
+    transform: translate3d(0, 30px, 0);
+  }
+  body:not(.contactShow) .contact-html .container {
     transform: translate3d(0, 30px, 0);
   }
 }
@@ -3530,8 +3586,17 @@ body.aboutShow .ui .contact,
 body.aboutShow .ui .right {
   opacity: 0 !important;
 }
+body.contactShow .ui .contact,
+body.contactShow .ui .right {
+  opacity: 0 !important;
+}
 body.aboutShow .about,
 body.aboutShow .about .container {
+  transition-duration: 1s;
+  transition-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+}
+body.contactShow .contact-html,
+body.contactShow .contact-html .container {
   transition-duration: 1s;
   transition-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
 }
@@ -3540,39 +3605,56 @@ body.aboutShow .about .container {
   body.aboutShow .about .container {
     transition-delay: 0.25s;
   }
+  body.contactShow .contact-html,
+  body.contactShow .contact-html .container {
+    transition-delay: 0.25s;
+  }
 }
 body.aboutShow .about {
+  opacity: 1;
+}
+body.contactShow .contact-html {
   opacity: 1;
 }
 body.aboutShow .btn-back {
   transform: translateX(0);
   transition-delay: 0.5s;
 }
+body.contactShow .btn-back {
+  transform: translateX(0);
+  transition-delay: 0.5s;
+}
 body.aboutShow .mobile-nav-inner:before {
+  transform: translate3d(-7px, 2px, 0) rotate(-45deg) scaleX(0.6);
+}
+body.contactShow .mobile-nav-inner:before {
   transform: translate3d(-7px, 2px, 0) rotate(-45deg) scaleX(0.6);
 }
 body.aboutShow .mobile-nav-inner:after {
   transform: translate3d(-7px, -2px, 0) rotate(45deg) scaleX(0.6);
 }
-.about, .contract {
+body.contactShow .mobile-nav-inner:after {
+  transform: translate3d(-7px, -2px, 0) rotate(45deg) scaleX(0.6);
+}
+.about, .contract, .contact-html {
   z-index: 1;
   opacity: 0;
   transition: opacity 0.5s 0s;
 }
 .about,
-.about:before, .contract, .contract:before {
+.about:before, .contract, .contract:before, .contact-html, .contact-html:before {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
 }
-.about:before {
+.about:before, .contact-html:before {
   content: "";
   z-index: -1;
   background-color: hsla(0, 0%, 95%, 0.95);
 }
-.about .container {
+.about .container, .contact-html .container {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: justify;
@@ -3635,13 +3717,13 @@ body.aboutShow .mobile-nav-inner:after {
 .about .heading:not(:first-of-type) {
   margin-top: 50px;
 }
-.about a {
+.about a, .contact-html a {
   display: inline-block;
   margin-bottom: 5px;
   color: #fff;
   text-decoration: none;
 }
-.about p {
+.about p, .contact-html p {
   width: 100%;
   margin-bottom: 5px;
 }
@@ -3687,7 +3769,7 @@ body.aboutShow .mobile-nav-inner:after {
   .about {
     z-index: 2;
   }
-  .about .container {
+  .about .container, .contact-html .container {
     display: block;
     height: 100vh;
     margin-top: 0;
@@ -3995,6 +4077,10 @@ body.loading .journal {
   transform: scaleX(1) translateZ(0);
   transition-delay: 0.25s;
 }
+.journal-page:not(.contactShow) .ui .links .journal-li:after {
+  transform: scaleX(1) translateZ(0);
+  transition-delay: 0.25s;
+}
 .journal-page .journal {
   position: relative;
   width: 100%;
@@ -4214,6 +4300,10 @@ body.loading .journal {
   }
 }
 .journal-post-page:not(.aboutShow) .ui .links .journal-li:after {
+  transform: scaleX(1) translateZ(0);
+  transition-delay: 0.25s;
+}
+.journal-post-page:not(.contactShow) .ui .links .journal-li:after {
   transform: scaleX(1) translateZ(0);
   transition-delay: 0.25s;
 }

@@ -26,6 +26,9 @@ abbr[title] {
   text-decoration: underline;
   text-decoration: underline dotted;
 }
+.font-italic {
+  font-style: italic !important;
+}
 b,
 strong {
   font-weight: bolder;
@@ -1621,7 +1624,7 @@ body.loading .module-copy-image .copy .heading {
 }
 .module-gallery {
   display: -ms-flexbox;
-  display: flex;
+  display: block;
   -ms-flex-pack: justify;
   justify-content: space-between;
   padding: 15vh 10vw 0;

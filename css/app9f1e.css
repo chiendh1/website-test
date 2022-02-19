@@ -887,7 +887,7 @@ body.night-mode .flickity-page-dots .dot {
     background: linear-gradient(0deg, #000 0, transparent);
   }
   body.night-mode .project-name {
-    font-size: 40px;
+    font-size: 35px;
   }
   @supports (-webkit-text-stroke: 1px #f2f2f2) or (text-stroke: 1px #f2f2f2) {
     body.night-mode .project-name {
@@ -3284,7 +3284,7 @@ body:not(.home-page):not(.journal-page):not(.aboutShow)
   font-weight: 900;
   font-style: normal;
   font-stretch: normal;
-  font-size: 9.6vw;
+  font-size: 9vw;
   letter-spacing: 0.02em;
   line-height: 0.9em;
   transition: color 0.5s, opacity 0.5s;

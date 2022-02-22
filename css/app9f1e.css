@@ -142,6 +142,12 @@ summary {
 template {
   display: none;
 }
+.float-right {
+  float: right !important;
+}
+.float-left {
+  float: left !important;
+}
 .text-center {
   text-align: center !important;
 }
@@ -3569,6 +3575,10 @@ body:not(.aboutShow) .about {
 }
 body:not(.contactShow) .contact-html {
   pointer-events: none;
+  display: none;
+}
+body.contactShow .contact-html {
+  display: block;
 }
 @media screen and (min-width: 768px) {
   body:not(.aboutShow) .about .container {
@@ -3637,7 +3647,7 @@ body.contactShow .mobile-nav-inner:after {
   transform: translate3d(-7px, -2px, 0) rotate(45deg) scaleX(0.6);
 }
 .about, .contract, .contact-html {
-  z-index: 1;
+  z-index: 3;
   opacity: 0;
   transition: opacity 0.5s 0s;
 }
@@ -4368,3 +4378,136 @@ body.night-mode.home-page:not(.ultra-mode):not(.intro):not(.outro) .projects.isH
 p.quote {
   font-size: 20px;
 }
+.col-100 {
+  width: 100%;
+  float: left;
+}
+
+.wrap-contact {
+  width: 100%;
+}
+.wrap-contact h3 {
+  font-size: 36px;
+  font-style: normal;
+  font-weight: normal;
+  margin-bottom: 60px;
+  width: 100%;
+}
+.wrap-contact .left-content {
+  float: left;
+  width: 40%;
+  padding-right: 30px;
+}
+.wrap-contact p {
+  font-size: 16px;
+}
+.wrap-contact p.title {
+  font-weight: bold;
+  font-size: 18px;
+}
+.wrap-contact .right-content {
+  float: right;
+  width: 60%;
+}
+.wrap-contact .wrap-form {
+  margin-top: 40px;
+  width: 100%;
+  float: left;
+  padding-bottom: 25px;
+}
+.wrap-contact .wrap-form label {
+  width: 100%;
+  float: left;
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-weight: normal;
+}
+.wrap-contact .wrap-form .row-form {
+  margin-bottom: 25px;
+}
+.wrap-contact .wrap-form .col-input {
+  width: 49%;
+  margin-right: 1%;
+}
+.wrap-contact .wrap-form .col-input.right {
+  margin-right: 0px;
+}
+.wrap-contact .wrap-form input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  background: #fafafa;
+  color: #000;
+  font-size: 14px;
+  box-sizing: border-box;
+  border-radius: 2px;
+  height: 40px;
+}
+.wrap-contact .wrap-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  background: #fafafa;
+  color: #000;
+  font-size: 14px;
+  box-sizing: border-box;
+  border-radius: 2px;
+  height: 90px;
+}
+.wrap-contact .wrap-form input.button {
+  background-color: transparent;
+  color: #fff;
+  border-radius: 0;
+  border-width: 2px;
+  border-style: solid;
+  transition: 0.1s background-color linear, 0.1s color linear;
+  font-style: normal;
+  border-color: #fff;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  width: auto;
+  display: inline-block;
+  height: auto;
+  padding: 1em 2.5em;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+.wrap-contact .wrap-form input.button:hover {
+  background-color: #fff;
+  color: #000;
+}
+.wrap-contact .wrap-form .error {
+  color: #e41717;
+  margin-top: 5px;
+  float: left;
+  display: none;
+}
+.wrap-contact .wrap-form .error.show {
+  display: inline-block;
+}
+
+/* Always set the map height explicitly to define the size of the div
+* element that contains the map. */
+#map {
+  height: 393px;
+  width: 100%;
+}
+.wrap-contact .wrap-address {
+  margin-bottom: 50px;
+}
+.wrap-contact .wrap-address .address-title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .wrap-contact .left-content {
+    width: 100%;
+  }
+  .wrap-contact .right-content {
+    width: 100%;
+  }
+}
+      

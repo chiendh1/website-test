@@ -76,6 +76,185 @@ function eraseCookie (name,path,domain) {
 }
 /* End */
 
+// Contact submit
+$('body').on('click', '.contact-html .wrap-form .button', function (e) {
+  const parent = $(this).closest('.wrap-form');
+  let validate = false;
+  const firstName = parent.find('.firstName').val();
+  const lastName = parent.find('.lastName').val();
+  const email = parent.find('.email').val();
+  if (!firstName) {
+    validate = true;
+    parent.find('.firstNameError').html('First Name is required').addClass('show');
+  } else {
+    parent.find('.firstNameError').empty().removeClass('show');
+  }
+  if (!lastName) {
+    validate = true;
+    parent.find('.lastNameError').html('Last Name is required').addClass('show');
+  } else {
+    parent.find('.lastNameError').empty().removeClass('show');
+  }
+  if (!email) {
+    validate = true;
+    parent.find('.emailError').html('Email Address is required').addClass('show');
+  } else {
+    const validEmail = validateEmail(email);
+    if (!validEmail) {
+      validate = true;
+      parent.find('.emailError').html('Email Address is not valid. Email addresses should follow the format user@domain.com.').addClass('show');
+    } else {
+      parent.find('.emailError').empty().removeClass('show');
+    }
+  }
+  if (validate) {
+    return false;
+  }
+});
+
+$('body').on('keyup', '.contact-html .wrap-form .firstName', function () {
+  const value = $(this).val();
+  const parent = $(this).closest('.wrap-form');
+  if (value) {
+    parent.find('.firstNameError').empty().removeClass('show');
+  }
+})
+
+$('body').on('keyup', '.contact-html .wrap-form .lastName', function () {
+  const value = $(this).val();
+  const parent = $(this).closest('.wrap-form');
+  if (value) {
+    parent.find('.lastNameError').empty().removeClass('show');
+  }
+})
+
+$('body').on('keyup', '.contact-html .wrap-form .email', function () {
+  const value = $(this).val();
+  const parent = $(this).closest('.wrap-form');
+  if (value) {
+    parent.find('.emailError').empty().removeClass('show');
+    const validEmail = validateEmail(value);
+    if (!validEmail) {
+      parent.find('.emailError').html('Email Address is not valid. Email addresses should follow the format user@domain.com.').addClass('show');
+    } else {
+      parent.find('.emailError').empty().removeClass('show');
+    }
+  }
+})
+
+const validateEmail = (email) => {
+  return String(email)
+    .toLowerCase()
+    .match(
+      /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+    );
+};
+
+// This example adds a search box to a map, using the Google Place Autocomplete
+// feature. People can enter geographical searches. The search box will return a
+// pick list containing a mix of places and predicted search terms.
+// This example requires the Places library. Include the libraries=places
+// parameter when you first load the API. For example:
+// <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
+function initAutocomplete() {
+  const latlng = { lat: 40.704172, lng: -73.98490649999997 };
+  const map = new google.maps.Map(document.getElementById("map"), {
+    center: latlng,
+    zoom: 12,
+    // mapTypeId: "roadmap",
+    styles: [
+      { elementType: "geometry", stylers: [{ color: "#242f3e" }] },
+      { elementType: "labels.text.stroke", stylers: [{ color: "#242f3e" }] },
+      { elementType: "labels.text.fill", stylers: [{ color: "#746855" }] },
+      {
+        featureType: "administrative.locality",
+        elementType: "labels.text.fill",
+        stylers: [{ color: "#d59563" }],
+      },
+      {
+        featureType: "poi",
+        elementType: "labels.text.fill",
+        stylers: [{ color: "#d59563" }],
+      },
+      {
+        featureType: "poi.park",
+        elementType: "geometry",
+        stylers: [{ color: "#263c3f" }],
+      },
+      {
+        featureType: "poi.park",
+        elementType: "labels.text.fill",
+        stylers: [{ color: "#6b9a76" }],
+      },
+      {
+        featureType: "road",
+        elementType: "geometry",
+        stylers: [{ color: "#38414e" }],
+      },
+      {
+        featureType: "road",
+        elementType: "geometry.stroke",
+        stylers: [{ color: "#212a37" }],
+      },
+      {
+        featureType: "road",
+        elementType: "labels.text.fill",
+        stylers: [{ color: "#9ca5b3" }],
+      },
+      {
+        featureType: "road.highway",
+        elementType: "geometry",
+        stylers: [{ color: "#746855" }],
+      },
+      {
+        featureType: "road.highway",
+        elementType: "geometry.stroke",
+        stylers: [{ color: "#1f2835" }],
+      },
+      {
+        featureType: "road.highway",
+        elementType: "labels.text.fill",
+        stylers: [{ color: "#f3d19c" }],
+      },
+      {
+        featureType: "transit",
+        elementType: "geometry",
+        stylers: [{ color: "#2f3948" }],
+      },
+      {
+        featureType: "transit.station",
+        elementType: "labels.text.fill",
+        stylers: [{ color: "#d59563" }],
+      },
+      {
+        featureType: "water",
+        elementType: "geometry",
+        stylers: [{ color: "#17263c" }],
+      },
+      {
+        featureType: "water",
+        elementType: "labels.text.fill",
+        stylers: [{ color: "#515c6d" }],
+      },
+      {
+        featureType: "water",
+        elementType: "labels.text.stroke",
+        stylers: [{ color: "#17263c" }],
+      },
+    ],
+  });
+
+  const marker = new google.maps.Marker({
+    position: latlng,
+    map,
+    title: "18 Bridge Street, Brooklyn, NY 11201",
+  });
+
+  // Add a click listener for each marker, and set up the info window.
+  marker.addListener("click", () => {
+    window.open(`https://www.google.com/maps?sll=40.704172,-73.984906&q=18+Bridge+Street+Brooklyn,+NY,+11201,+United+States&z=3`);
+  });
+}
 
 
 

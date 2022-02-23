@@ -4483,7 +4483,13 @@ window.addEventListener("load", function (e) {
             "https://images.squarespace-cdn.com/content/v1/5c587c5f65019f7b1a809d16/1549996190470-9FPQ3XVRZDPLK6BKC7HJ/gimlet_website_casestudy_image_googlehome.jpg?format=2500w",
           name: "GIMLET",
         },
-    
+        {
+          url: "bnp-paribas",
+          imgUrl:
+            "https://manaos.com/wp-content/uploads/2021/09/logo-BNP-Paribas-white.png",
+          name: "BNP PARIBAS",
+          disabledReadmore: true,
+        },
         {
           url: "",
           imgUrl:
@@ -4530,14 +4536,14 @@ window.addEventListener("load", function (e) {
         {
           url: "bic",
           imgUrl:
-            "https://images.squarespace-cdn.com/content/v1/5c587c5f65019f7b1a809d16/1550092056833-2H2PONW5YJGXPB31XCH3/bic_office_assistant_low.jpg?format=2500w",
+            "https://res.cloudinary.com/rd-vinsofts/image/upload/v1645612418/bic_v16mox.png",
           name: "BIC",
         },
     
         {
           url: "doctors-without-borders",
           imgUrl:
-            "https://images.squarespace-cdn.com/content/v1/5c587c5f65019f7b1a809d16/1550266424390-ZL44VI529KORCD0K7WZ5/doctors_wo_borders_googlehome_livingroom_low.jpg?format=1500w",
+            "https://res.cloudinary.com/rd-vinsofts/image/upload/v1645613102/doctor_wexh6s.png",
           name: "DOCTORS WITHOUT BORDERS",
         },
     
@@ -4558,22 +4564,15 @@ window.addEventListener("load", function (e) {
         {
           url: "vita-coco",
           imgUrl:
-            "https://assets-global.website-files.com/5b4a8d1cabad384302b96f64/5b60c7862231dc553570e5a7_5b399a96b128b34aa3f56fce_VC_white_logo.png",
+            "https://res.cloudinary.com/rd-vinsofts/image/upload/v1645612082/vita-coco_p1ulit.png",
           name: "VITA COCO",
           disabledReadmore: true,
         },
         {
           url: "girl-scouts",
           imgUrl:
-            "https://pixy.org/download/1360455/",
+            "https://res.cloudinary.com/rd-vinsofts/image/upload/v1645612209/girl-scouts_bzwrzd.png",
           name: "GIRL SCOUTS",
-          disabledReadmore: true,
-        },
-        {
-          url: "bnp-paribas",
-          imgUrl:
-            "https://manaos.com/wp-content/uploads/2021/09/logo-BNP-Paribas-white.png",
-          name: "BNP PARIBAS",
           disabledReadmore: true,
         },
         {
@@ -4601,7 +4600,7 @@ window.addEventListener("load", function (e) {
                                     data-timing="quadOut"
                                   >
                                     <img
-                                      style="max-width: 550px;
+                                      style="max-width: 600px;
                                       height: auto;"
                                       src="${element.imgUrl}"
                                       alt="${element.name}"

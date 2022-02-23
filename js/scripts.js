@@ -83,6 +83,8 @@ $('body').on('click', '.contact-html .wrap-form .button', function (e) {
   const firstName = parent.find('.firstName').val();
   const lastName = parent.find('.lastName').val();
   const email = parent.find('.email').val();
+  const company = parent.find('.company').val();
+  const message = parent.find('textarea').val();
   if (!firstName) {
     validate = true;
     parent.find('.firstNameError').html('First Name is required').addClass('show');

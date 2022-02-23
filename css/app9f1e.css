@@ -3056,7 +3056,7 @@ body.uiHover .ui .color-mode {
     margin-bottom: 5px;
   }
 }
-@media screen and (max-width: 440px) {
+@media screen and (max-width: 450px) {
   .contact-li button.link {
     padding-top: 15px;
   }

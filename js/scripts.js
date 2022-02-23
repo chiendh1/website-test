@@ -123,11 +123,11 @@ $('body').on('click', '.contact-html .wrap-form .button', function (e) {
     url: "/send-email/index.php",
     data: params,
     success: function(res)
-    {
-      $('body').addClass('showSendMailSuccess');
-      document.getElementById("formContact").reset();
+    { 
     }
-  })
+  });
+  $('body').addClass('showSendMailSuccess');
+  document.getElementById("formContact").reset();
 });
 
 $('body').on('keyup', '.contact-html .wrap-form .firstName', function () {

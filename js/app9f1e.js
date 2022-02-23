@@ -4306,6 +4306,7 @@ window.addEventListener("load", function (e) {
             ui.classList.contains("bottom"))) &&
           documentBody.classList.remove("navTop"),
         documentBody.classList.remove("contactShow"),
+        documentBody.classList.remove("showSendMailSuccess"),
         isMobile && documentBody.classList.add("mobileNavOpen");
     }),
     isMobile ||

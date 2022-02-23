@@ -4488,6 +4488,22 @@ p.quote {
   display: inline-block;
 }
 
+.wrap-contact .wrap-success {
+  display: none;
+  margin-top: 40px;
+  width: 100%;
+  float: left;
+}
+.wrap-contact .wrap-success p {
+  font-size: 36px;
+}
+.showSendMailSuccess .wrap-form {
+  display: none;
+}
+.showSendMailSuccess .wrap-success {
+  display: inline-block;
+}
+
 /* Always set the map height explicitly to define the size of the div
 * element that contains the map. */
 #map {

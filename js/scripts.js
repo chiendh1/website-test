@@ -83,8 +83,8 @@ $('body').on('click', '.contact-html .wrap-form .button', function (e) {
   const firstName = parent.find('.firstName').val();
   const lastName = parent.find('.lastName').val();
   const email = parent.find('.email').val();
-  const company = parent.find('.company').val();
-  const message = parent.find('textarea').val();
+  const company = parent.find('.company').val() || '';
+  const message = parent.find('textarea').val() || '';
   if (!firstName) {
     validate = true;
     parent.find('.firstNameError').html('First Name is required').addClass('show');
@@ -112,6 +112,22 @@ $('body').on('click', '.contact-html .wrap-form .button', function (e) {
   if (validate) {
     return false;
   }
+  const body = `<p>Full Name: ${firstName} ${lastName}</p><p>Email: ${email}</p><p>Company: ${company}</p><p>Message: ${message}</p>`;
+  const params = {
+    email: email,
+    body: body,
+    fullName: `${firstName} ${lastName}`,
+  };
+  $.ajax({
+    type: "POST",
+    url: "/send-email/index.php",
+    data: params,
+    success: function(res)
+    {
+      $('body').addClass('showSendMailSuccess');
+      document.getElementById("formContact").reset();
+    }
+  })
 });
 
 $('body').on('keyup', '.contact-html .wrap-form .firstName', function () {

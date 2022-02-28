@@ -4167,7 +4167,7 @@ window.addEventListener("load", function (e) {
     nextPage = void 0,
     barbaSelectedLink = void 0,
     barbaContainer = document.querySelector(".barba-container"),
-    colorModeSelection = "night-mode";
+    colorModeSelection = "default";
   setTimeout(function () {
     documentBody.classList.contains("night-mode") &&
       (colorModeSelection = "night-mode");
@@ -4486,7 +4486,7 @@ window.addEventListener("load", function (e) {
         {
           url: "bnp-paribas",
           imgUrl:
-            "https://manaos.com/wp-content/uploads/2021/09/logo-BNP-Paribas-white.png",
+            "https://res.cloudinary.com/rd-vinsofts/image/upload/v1646044147/bnp-logo_efnyod.png",
           name: "BNP PARIBAS",
           disabledReadmore: true,
         },
@@ -4564,7 +4564,7 @@ window.addEventListener("load", function (e) {
         {
           url: "vita-coco",
           imgUrl:
-            "https://res.cloudinary.com/rd-vinsofts/image/upload/v1645612082/vita-coco_p1ulit.png",
+            "https://res.cloudinary.com/rd-vinsofts/image/upload/v1646044382/vita-coco_gtcrmd.png",
           name: "VITA COCO",
           disabledReadmore: true,
         },
@@ -4578,7 +4578,7 @@ window.addEventListener("load", function (e) {
         {
           url: "liquid-iv",
           imgUrl:
-            "https://athelogroup.com/wp-content/uploads/2021/06/liquidIValt.png",
+            "https://images.squarespace-cdn.com/content/v1/5345e6e2e4b03960bb9bc307/1476378073917-D9IQXNXTYDEW9A2H5ZP6/image-asset.png",
           name: "LIQUID IV",
           disabledReadmore: true,
         },

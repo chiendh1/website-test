@@ -4155,13 +4155,13 @@ window.addEventListener("load", function (e) {
     lightMode = document.querySelector(".color-mode .light-mode"),
     ultraMode = document.querySelector(".color-mode .ultra-mode"),
     mobileNav = document.querySelector(".mobile-nav"),
-    navAbout = document.querySelector(".about-li button.link"),
-    navContact = document.querySelector(".contact-li button.link"),
+    // navAbout = document.querySelector(".about-li button.link"),
+    // navContact = document.querySelector(".contact-li button.link"),
     serviceClick = document.querySelector(".services"),
-    aboutBack = document.querySelector(".about .btn-back"),
+    // aboutBack = document.querySelector(".about .btn-back"),
     aboutContainer = document.querySelector(".about .container"),
     // navContact = document.querySelector(".contact-li button.link"),
-    contactBack = document.querySelector(".contact-html .btn-back"),
+    // contactBack = document.querySelector(".contact-html .btn-back"),
     // contactContainer = document.querySelector(".contact .container"),
     prevPage = void 0,
     nextPage = void 0,
@@ -4257,22 +4257,22 @@ window.addEventListener("load", function (e) {
         documentBody.classList.toggle("mobileNavOpen"),
         documentBody.classList.remove("uiHover");
     }),
-    navAbout && navAbout.addEventListener("click", function (t) {
-      t.stopPropagation(),
-        t.preventDefault(),
-        isMobile && documentBody.classList.remove("mobileNavOpen"),
-        (aboutContainer.scrollTop = 0),
-        documentBody.classList.add("navTop"),
-        documentBody.classList.add("aboutShow");
-    }),
-    navContact && navContact.addEventListener("click", function (t) {
-      t.stopPropagation(),
-        t.preventDefault(),
-        isMobile && documentBody.classList.remove("mobileNavOpen"),
-        (aboutContainer.scrollTop = 0),
-        documentBody.classList.add("navTop"),
-        documentBody.classList.add("contactShow");
-    }),
+    // navAbout && navAbout.addEventListener("click", function (t) {
+    //   t.stopPropagation(),
+    //     t.preventDefault(),
+    //     isMobile && documentBody.classList.remove("mobileNavOpen"),
+    //     (aboutContainer.scrollTop = 0),
+    //     documentBody.classList.add("navTop"),
+    //     documentBody.classList.add("aboutShow");
+    // }),
+    // navContact && navContact.addEventListener("click", function (t) {
+    //   t.stopPropagation(),
+    //     t.preventDefault(),
+    //     isMobile && documentBody.classList.remove("mobileNavOpen"),
+    //     (aboutContainer.scrollTop = 0),
+    //     documentBody.classList.add("navTop"),
+    //     documentBody.classList.add("contactShow");
+    // }),
     serviceClick && serviceClick.addEventListener("click", function (t) {
       clickService();
     }),
@@ -4284,31 +4284,31 @@ window.addEventListener("load", function (e) {
     //     documentBody.classList.add("navTop"),
     //     documentBody.classList.add("aboutShow");
     // }),
-    aboutBack && aboutBack.addEventListener("click", function (t) {
-      t.stopPropagation(),
-        t.preventDefault(),
-        (documentBody.classList.contains("home-page") ||
-          (documentBody.classList.contains("work-page") &&
-            ui.classList.contains("bottom")) ||
-          (!documentBody.classList.contains("journal-page") &&
-            ui.classList.contains("bottom"))) &&
-          documentBody.classList.remove("navTop"),
-        documentBody.classList.remove("aboutShow"),
-        isMobile && documentBody.classList.add("mobileNavOpen");
-    }),
-    contactBack && contactBack.addEventListener("click", function (t) {
-      t.stopPropagation(),
-        t.preventDefault(),
-        (documentBody.classList.contains("home-page") ||
-          (documentBody.classList.contains("work-page") &&
-            ui.classList.contains("bottom")) ||
-          (!documentBody.classList.contains("journal-page") &&
-            ui.classList.contains("bottom"))) &&
-          documentBody.classList.remove("navTop"),
-        documentBody.classList.remove("contactShow"),
-        documentBody.classList.remove("showSendMailSuccess"),
-        isMobile && documentBody.classList.add("mobileNavOpen");
-    }),
+    // aboutBack && aboutBack.addEventListener("click", function (t) {
+    //   t.stopPropagation(),
+    //     t.preventDefault(),
+    //     (documentBody.classList.contains("home-page") ||
+    //       (documentBody.classList.contains("work-page") &&
+    //         ui.classList.contains("bottom")) ||
+    //       (!documentBody.classList.contains("journal-page") &&
+    //         ui.classList.contains("bottom"))) &&
+    //       documentBody.classList.remove("navTop"),
+    //     documentBody.classList.remove("aboutShow"),
+    //     isMobile && documentBody.classList.add("mobileNavOpen");
+    // }),
+    // contactBack && contactBack.addEventListener("click", function (t) {
+    //   t.stopPropagation(),
+    //     t.preventDefault(),
+    //     (documentBody.classList.contains("home-page") ||
+    //       (documentBody.classList.contains("work-page") &&
+    //         ui.classList.contains("bottom")) ||
+    //       (!documentBody.classList.contains("journal-page") &&
+    //         ui.classList.contains("bottom"))) &&
+    //       documentBody.classList.remove("navTop"),
+    //     documentBody.classList.remove("contactShow"),
+    //     documentBody.classList.remove("showSendMailSuccess"),
+    //     isMobile && documentBody.classList.add("mobileNavOpen");
+    // }),
     isMobile ||
       (document.onkeydown = function (t) {
         (t = t || window.event),

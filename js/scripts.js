@@ -77,7 +77,7 @@ function eraseCookie (name,path,domain) {
 /* End */
 
 // Contact submit
-$('body').on('click', '.contact-html .wrap-form .button', function (e) {
+$('body').on('click', '.wrap-form .button', function (e) {
   const parent = $(this).closest('.wrap-form');
   let validate = false;
   const firstName = parent.find('.firstName').val();
@@ -130,7 +130,7 @@ $('body').on('click', '.contact-html .wrap-form .button', function (e) {
   document.getElementById("formContact").reset();
 });
 
-$('body').on('keyup', '.contact-html .wrap-form .firstName', function () {
+$('body').on('keyup', '.wrap-form .firstName', function () {
   const value = $(this).val();
   const parent = $(this).closest('.wrap-form');
   if (value) {

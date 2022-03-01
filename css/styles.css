@@ -6,3 +6,6 @@
 body.night-mode.home-page:not(.ultra-mode):not(.intro):not(.outro) .projects.isHovering li.hover a{
     color: #f2f2f2;
 }
+body.ultra-mode.home-page:not(.outro) .projects.isHovering li.hover a {
+    color: transparent;
+}

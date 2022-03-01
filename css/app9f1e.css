@@ -3650,7 +3650,7 @@ body.contactShow .mobile-nav-inner:after {
   transform: translate3d(-7px, -2px, 0) rotate(45deg) scaleX(0.6);
 }
 .about, .contract, .contact-html {
-  z-index: 3;
+  z-index: 1;
   opacity: 0;
   transition: opacity 0.5s 0s;
 }

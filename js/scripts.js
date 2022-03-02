@@ -274,5 +274,8 @@ function initAutocomplete() {
   });
 }
 
+$('body').on('click', '.a-contact', function(e) {
+  window.location.href = '/contact/';
+})
 
 

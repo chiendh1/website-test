@@ -278,4 +278,7 @@ $('body').on('click', '.a-contact', function(e) {
   window.location.href = '/contact/';
 })
 
+$('body').on('click', '.a-about', function(e) {
+  window.location.href = '/about/';
+})
 

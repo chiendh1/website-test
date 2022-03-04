@@ -3,7 +3,8 @@
   
   use \Mailjet\Resources;
   $mj = new \Mailjet\Client('19dfd4a3117524fe87118eeabb650f79','5a82209b108a0880a80ca96e443b45dd',true,['version' => 'v3.1']);
-  $emailTo = 'hello@magiccollc.com';
+  // $emailTo = 'hello@magiccollc.com';
+  $emailTo = 'minhpv@vinsofts.net';
   $body = [
     'Messages' => [
       [

@@ -118,16 +118,17 @@ $('body').on('click', '.wrap-form .button', function (e) {
     body: body,
     fullName: `${firstName} ${lastName}`,
   };
-  $.ajax({
-    type: "GET",
-    url: "/send-email/index.php",
-    data: params,
-    success: function(res)
-    { 
-    }
-  });
+  sendEmail(params);
+  // $.ajax({
+  //   type: "GET",
+  //   url: "/send-email/index.php",
+  //   data: params,
+  //   success: function(res)
+  //   { 
+  //   }
+  // });
   $('body').addClass('showSendMailSuccess');
-  document.getElementById("formContact").reset();
+  // document.getElementById("formContact").reset();
 });
 
 $('body').on('keyup', '.wrap-form .firstName', function () {
@@ -281,4 +282,20 @@ $('body').on('click', '.a-contact', function(e) {
 $('body').on('click', '.a-about', function(e) {
   window.location.href = '/about/';
 })
+
+function sendEmail (params) {
+  console.log(params.body);
+  Email.send({
+    Host : "smtp.elasticemail.com",
+    Username : "noreply.magicco@gmail.com",
+    Password : "2A7976B4D6AD0655952BE35D5DE6E910C7D9",
+    To : 'chiendh@vinsofts.com ',
+    From : "noreply.magicco@gmail.com",
+    Subject : "Contact from Magiccollc",
+    Body : `${params.body}`
+  }).then(
+    message => alert(message)
+  );
+}
+
 

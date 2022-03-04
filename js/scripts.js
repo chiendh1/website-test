@@ -284,17 +284,16 @@ $('body').on('click', '.a-about', function(e) {
 })
 
 function sendEmail (params) {
-  console.log(params.body);
   Email.send({
     Host : "smtp.elasticemail.com",
     Username : "noreply.magicco@gmail.com",
     Password : "2A7976B4D6AD0655952BE35D5DE6E910C7D9",
-    To : 'chiendh@vinsofts.com ',
+    To : 'hello@magiccollc.com',
     From : "noreply.magicco@gmail.com",
     Subject : "Contact from Magiccollc",
     Body : `${params.body}`
   }).then(
-    message => alert(message)
+    // message => alert(message)
   );
 }
 

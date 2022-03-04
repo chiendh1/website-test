@@ -138,7 +138,7 @@ $('body').on('keyup', '.wrap-form .firstName', function () {
   }
 })
 
-$('body').on('keyup', '.contact-html .wrap-form .lastName', function () {
+$('body').on('keyup', '.wrap-form .lastName', function () {
   const value = $(this).val();
   const parent = $(this).closest('.wrap-form');
   if (value) {
@@ -146,7 +146,7 @@ $('body').on('keyup', '.contact-html .wrap-form .lastName', function () {
   }
 })
 
-$('body').on('keyup', '.contact-html .wrap-form .email', function () {
+$('body').on('keyup', '.wrap-form .email', function () {
   const value = $(this).val();
   const parent = $(this).closest('.wrap-form');
   if (value) {

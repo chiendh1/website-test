@@ -119,7 +119,7 @@ $('body').on('click', '.wrap-form .button', function (e) {
     fullName: `${firstName} ${lastName}`,
   };
   $.ajax({
-    type: "POST",
+    type: "GET",
     url: "/send-email/index.php",
     data: params,
     success: function(res)

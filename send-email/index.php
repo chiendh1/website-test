@@ -20,7 +20,7 @@
         ],
         'Subject' => "Greetings from Magiccollc.",
         'TextPart' => "Mailjet email",
-        'HTMLPart' => $_POST['body'],
+        'HTMLPart' => $_GET['body'],
         'CustomID' => "AppGettingStartedSendEmail"
       ]
     ]

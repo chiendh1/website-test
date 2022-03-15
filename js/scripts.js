@@ -302,11 +302,13 @@ $(document).ready(function() {
 })
 
 function removeFeint() {
-  if ( window.location.pathname !== '/' ){
-    $('#feint').addClass('none');
-  } else {
-    $('#feint').removeClass('none');
-  }
+  // if ( window.location.pathname !== '/' ){
+  //   $('#feint').addClass('none');
+  // } else {
+  //   $('#feint').removeClass('none');
+  // }
+
+  $('#feint').addClass('none');
 }
 
 

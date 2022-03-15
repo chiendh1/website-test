@@ -297,4 +297,16 @@ function sendEmail (params) {
   );
 }
 
+$(document).ready(function() {
+  removeFeint();
+})
+
+function removeFeint() {
+  if ( window.location.pathname !== '/' ){
+    $('#feint').addClass('none');
+  } else {
+    $('#feint').removeClass('none');
+  }
+}
+
 

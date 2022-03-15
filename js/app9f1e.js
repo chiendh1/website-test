@@ -4392,6 +4392,7 @@ window.addEventListener("load", function (e) {
     namespace: "home-page",
     onEnter: function () {
       documentBody.classList.add("home-page");
+      removeFeint();
     },
     onEnterCompleted: function () {
       "default" != colorModeSelection ||
@@ -4413,6 +4414,7 @@ window.addEventListener("load", function (e) {
     },
     onLeave: function () {
       stopPage(), documentBody.classList.remove("home-page-js");
+      removeFeint();
     },
     onLeaveCompleted: function () {
       documentBody.classList.remove("home-page"),

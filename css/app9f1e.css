@@ -1549,6 +1549,13 @@ body.loading .module-copy-image .copy .heading {
   left: -63px;
   font-size: 6.2vw;
 }
+
+.module-quote blockquote .quote-right {
+  position: absolute;
+  bottom: -5px;
+  font-size: 6.2vw;
+}
+
 .module-quote .attribution {
   display: block;
   margin-top: 4em;
@@ -1564,6 +1571,10 @@ body.loading .module-copy-image .copy .heading {
   }
   .module-quote blockquote .quote-left {
     top: 8px;
+    font-size: 72px;
+  }
+  .module-quote blockquote .quote-right {
+    position: absolute;
     font-size: 72px;
   }
 }
@@ -1588,6 +1599,7 @@ body.loading .module-copy-image .copy .heading {
     top: 8px;
     font-size: 60px;
   }
+
 }
 @media screen and (max-width: 767px) {
   .module-quote {
@@ -1601,6 +1613,11 @@ body.loading .module-copy-image .copy .heading {
     left: -7vw;
     font-size: 40px;
   }
+  .module-quote blockquote .quote-right {
+    position: absolute;
+    font-size: 40px;
+  }
+
   .module-quote .attribution {
     margin-top: 2em;
   }

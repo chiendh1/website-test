@@ -1600,6 +1600,11 @@ body.loading .module-copy-image .copy .heading {
     font-size: 60px;
   }
 
+  .module-quote blockquote .quote-right {
+    position: absolute;
+    font-size: 60px;
+  }
+
 }
 @media screen and (max-width: 767px) {
   .module-quote {

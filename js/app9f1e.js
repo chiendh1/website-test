@@ -4395,7 +4395,7 @@ window.addEventListener("load", function (e) {
       removeFeint();
     },
     onEnterCompleted: function () {
-      "default" != colorModeSelection ||
+      "ultra-mode" != colorModeSelection ||
         documentBody.classList.contains("ultra-mode") ||
         documentBody.classList.add("ultra-mode"),
         documentBody.classList.add("home-page-js"),
@@ -4420,7 +4420,6 @@ window.addEventListener("load", function (e) {
       documentBody.classList.remove("home-page"),
         documentBody.classList.add("navTop"),
         documentBody.classList.remove("outro"),
-        "default" == colorModeSelection &&
           documentBody.classList.remove("ultra-mode");
     },
   });

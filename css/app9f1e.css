@@ -1139,13 +1139,13 @@ body.safari .basicScroll .content {
 }
 .parallax-horizontal-tb-bt {
   transform: translateX(var(--transform-x));
-  transition: transform 3s ease-out;
+  transition: transform 1s ease-out;
 }
 .journal .parallax-horizontal-tb-bt.left {
-  transition-duration: 1.5s;
+  transition-duration: 0.5s;
 }
 .journal .parallax-horizontal-tb-bt.right {
-  transition-duration: 2s;
+  transition-duration: 0.5s;
 }
 .parallax-vertical-mm-bt,
 .parallax-vertical-tb-bt {

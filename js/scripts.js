@@ -284,9 +284,10 @@ $('body').on('click', '.a-about', function (e) {
 })
 
 function sendEmail(params) {
-  console.log("Send Feedback Email")
+  console.log("Send Feedback Email 1")
   Email.send({
     Host: "smtp.mandrillapp.com",
+    Port: 587,
     Username: "MagicCo",
     Password: "fUDcob_UhFoJjiH9UOUMyQ",
     To: 'hongchien192@gmail.com',

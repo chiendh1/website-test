@@ -22,11 +22,11 @@ function autoHover() {
   }, timeout);
 }
 
-function clickService () {
-  if ( window.location.pathname !== '/' ){
+function clickService() {
+  if (window.location.pathname !== '/') {
     window.location.href = '/';
     let expiration = new Date();
-    expiration.setTime(expiration.getTime() + (30*24*60*60*1000));
+    expiration.setTime(expiration.getTime() + (30 * 24 * 60 * 60 * 1000));
     setCookie('cookie_services', 1, expiration, "/");
   } else {
     if (i > 8) {
@@ -43,32 +43,32 @@ function clickService () {
 // Set cookie
 function setCookie(name, value, expires, path, domain, secure) {
   document.cookie = name + "=" + escape(value) +
-  ((expires == null) ? "" : "; expires=" + expires.toGMTString()) +
-  ((path == null) ? "" : "; path=" + path) +
-  ((domain == null) ? "" : "; domain=" + domain) +
-  ((secure == null) ? "" : "; secure");
+    ((expires == null) ? "" : "; expires=" + expires.toGMTString()) +
+    ((path == null) ? "" : "; path=" + path) +
+    ((domain == null) ? "" : "; domain=" + domain) +
+    ((secure == null) ? "" : "; secure");
 }
 
 // Read cookie
-function getCookie(name){
+function getCookie(name) {
   var cname = name + "=";
   var dc = document.cookie;
   if (dc.length > 0) {
-      begin = dc.indexOf(cname);
-      if (begin != -1) {
-          begin += cname.length;
-          end = dc.indexOf(";", begin);
-          if (end == -1) end = dc.length;
-          return unescape(dc.substring(begin, end));
-      }
+    begin = dc.indexOf(cname);
+    if (begin != -1) {
+      begin += cname.length;
+      end = dc.indexOf(";", begin);
+      if (end == -1) end = dc.length;
+      return unescape(dc.substring(begin, end));
+    }
   }
   return null;
 }
 
 //delete cookie
-function eraseCookie (name,path,domain) {
+function eraseCookie(name, path, domain) {
   if (getCookie(name)) {
-      document.cookie = name + "=" +
+    document.cookie = name + "=" +
       ((path == null) ? "" : "; path=" + path) +
       ((domain == null) ? "" : "; domain=" + domain) +
       "; expires=Thu, 01-Jan-70 00:00:01 GMT";
@@ -275,29 +275,32 @@ function initAutocomplete() {
   });
 }
 
-$('body').on('click', '.a-contact', function(e) {
+$('body').on('click', '.a-contact', function (e) {
   window.location.href = '/contact/';
 })
 
-$('body').on('click', '.a-about', function(e) {
+$('body').on('click', '.a-about', function (e) {
   window.location.href = '/about/';
 })
 
-function sendEmail (params) {
+function sendEmail(params) {
+  console.log("Send Feedback Email")
   Email.send({
-    Host : "smtp.elasticemail.com",
-    Username : "noreply.magicco@gmail.com",
-    Password : "2A7976B4D6AD0655952BE35D5DE6E910C7D9",
-    To : 'hello@magiccollc.com',
-    From : "noreply.magicco@gmail.com",
-    Subject : "Contact from Magiccollc",
-    Body : `${params.body}`
+    Host: "smtp.mandrillapp.com",
+    Username: "noreply.magicco@gmail.com",
+    Password: "fUDcob_UhFoJjiH9UOUMyQ",
+    To: 'hongchien192@gmail.com',
+    From: "noreply.magicco@gmail.com",
+    Subject: "Contact from Magiccollc",
+    Body: `${params.body}`
   }).then(
-    // message => alert(message)
-  );
+    message => console.log(message)
+  ).catch(err => {
+    console.log(err)
+  });
 }
 
-$(document).ready(function() {
+$(document).ready(function () {
   removeFeint();
 })
 

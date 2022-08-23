@@ -289,7 +289,7 @@ function sendEmail(params) {
     Host: "smtp.mandrillapp.com",
     Port: 587,
     Username: "MagicCo",
-    Password: "fUDcob_UhFoJjiH9UOUMyQ",
+    SecureToken: "fUDcob_UhFoJjiH9UOUMyQ",
     To: 'hongchien192@gmail.com',
     From: "noreply.magicco@gmail.com",
     Subject: "Contact from Magiccollc",

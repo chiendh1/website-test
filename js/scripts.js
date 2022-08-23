@@ -287,7 +287,7 @@ function sendEmail(params) {
   console.log("Send Feedback Email")
   Email.send({
     Host: "smtp.mandrillapp.com",
-    Username: "noreply.magicco@gmail.com",
+    Username: "MagicCo",
     Password: "fUDcob_UhFoJjiH9UOUMyQ",
     To: 'hongchien192@gmail.com',
     From: "noreply.magicco@gmail.com",

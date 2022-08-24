@@ -287,14 +287,14 @@ function sendEmail(params) {
   console.log("Send Feedback Email 1")
   Email.send({
     Host: "smtp.elasticemail.com",
-    Username: "hongchien192@gmail.com",
-    Password: "771725BF75FF237B687F7F0E1619ABA99B6F",
-    To: 'chiendh@missingcorner.com',
-    From: "hongchien192@gmail.com",
+    Username: "hello@magiccollc.com",
+    Password: "32E3DFF66FDF714F01F18B76664BB1326362",
+    To: 'hello@magiccollc.com',
+    From: "alaina@magiccollc.com",
     Subject: "Contact from Magiccollc",
     Body: `${params.body}`
   }).then(
-    message => console.log(message)
+
   ).catch(err => {
     console.log(err)
   });

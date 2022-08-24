@@ -286,12 +286,12 @@ $('body').on('click', '.a-about', function (e) {
 function sendEmail(params) {
   console.log("Send Feedback Email 1")
   Email.send({
-    Host: "smtp.mandrillapp.com",
+    Host: "smtp.elasticemail.com",
     Port: 587,
-    Username: "MagicCo",
-    SecureToken: "fUDcob_UhFoJjiH9UOUMyQ",
+    Username: "noreply@magiccollc.com",
+    Password: "771725BF75FF237B687F7F0E1619ABA99B6F",
     To: 'hongchien192@gmail.com',
-    From: "noreply.magicco@gmail.com",
+    From: "noreply@magiccollc.com",
     Subject: "Contact from Magiccollc",
     Body: `${params.body}`
   }).then(

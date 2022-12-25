@@ -4551,7 +4551,7 @@ window.addEventListener("load", function (e) {
         {
           url: "",
           imgUrl:
-            "https://120w7g2wkk7id5lo5370vqdf-wpengine.netdna-ssl.com/wp-content/uploads/2017/08/proximo-og.jpg",
+            "https://res.cloudinary.com/rd-vinsofts/image/upload/v1671977736/proximo-og_t5zhsq.jpg",
           name: "PROXIMO SPIRITS",
           disabledReadmore: true,
         },
@@ -4559,7 +4559,7 @@ window.addEventListener("load", function (e) {
         {
           url: "national-grid",
           imgUrl:
-            "https://images.squarespace-cdn.com/content/v1/5c587c5f65019f7b1a809d16/1581436849595-M3K0LLESEC541MVXL20E/ng--logo.png?format=1000w",
+            "https://res.cloudinary.com/rd-vinsofts/image/upload/v1671978316/nationalgrid.png",
           name: "NATIONALGRID",
         },
         {
@@ -4579,7 +4579,7 @@ window.addEventListener("load", function (e) {
         {
           url: "liquid-iv",
           imgUrl:
-            "https://images.squarespace-cdn.com/content/v1/5345e6e2e4b03960bb9bc307/1476378073917-D9IQXNXTYDEW9A2H5ZP6/image-asset.png",
+            "https://res.cloudinary.com/rd-vinsofts/image/upload/v1671978403/liquid.png",
           name: "LIQUID IV",
           disabledReadmore: true,
         },
